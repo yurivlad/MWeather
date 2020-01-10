@@ -1,6 +1,5 @@
 package com.yurivlad.multiweather.domainImpl
 
-import com.yurivlad.multiweather.core.DispatchersProvider
 import com.yurivlad.multiweather.core.createCombinedErrorChannel
 import com.yurivlad.multiweather.core.createCombinedProgressChannel
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
@@ -9,14 +8,13 @@ import com.yurivlad.multiweather.domainModel.model.*
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
-import trikita.log.Log
 
 /**
  *
  */
 
 @ExperimentalCoroutinesApi
-class ThreeWeatherSourcesForecastUseCase(
+class WeatherSourcesForecastUseCase(
     coroutineDispatcher: CoroutineDispatcher,
     private val gisRepo: RepositoryDomain<ForecastWithDayParts, Gis10DayForecastRequest>,
     private val yaRepo: RepositoryDomain<ForecastWithDayParts, Ya10DayForecastRequest>,

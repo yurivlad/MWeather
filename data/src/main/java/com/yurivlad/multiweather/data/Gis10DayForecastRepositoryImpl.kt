@@ -30,7 +30,7 @@ class Gis10DayForecastRepositoryImpl(
             return
         }
         launchHandledCoroutine(channel) {
-            channel.valueSendChannel.send(
+            channel.valueSendChannel.offer(
                 forecastConverter.convert(
                     gisApiService.get10DayForecast(request.cityUrl),
                     NoAdditionalParams

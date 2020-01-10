@@ -31,7 +31,7 @@ class Ya10DayForecastRepositoryImpl(
             return
         }
         launchHandledCoroutine(channel) {
-            channel.valueSendChannel.send(
+            channel.valueSendChannel.offer(
                 forecastConverter.convert(
                     yaApiService.get10DayForecast(request.lat, request.lon),
                     NoAdditionalParams

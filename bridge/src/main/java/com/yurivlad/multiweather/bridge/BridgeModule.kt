@@ -18,7 +18,7 @@ import com.yurivlad.multiweather.dataDomainConvertersImpl.PrimToDomainMapper
 import com.yurivlad.multiweather.dataDomainConvertersImpl.YaToDomainMapper
 import com.yurivlad.multiweather.dataDomainConvertersModel.NoAdditionalParams
 import com.yurivlad.multiweather.dataDomainConvertersModel.ToDomainMapper
-import com.yurivlad.multiweather.domainImpl.ThreeWeatherSourcesForecastUseCase
+import com.yurivlad.multiweather.domainImpl.WeatherSourcesForecastUseCase
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.UseCase
 import com.yurivlad.multiweather.domainModel.model.*
@@ -76,7 +76,7 @@ internal val appCoreModules = module {
     }
 
     single<UseCase<ForecastSources, NoParamsRequest>> {
-        ThreeWeatherSourcesForecastUseCase(
+        WeatherSourcesForecastUseCase(
             get(),
             get(named("Gis10DayForecastRepositoryImpl")),
             get(named("Ya10DayForecastRepositoryImpl")),

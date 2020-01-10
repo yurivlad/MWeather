@@ -1,6 +1,5 @@
 package com.yurivlad.multiweather.domainImpl
 
-import com.yurivlad.multiweather.core.AssignableDispatcher
 import com.yurivlad.multiweather.domainModel.BaseRepositoryImpl
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.RepositoryRequest
@@ -20,9 +19,9 @@ import java.util.*
 @ExperimentalCoroutinesApi
 class ThreeWeatherSourcesForecastUseCaseTest {
 
-    fun <R : RepositoryRequest> createRepo(thatReturns: () -> ForecastWithDayParts): RepositoryDomain<ForecastWithDayParts, R> {
+    private fun <R : RepositoryRequest> createRepo(thatReturns: () -> ForecastWithDayParts): RepositoryDomain<ForecastWithDayParts, R> {
         return object :
-            BaseRepositoryImpl<ForecastWithDayParts, R>(AssignableDispatcher(TestCoroutineDispatcher())) {
+            BaseRepositoryImpl<ForecastWithDayParts, R>(TestCoroutineDispatcher()) {
 
             override fun requestUpdate(request: R) {
                 val channel = getOrCreateChannel(request)
@@ -38,8 +37,8 @@ class ThreeWeatherSourcesForecastUseCaseTest {
             ForecastWithDayParts(ForecastSource.PRIMPOGODA, Date(), Date(), emptyList())
         val yaForecast = ForecastWithDayParts(ForecastSource.YANDEX, Date(), Date(), emptyList())
 
-        val useCase = ThreeWeatherSourcesForecastUseCase(
-            AssignableDispatcher(TestCoroutineDispatcher()),
+        val useCase = WeatherSourcesForecastUseCase(
+            TestCoroutineDispatcher(),
             createRepo { gisForecast },
             createRepo { yaForecast },
             createRepo { primForecast }
@@ -68,8 +67,8 @@ class ThreeWeatherSourcesForecastUseCaseTest {
         val primForecast =
             ForecastWithDayParts(ForecastSource.PRIMPOGODA, Date(), Date(), emptyList())
 
-        val useCase = ThreeWeatherSourcesForecastUseCase(
-            AssignableDispatcher(TestCoroutineDispatcher()),
+        val useCase = WeatherSourcesForecastUseCase(
+            TestCoroutineDispatcher(),
             createRepo { gisForecast },
             createRepo { throw Exception() },
             createRepo { primForecast }
