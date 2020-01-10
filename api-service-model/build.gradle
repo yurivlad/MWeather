@@ -1,0 +1,7 @@
+apply from:"../common_java_module.gradle"
+
+
+dependencies {
+    implementation retrofit
+    implementation project(':parsers-model')
+}

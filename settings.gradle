@@ -1,0 +1,13 @@
+include ':app', ':presentation-impl', ':presentation-model', ':api-service-api', ':presentation-api', ':data',
+        ':bridge',
+        ':parsers-model',
+        ':parsers-impl',
+        ':constants',
+        ':api-service-model',
+        ':domain-model',
+        ':domain-impl',
+        ':core',
+        ':data-domain-mappers-model',
+        ':data-domain-mappers-impl',
+        ':api-service-impl'
+rootProject.name = 'My Application'

@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <title>Примпогода - Прогноз погоды в Находке (Приморский край) на неделю</title>
+    <meta name="Description"
+          content="Прогноз погоды в Находке на неделю. Точный прогноз погоды в Находке на ближайшую неделю, выходные и 10-14 дней с учетом дальневосточной специфики. Текущая погода в Находке и архив погоды за последнюю неделю на графиках."/>
+
+
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-crossorigin"/>
+
+    <meta id="viewport" name="viewport" content="width=1024, maximum-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">-->
+    <!-- Change viewport for mobile -->
+    <script>
+	var viewportMobile = 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+	var isMobile = (window.location.host.substring(0,2) == 'm.');
+	if (isMobile) {
+		document.getElementById("viewport").setAttribute("content", viewportMobile);
+	}
+
+    </script>
+
+
+    <meta name="copyright" content="© Primpogoda.ru, 2001-2020"/>
+    <meta name="author" content="© Black Fox Studio LLC, 2006-2020"/>
+
+    <!-- Search engines-->
+    <meta name="google-site-verification" content="vUbvBm8IzCotn0pGksXzCkJ5cKkcQi3KePvdLiE-xZM"/>
+    <meta name="yandex-verification" content="b5cbc9e855bd8a05"/>
+
+    <link rel="apple-touch-icon" href="/templates/v2014/img/ios/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/templates/v2014/img/ios/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="/templates/v2014/img/ios/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="/templates/v2014/img/ios/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="/templates/v2014/img/ios/startup.png">
+
+    <meta name="apple-itunes-app" content="app-id=1032942247">
+    <meta name="google-play-app" content="app-id=ru.primpogoda.app">
+    <link rel="android-touch-icon" href="/templates/v2014/img/android/app_icon.png"/>
+
+
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <!--% data getProperty(%pid%, 'anons_pic', 'facebook_image') %-->
+
+    <meta name="Keywords"
+          content="Прогноз погоды в Находке, погода в Находке, погода сегодня, погода завтра, погода на 1-3 дня, погода на 5 дней, погода на неделю, погода на 2 недели (14 дней). Прогноз на каждый час. Куда поехать отдохнуть?"/>
+
+    <link rel="stylesheet" href="/templates/v2014/css/foundation.css"/>
+
+    <!-- icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css"/>
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <link href="/templates/v2014//css/material-icons/iconfont/material-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/templates/v2014/css/flaticon/flaticon.min.css">
+
+    <link rel="stylesheet" href="/templates/v2014/css/custom.css?v=5" type="text/css"/>
+
+    <link rel="stylesheet" href="/templates/v2014/css/holidays.css" type="text/css"/>
+
+    <!--% data getRssMeta(66392) %
+    % data getAtomMeta(66392) % -->
+
+    <!-- DoubleClick -->
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+		  var googletag = googletag || {};
+		  googletag.cmd = googletag.cmd || [];
+
+    </script>
+
+    <script>
+		    var googleTagSlots = [];
+
+		  googletag.cmd.push(function() {
+
+		  	//
+		  	// Адаптивный размер рекламы - https://support.google.com/dfp_premium/answer/3423562?hl=en
+		  	//
+		  	var sizeMap = googletag.sizeMapping().
+                addSize([1024, 768], [[730, 200], [730, 150], [728, 90], [600, 150], [650, 150]]). // PC
+                addSize([980, 690], [[728, 90], [600, 150], [650, 150]]).
+                addSize([980, 480], [[728, 90], [600, 150], [650, 150]]).
+                addSize([640, 480], [336, 280]). // Tablet
+                addSize([640, 360], [336, 280]).
+                addSize([360, 640], [336, 280]).
+                addSize([0, 0], [300, 250]).
+                // Fits browsers of any size smaller than 640 x 480
+                build();
+
+		  	var mappingHorizontal = googletag.sizeMapping().
+			  	addSize([1024, 768], [970, 250]).
+			  	addSize([980, 690], [728, 90]).
+			  	addSize([640, 480], [120, 60]).
+			  	addSize([0, 0], [88, 31]).
+			  	// Fits browsers of any size smaller than 640 x 480
+			  	build();
+
+			var mappingVertial = googletag.sizeMapping().
+			  	addSize([1024, 768], [970, 250]).
+			  	addSize([980, 690], [728, 90]).
+			  	addSize([640, 480], [120, 60]).
+			  	addSize([0, 0], [88, 31]).
+			  	// Fits browsers of any size smaller than 640 x 480
+			  	build();
+
+			var slots = [];
+
+			// A - в контенте, B - в правом sidebar
+			// Forecast - страница прогноза, main - главная страница, info - страницы дополнительной информации
+			var horizontalDesktopSizes = ['fluid', [730,200], [730,150], [750,200], [650,150], [600,150], [728,90], [480,320], [450, 255], [468,60], [336,280], [300,250], [250,250], [300,75], [300,50]]; //[[730,150],[728,90],[600,150],[468,60]];
+			var verticalDesktopSizes = ['fluid', [300,600], [300,250], [240,400], [250,250], [160,600], [200,200], [234,60], [168,28], [168,42], [180,150], [216,36], [216,54]]; //[[300,250],[250,250],[240,400],[200,200]];
+			var sizesB2 = ['fluid', [300,250], [240,400], [250,250], [160,600], [200,200], [234,60], [168,28], [168,42], [180,150], [216,36], [216,54]];
+
+			//var horizontalMobileSizes = [[336,280],[320,50],[300,250],[300,100],[300,75],[300,50],[320,480],[250,250]];
+			//var verticalMobileSizes = [[320,480],[250,250]];
+
+		    //googletag.defineSlot('/136837651/asiaA1', [[650, 150], [600, 150], [730, 150]], 'div-gpt-bober-1472696045279-asiaA1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/asiaA2', [[650, 150], [600, 150], [730, 150]], 'div-gpt-bober-1472696045279-asiaA2').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/asiaB1', [[600, 150], [730, 150]], 'div-gpt-bober-1472696045279-asiaB1').addService(googletag.pubads());
+		    slots['main_a1'] = googletag.defineSlot('/136837651/mainA1', [[650, 150], [600, 150], [730, 150]], 'div-gpt-bober-1472696045279-mainA1').defineSizeMapping(sizeMap).addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/mainA2', [[650, 150], [600, 150], [730, 150]], 'div-gpt-bober-1472696045279-mainA2').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/mainB1', verticalDesktopSizes, 'div-gpt-bober-1472696045279-mainB1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/mainB2', verticalDesktopSizes, 'div-gpt-bober-1472696045279-mainB2').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/infoA1', [[650, 150], [730, 150]], 'div-gpt-bober-1472696045279-infoA1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/infoA2', [[650, 150], [730, 150]], 'div-gpt-bober-1472696045279-infoA2').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/infoB1', verticalDesktopSizes, 'div-gpt-bober-1472696045279-infoB1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/infoB2', verticalDesktopSizes, 'div-gpt-bober-1472696045279-infoB2').addService(googletag.pubads());
+
+		    slots['a1'] = googletag.defineSlot('/136837651/forecastA1', horizontalDesktopSizes, 'div-gpt-bober-1472696045279-forecastA1').defineSizeMapping(sizeMap).addService(googletag.pubads());
+		    //forecastA2
+		    slots['main_a2'] = googletag.defineSlot('/136837651/ad730x150', horizontalDesktopSizes, 'div-gpt-bober-1472696045279-ad730x150').defineSizeMapping(sizeMap).addService(googletag.pubads());
+		    slots['main_a3'] = googletag.defineSlot('/136837651/forecastA3', horizontalDesktopSizes, 'div-gpt-bober-1472696045279-forecastA3').defineSizeMapping(sizeMap).addService(googletag.pubads());
+		    slots['b1'] = googletag.defineSlot('/136837651/ad240x400', sizesB2, 'div-gpt-bober-1472696045279-ad240x400').addService(googletag.pubads());
+		    slots['b2'] = googletag.defineSlot('/136837651/forecastB2', sizesB2, 'div-gpt-bober-1472696045279-forecastB2').addService(googletag.pubads());
+		    slots['b3'] = googletag.defineSlot('/136837651/farecastB3', verticalDesktopSizes, 'div-gpt-bober-1472696045279-farecastB3').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/ussurB1', verticalDesktopSizes, 'div-gpt-bober-1472696045279-ussurB1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/top', [1000, 70], 'div-gpt-bober-1472696045279-top').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/RFforecastA1', [[650, 150], [600, 150], [730, 150]], 'div-gpt-bober-1472696045279-RFforecastA1').addService(googletag.pubads());
+		    //googletag.defineSlot('/136837651/RFforecastB1', verticalDesktopSizes, 'div-gpt-bober-1472696045279-RFforecastB1').addService(googletag.pubads());
+
+		    googleTagSlots = slots;
+
+		    // Infinite scroll requires SRA
+            googletag.pubads().enableSingleRequest();
+
+		    googletag.pubads().setTargeting('page_url', '/weather/nahodka');
+		    googletag.pubads().collapseEmptyDivs();
+
+		    var hSlotOccupied = false;
+		    var vSlotOccupied = [false, false];
+
+		    var vSlot = 0;
+
+		    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+
+		      var slotId = event.slot.getSlotElementId();
+		      var st = document.getElementById(slotId);
+		      var sh = new Number(st.style.height.replace('px', ''));
+		      var sw = st.parentElement.offsetWidth;
+
+		      var dim = (sh >= sw) ? 'vertical' : 'horizontal';
+
+		      st.style.width = '100%';
+		      st.style.height = 'auto';
+
+		      if (event.isEmpty) {
+
+		        //console.log('Slot empty:' + slotId + ' ' + dim + ' ' + sh + ' ' + sw + ' ' + st.getAttribute('data-altads'));
+
+		        if(st.getAttribute('data-altads') == 'yandex')
+		        {
+		          st.style.display = 'block';
+		          st.innerHTML = '';
+
+		          var yaVerticalId = ['R-142481-2','R-142481-4'];
+		          var yaHorizontalId = 'R-142481-1';
+
+		          var f = function(w, d, n, s, t) {
+		              w[n] = w[n] || [];
+		              w[n].push(function() {
+		                  Ya.Context.AdvManager.render({
+		                      blockId: ((dim == 'vertical') ? yaVerticalId[vSlot] : yaHorizontalId),
+		                      renderTo: slotId,
+		                      async: true
+		                  });
+		              });
+		              t = d.getElementsByTagName('script')[0];
+		              s = d.createElement('script');
+		              s.type = 'text/javascript';
+		              s.src = '//an.yandex.ru/system/context.js';
+		              s.async = true;
+		              t.parentNode.insertBefore(s, t);
+		          };
+
+		          if((dim == 'vertical' && !vSlotOccupied[vSlot]))
+		          {
+		          	f(this, this.document, 'yandexContextAsyncCallbacks');
+		          	vSlotOccupied[vSlot] = true;
+		          	//vSlot++;
+		          }
+		          if((dim == 'horizontal' && !hSlotOccupied))
+		          {
+		          	f(this, this.document, 'yandexContextAsyncCallbacks');
+		          	hSlotOccupied = true;
+		          }
+		        }
+		      }
+		    });
+
+		    googletag.enableServices();
+		  });
+
+    </script>
+
+    <!-- AdSense Automatic Mobile Ads-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0089663168959582",
+          enable_page_level_ads: true
+     });
+
+    </script>
+
+    <!--<link rel="manifest" href="/manifest.json">-->
+    <link rel="manifest" href="/manifest.txt">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--<script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>-->
+    <!--<script src="https://yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <!-- Скрипт моблиьной рекламной сети (SeaLine network). Добавлен 2017-04-28 -->
+    <!--<script src="http://cdn.sealine.pro/js/network.js"></script>-->
+    <!--<script src="https://sealine-pfuoxcbgd.netdna-ssl.com/js/network.js?201805231728" async='async'></script>-->
+    <script src="https://sealine.pro/js/network.js?201810041218" async='async'></script>
+
+    <!-- Open Graph protocol (Facebook, twitter, ...) -->
+    <meta property="og:site_name" content="Примпогода"/>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:title" content="Примпогода - Прогноз погоды в Находке (Приморский край)"/>
+    <meta property="og:description"
+          content="Точный прогноз погоды в Находке на ближайшую неделю, выходные и 10-14 дней с учетом дальневосточной специфики. Текущая погода в Находке и архив погоды за последнюю неделю на графиках. "/>
+    <meta property="og:url" content="https://primpogoda.ru/weather/nahodka"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:image:secure_url" content=""/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="628"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@Primpogoda"/>
+    <meta name="twitter:title" content="Примпогода - Прогноз погоды в Находке (Приморский край)"/>
+    <meta name="twitter:description"
+          content="Точный прогноз погоды в Находке на ближайшую неделю, выходные и 10-14 дней с учетом дальневосточной специфики. Текущая погода в Находке и архив погоды за последнюю неделю на графиках...."/>
+    <meta name="twitter:image" content=""/>
+
+    <!-- Facebook instatn articles -->
+    <meta property="fb:pages" content="190521240970540"/>
+
+    <link type="application/opensearchdescription+xml" rel="search" href="opensearch"/>
+
+    <link rel="canonical" href="https://primpogoda.ru/weather/nahodka"/>
+
+    <!-- Google AdSense -->
+    <!--
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-0089663168959582",
+        enable_page_level_ads: true
+      });
+    </script>
+    -->
+
+
+    <!--<link rel="stylesheet" type="text/css" href="%template_resources%css/weather.min.css">-->
+    <link rel="stylesheet" type="text/css" href="/templates/v2014/css/weather.css?v=1578231910">
+    <script type='text/javascript'>var OA_channel = 'pp/test/preview';</script>
+</head>
+<body>
+<!-- OptAd60 - Google AdExchange -->
+<script async
+        src="//get.optad360.io/sf/eaf45f52-8a7c-11e8-b5b1-06048607e8f8/plugin.min.js"></script>
+
+<!-- % custom blockOldBrowsers() % -->
+<div class="bober-top text-center" style=""></div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <nav class="tab-bar top-bar">
+            <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+
+            <section class="middle tab-bar-section">
+                <h1 class="title">
+                    Находка
+                    <span class="text-center favorites-add">
+            	 	<a class="button round helper favstar"
+                       style="vertical-align: initial; margin-left: 0.3em;" data-title="Находка"
+                       data-pid="66392" href="/weather/nahodka" title="Добавить в избранные"><i
+                            class="fa fa-star fa-fw fa-lg"></i></a>
+            	</span>
+                </h1>
+            </section>
+
+            <section class="right-small text-center">
+                <a class="right-off-canvas-toggle" href="#"><i class="fa fa-map-marker font-2x"
+                                                               aria-hidden="true"
+                                                               style="line-height: inherit;"></i></a>
+            </section>
+        </nav>
+
+        <aside class="left-off-canvas-menu dark-bg">
+
+            <div class="row collapse logo">
+                <div class="small-9 columns">
+                    <a href="/"><img src="/templates/v2014/img/logo.svg"
+                                     onerror="this.onerror=null; this.src='/templates/v2014/img/logo.png'"/></a>
+                    <div class="holiday-text"></div>
+                </div>
+                <div class="small-3 columns text-center">
+                    <a href="/" class="button tiny hollow flat no-margin-bottom"><i
+                            class="material-icons font-lg">&#xE88A;</i></a>
+                </div>
+                <div class="small-12 columns">
+                    <div class="addthis_inline_follow_toolbox"></div>
+                </div>
+            </div>
+
+            <ul class="off-canvas-list light">
+                <li class="overflow-hidden"><a href="/weather">Погода <i
+                        class="material-icons font-lg grey valign-middle">&#xE315;</i> <span
+                        class="mycity-name nowrap"></span></a></li>
+                <li class="has-submenu">
+                    <div id="weather-drop-down-menu"></div>
+                </li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/articles">Статьи</a></li>
+                <li><a href="/today">Обзоры</a></li>
+                <li><a href="/asia">Азия</a></li>
+                <li><a href="/info">Инфо</a></li>
+                <li class=""><a href="/leto/"><!--<i class="fa fa-sun-o"></i>--> Лето!</a></li>
+                <li class="alert"><a href="/app" target="_blank">Приложение &nbsp;<i
+                        class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i></a></li>
+                <!--<li class="show-for-medium-down"><a href="/contests/newyear2017/" target="_blank"><i class="fa fa-tree fa-fw"></i><i class="fa fa-gift fa-fw"></i></a></li>
+                <li class="show-for-large-up"><a href="/contests/newyear2017/" target="_blank"><i class="fa fa-tree fa-fw"></i> Конкурс!</a></li>-->
+
+                <!--<li class="red-bg show-for-medium-down"><a href="/news/anons/tornament_2016" target="_blank"><i class="fa fa-gamepad fa-fw"></i><i class="fa fa-trophy fa-fw"></i></a></li>
+                <li class="red-bg show-for-large-up"><a href="/news/anons/tornament_2016" target="_blank"><i class="fa fa-gamepad"></i> Турнир!</a></li>-->
+
+                <!--<li class="alert"><a href="/contests/sneg2016" target="_blank"><i class="fa fa-trophy"></i> Конкурс!</a></li>-->
+                <!--<li class="show-for-medium-down alert"><a href="/avto/"><i class="fa fa-car fa-fw"></i></a></li>
+                <li class="show-for-large-up alert"><a href="/avto/"><i class="fa fa-car fa-fw"></i> Новый прогноз!</a></li>-->
+                <!--<li class="alert show-for-medium-down"><a href="/leto"><i class="fa fa-sun-o fa-fw"></i> Лето!</a></li>-->
+
+                <!--<li class="alert show-for-large-up"><a href="/leto"><i class="fa fa-sun-o fa-fw"></i> Погода на пляжах!</a></li>-->
+
+            </ul>
+
+
+        </aside>
+
+        <aside class="right-off-canvas-menu dark-bg">
+
+            <ul class="off-canvas-list light">
+                <li>
+                    <form method="get" action="/search/search_weather/" id="search_form"
+                          class="search-form white-bg">
+                        <div class="row collapse">
+                            <div class="medium-11 small-10 columns"><input type="text"
+                                                                           class="autocomplete flat transparent nospace-bottom"
+                                                                           placeholder="Город или населенный пункт"
+                                                                           name="q" id="search_txt"
+                                                                           autocomplete="off"
+                                                                           data-dropdown="keywords"/>
+                            </div>
+                            <div class="medium-1 small-2 columns">
+                                <button class="postfix secondary flat transparent nospace-bottom"
+                                        type="button" onClick="submit()"><i
+                                        class="fa fa-search fa-fw"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+
+                <li>
+                    <label>
+                        <i class="material-icons font-lg">&#xE55C;</i> Мой город <span href="#"
+                                                                                       class="right"
+                                                                                       data-reveal-id="location"><i
+                            class="fa fa-edit fa-fw fa-lg"></i></a>
+                    </label>
+                </li>
+                <li>
+                    <div class="row collapse">
+                        <div class="columns small-10">
+                            <div id="mycity-container"><i
+                                    class="fa fa-refresh fa-spin grey semi-transparent"></i></div>
+                        </div>
+
+                        <div class="columns small-2">
+                            <!--<a href="#" data-reveal-id="location"><i class="fa fa-edit fa-fw" style="line-height: inherit;"></i></a>-->
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <label>
+                        <i class="material-icons font-lg">&#xE838;</i> Избранные <span
+                            class="edit-favorites-mobile right"><i
+                            class="fa fa-edit fa-fw fa-lg"></i></span>
+                    </label>
+                </li>
+                <li>
+                    <div id="favorites-container-mobile"></div>
+                </li>
+            </ul>
+
+            <div id="location" class="reveal-modal small" data-reveal="">
+                <div class="font-2x">Мой город</div>
+                <div class="spacer-single"></div>
+                <form class="lead nospace-bottom" id="select-city" action="/internal/setmycity/do/"
+                      method="get">
+                    <input type="text" name="city" id="my_city_input" value=""
+                           placeholder="Город или населенный пункт"
+                           class="autocomplete prevent-jump" data-dropdown="keywords"
+                           autocomplete="off"/>
+                    <div class="spacer-single"></div>
+                    <div class="row">
+                        <div class="columns small-6">
+                            <button type="submit" class="button expand radius nospace-bottom">
+                                Сохранить
+                            </button>
+                        </div>
+                        <div class="columns small-6">
+                            <button type="button"
+                                    class="button expand secondary radius right nospace-bottom"
+                                    onClick="$('.close-reveal-modal').click()">Отмена
+                            </button>
+                        </div>
+                    </div>
+
+
+                </form>
+                <!--<a class="close-reveal-modal">&#215;</a>-->
+            </div>
+
+
+        </aside>
+
+
+        <!--<div class="panel alert">На сайте идут технические работы. Нормальная работа сайта в скором времени будет восстановлена. Приносим извинения за неудобства.</div>-->
+
+
+        <!--<div id="favorites-container"></div>-->
+        <!-- HEADER -->
+        <div class="content-header white-bg">
+            <div class="row">
+                <div class="large-12 medium-12 small-12 columns">
+
+                    <!--
+                    <div class="row">
+
+                        <div class="large-10 medium-10 small-10 columns">
+                            <h1>Прогноз погоды в Находке на неделю</h1>
+
+        <ul class="breadcrumbs">
+          <li><a href="/">Примпогода</a></li>
+          <li><a href="/weather">Погода</a></li><li><a href="/weather/nahodka">Находка</a></li>
+        </ul>
+
+                         </div>
+
+
+
+                         <div class="large-2 medium-2 small-2 columns text-center favorites-add">
+                             <a class="button round helper favstar" data-title="Находка" data-pid="66392" href="/weather/nahodka" title="Добавить в избранные"><i class="fa fa-star fa-fw fa-lg"></i></a>
+                        </div>
+                    </div>
+                    -->
+
+
+                    <!--<dl class="sub-nav district-menu">
+                        <dt>Район города:</dt>
+                        <dd class="active"><a href="/weather/forecast/vladivostok.html">Центр</a></dd>
+                        <dd><a href="/weather/forecast/point/438.html">б. Лазурная (Шамора)</a></dd>
+                        <dd><a href="/weather/forecast/point/66.html">Русский</a></dd>
+                        <dd><a href="/weather/forecast/point/68.html">Садгород</a></dd>
+                        <dd><a href="/weather/forecast/point/68.html">Аэропорт Кневичи</a></dd>
+                       </dl>-->
+                    <div class="spacer-micro"></div>
+                    <div class="row mobile-scroll-menu">
+                        <!--<div id="scroller-anchor"></div>-->
+                        <ul class="menu">
+                            <li class=""><a href="/weather/nahodka/.now">Сейчас</a></li>
+                            <li class=""><a href="/weather/nahodka/.today">Сегодня</a></li>
+                            <li class="active"><a href="/weather/nahodka/.week">На неделю</a></li>
+                            <li class=""><a href="/weather/nahodka/.14days">На 14 дней</a></li>
+                            <li class=""><a href="/weather/nahodka/.avto">Автомобильный</a></li>
+                            <li class=""><a href="/weather/nahodka/.more"
+                                            title="Прогноз температуры воды и волнения"><i
+                                    class="fa fa-anchor" style="vertical-align: initial;"></i>
+                                Морской</a></li>
+                        </ul>
+                        <script>
+   					var activElement = $(".mobile-scroll-menu li.active a").focus();
+
+                        </script>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--
+            <div class="content-header fixed-tabs" style="display: none;">
+                <div class="row">
+                  <div class="large-12 medium-12 small-12 columns">
+                       % custom getWeatherMenu('top') %
+                  </div>
+              </div>
+            </div>
+            -->
+        </div>
+        <!--/  HEADER -->
+        <div class="spacer-single"></div>
+        <!-- CONTENT -->
+        <div class="row">
+
+            <div class="large-9 medium-9 small-12 columns">
+                <div class="panel radius expand transparent weather-alerts no-padding-bottom  disabled ">
+                    <div class="font17x">
+                        Внимание!
+                    </div>
+                    <div class="notice-text">
+                        <p><span><a
+                                href="https://primpogoda.ru/news/pogoda/v_primore_obyavleno_shtormovoe_preduprezhdenie_obnovleno"
+                                target="_blank">8 &mdash;&nbsp;10 августа на Приморье возможен выход мощного тайфуна NORU. Штормовое предупреждение остаётся в силе</a><a
+                                href="https://primpogoda.ru/today/obzor_sostoyaniya_vodnyh_obektov"
+                                target="_blank"><br/></a></span></p>
+                    </div>
+                </div>
+
+                <div class="forecast">
+
+
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="05 января" class="anchor"></a>
+                    <div class="bober">
+                        <div class="expanded" style="background-color: " data-title="A-1"
+                             data-sizes="730x150, 730x200, 728x90, 650x150">
+                            <div id='div-gpt-bober-1472696045279-forecastA1'
+                                 style='height:150px; width:100%;' data-altads='yandex'>
+                                <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-forecastA1'); });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>05 января, <span class='weekend'>воскресенье</span></h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon night"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon morning"
+                                                                    src="/img/forecast_icons/svg/icon_01_day.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода с&nbsp;перистыми облаками"><img
+                                        class="icon" src="/img/forecast_icons/svg/icon_02_day.svg"/></span>
+                                    <div class="font-condensed">Ясная погода с&nbsp;перистыми
+                                        облаками
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon evening"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-9...-10°</div>
+                                        <div class="show-for-small-only">-10°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-8...-10°</div>
+                                        <div class="show-for-small-only">-9°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...-6°</div>
+                                        <div class="show-for-small-only">-4°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-3...-7°</div>
+                                        <div class="show-for-small-only">-5°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-13...-15°</div>
+                                        <div class="show-for-small-only">-14°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-12...-15°</div>
+                                        <div class="show-for-small-only">-14°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-10°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-7...-11°</div>
+                                        <div class="show-for-small-only">-9°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>769 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>771 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                                <td>772 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                                <td>773 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>70%</td>
+                                <td>71%</td>
+                                <td>56%</td>
+                                <td>66%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="06 января" class="anchor"></a>
+                    <div class="bober"></div>
+                    <h3>06 января, понедельник</h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon night"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon morning"
+                                        src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon" src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon evening"
+                                        src="/img/forecast_icons/svg/icon_22_night.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-7...-8°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-6...-9°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-4...-0°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-2°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-11...-13°</div>
+                                        <div class="show-for-small-only">-12°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-11...-13°</div>
+                                        <div class="show-for-small-only">-12°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-4...-9°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-5...-7°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>773 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                                <td>773 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                                <td>772 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                                <td>771 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Повышенное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>75%</td>
+                                <td>73%</td>
+                                <td>56%</td>
+                                <td>70%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="07 января" class="anchor"></a>
+                    <div class="bober">
+                        <div class="expanded" style="background-color: " data-title="A-2"
+                             data-sizes="730x150, 730x200, 728x90, 650x150">
+                            <div id='div-gpt-bober-1472696045279-ad730x150'
+                                 style='height:150px; width:100%;' data-altads='yandex'>
+                                <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-ad730x150'); });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>07 января, вторник</h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon night"
+                                        src="/img/forecast_icons/svg/icon_22_night.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon morning"
+                                        src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Пасмурно, небольшой снег"><img class="icon"
+                                                                                src="/img/forecast_icons/svg/icon_34_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно, небольшой снег</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon evening"
+                                        src="/img/forecast_icons/svg/icon_22_night.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right " data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 10%;"></div></td>
+                              <td><div style="height: 28%;"></div></td>
+                              <td><div style="height: 32%;"></div></td>
+                              <td><div style="height: 18%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 10%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 28%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 32%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 18%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм" class="precip divider tip-right  "
+                                data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class=""><i class="fa fa-tint blue"></i> 1.61 мм</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...-3°</div>
+                                        <div class="show-for-small-only">-3°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-2°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...0°</div>
+                                        <div class="show-for-small-only">-1°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...0°</div>
+                                        <div class="show-for-small-only">-1°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-7°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-7°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-5...-6°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-5...-6°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>3-4 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Слабый ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>770 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>768 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>766 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>764 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>73%</td>
+                                <td>80%</td>
+                                <td>83%</td>
+                                <td>85%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="08 января" class="anchor"></a>
+                    <div class="bober"></div>
+                    <h3>08 января, среда</h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon night"
+                                        src="/img/forecast_icons/svg/icon_22_night.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon morning"
+                                        src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Малооблачно, кучевые облака"><img class="icon"
+                                                                                   src="/img/forecast_icons/svg/icon_04_day.svg"/></span>
+                                    <div class="font-condensed">Малооблачно, кучевые облака</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon evening"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 1%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 1%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-3°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-3...-4°</div>
+                                        <div class="show-for-small-only">-4°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...0°</div>
+                                        <div class="show-for-small-only">-1°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...-5°</div>
+                                        <div class="show-for-small-only">-4°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-7°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-7...-8°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-8°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-7...-11°</div>
+                                        <div class="show-for-small-only">-9°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>3-4 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Слабый ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>3-4 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Слабый ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>763 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>764 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>83%</td>
+                                <td>73%</td>
+                                <td>54%</td>
+                                <td>57%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="09 января" class="anchor"></a>
+                    <div class="bober">
+                        <div class="expanded" style="background-color: " data-title="A-3"
+                             data-sizes="730x150, 730x200, 728x90, 650x150">
+                            <div id='div-gpt-bober-1472696045279-forecastA3'
+                                 style='height:150px; width:100%;' data-altads='yandex'>
+                                <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-forecastA3'); });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>09 января, четверг</h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon night"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon morning"
+                                                                    src="/img/forecast_icons/svg/icon_01_day.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon"
+                                                                    src="/img/forecast_icons/svg/icon_01_day.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Ясная погода"><img class="icon evening"
+                                                                    src="/img/forecast_icons/svg/icon_01_night.svg"/></span>
+                                    <div class="font-condensed">Ясная погода</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-5...-7°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-5...-7°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-4°</div>
+                                        <div class="show-for-small-only">-3°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...-6°</div>
+                                        <div class="show-for-small-only">-4°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-11...-12°</div>
+                                        <div class="show-for-small-only">-12°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-10...-12°</div>
+                                        <div class="show-for-small-only">-11°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-9°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-10°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>765 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>767 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>769 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>770 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>64%</td>
+                                <td>62%</td>
+                                <td>53%</td>
+                                <td>67%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="10 января" class="anchor"></a>
+                    <div class="bober"></div>
+                    <h3>10 января, пятница</h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Малооблачно, кучевые облака"><img
+                                        class="icon night"
+                                        src="/img/forecast_icons/svg/icon_04_night.svg"/></span>
+                                    <div class="font-condensed">Малооблачно, кучевые облака</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon morning"
+                                        src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr="" title="Пасмурно"><img
+                                        class="icon" src="/img/forecast_icons/svg/icon_22_day.svg"/></span>
+                                    <div class="font-condensed">Пасмурно</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Туман или низкая слоистая облачность"><img
+                                        class="icon evening"
+                                        src="/img/forecast_icons/svg/icon_16_night.svg"/></span>
+                                    <div class="font-condensed">Туман или низкая слоистая
+                                        облачность
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 8%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 8%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-6...-8°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-5...-8°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-4°</div>
+                                        <div class="show-for-small-only">-3°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-2°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-10...-12°</div>
+                                        <div class="show-for-small-only">-11°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-10...-13°</div>
+                                        <div class="show-for-small-only">-12°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-5...-8°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-5...-6°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(135deg); -webkit-transform: rotate(135deg); -o-transform: rotate(135deg);"></i>ЮВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);"></i>СВ
+                                            <br/>1 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Тихий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>770 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>769 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>766 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>764 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>70%</td>
+                                <td>71%</td>
+                                <td>64%</td>
+                                <td>77%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <style>
+.advanced { display: none; }
+.help { display: none; }
+
+                    </style>
+
+                    <a name="11 января" class="anchor"></a>
+                    <div class="bober"></div>
+                    <h3>11 января, <span class='weekend'>суббота</span></h3>
+                    <div class="table-container">
+                        <table class="data six-hour no-margin-bottom borders-vertical"
+                               cellspacing="0">
+                            <thead>
+                            <tr class=" divider">
+                                <th width="4%"></th>
+                                <th width="24%">Ночью</th>
+                                <th width="24%">Утром</th>
+                                <th width="24%">Днем</th>
+                                <th width="24%">Вечером</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="help">
+                                <td colspan="8">
+                                    <small>Состояние погоды</small>
+                                </td>
+                            </tr>
+                            <tr class="divider weather opaque day">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-day-cloudy"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Состояние погоды
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Туман или низкая слоистая облачность"><img
+                                        class="icon night"
+                                        src="/img/forecast_icons/svg/icon_16_night.svg"/></span>
+                                    <div class="font-condensed">Туман или низкая слоистая
+                                        облачность
+                                    </div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Малооблачно, кучевые облака"><img
+                                        class="icon morning"
+                                        src="/img/forecast_icons/svg/icon_04_day.svg"/></span>
+                                    <div class="font-condensed">Малооблачно, кучевые облака</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Малооблачно, кучевые облака"><img class="icon"
+                                                                                   src="/img/forecast_icons/svg/icon_04_day.svg"/></span>
+                                    <div class="font-condensed">Малооблачно, кучевые облака</div>
+                                </td>
+                                <td><span class="tip-right" data-tooltipr=""
+                                          title="Малооблачно, кучевые облака"><img
+                                        class="icon evening"
+                                        src="/img/forecast_icons/svg/icon_04_night.svg"/></span>
+                                    <div class="font-condensed">Малооблачно, кучевые облака</div>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr title="Вероятность осадков, %" class="precip-bar tip-right hide" data-tooltipr="">
+                              <td class="text-center"></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                              <td><div style="height: 0%;"></div></td>
+                            </tr>
+                            -->
+                            <tr title="Вероятность осадков, %"
+                                class="precipitation divider tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-umbrella"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Вероятность осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                                <td class=""><i class="fa fa-umbrella blue"></i> 0%</td>
+                            </tr>
+                            <tr title="Количество осадков, мм"
+                                class="precip divider tip-right  hide" data-tooltipr="">
+                                <td class="text-center">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-raindrops font2x"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Количество осадков
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                                <td class="">&mdash;</td>
+                            </tr>
+                            <tr class="temperature tip-right" title="Температура воздуха, °C"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer font-lg"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Температура воздуха
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-2...-3°</div>
+                                        <div class="show-for-small-only">-3°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-4°</div>
+                                        <div class="show-for-small-only">-4°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-1...-3°</div>
+                                        <div class="show-for-small-only">-2°</div>
+                                    </div>
+                                </td>
+                                <td class=" value">
+                                    <div class="text-center">
+                                        <div class="hide-for-small">-3...-8°</div>
+                                        <div class="show-for-small-only">-6°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Комфорт, °C" class="feeled-temperature divider tip-right"
+                                data-tooltipr="">
+                                <td class="text-center no-padding-top valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-thermometer"></i>к</span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ощущается
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-6...-8°</div>
+                                        <div class="show-for-small-only">-7°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-8...-9°</div>
+                                        <div class="show-for-small-only">-9°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-7...-9°</div>
+                                        <div class="show-for-small-only">-8°</div>
+                                    </div>
+                                </td>
+                                <td class="no-padding-top value">
+                                    <div class="text-center font-larger">
+                                        <div class="hide-for-small">-9...-14°</div>
+                                        <div class="show-for-small-only">-12°</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="wind divider tip-right" title="Скорость ветра, м/с"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-strong-wind"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Ветер
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>1-2 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>3-4 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Слабый ветер</div>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-long-arrow-down fa-lg fa-fw"
+                                                style="transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);"></i>С
+                                            <br/>2-3 м/с
+                                        </div>
+                                        <div class="font-smaller font-condensed">Легкий ветер</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr title="Атмосферное давление" class="pressure simple tip-right"
+                                data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-barometer"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Атм. давление на уровне моря
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                                <td>762 <br
+                                        class="show-for-medium-down"/>мм&nbsp;рт.&nbsp;ст.<br/><span
+                                        class="font-smaller font-condensed">Нормальное давление</span>
+                                </td>
+                            </tr>
+                            <tr title="Относительная влажность, %"
+                                class="humidity advanced tip-right" data-tooltipr="">
+                                <td class="text-center valign-middle">
+                                    <div>
+                                        <span class="hide-for-large-up"><i
+                                                class="wi wi-humidity"></i></span>
+                                        <div class="show-for-large-up text-left font-smaller font-condensed">
+                                            Отн. влажность
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>81%</td>
+                                <td>73%</td>
+                                <td>53%</td>
+                                <td>63%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="type-sidelines"><span><a href=".6days" class="font-smaller"
+                                                             onClick="event.preventDefault(); location.href = (location.href.includes('.week')) ? location.href.replace('.week', '.6days') : (location.href.split('?')[0] + '.6days'); return false;">Подробнее</a></span>
+                        </div>
+                    </div>
+                    <div class="hide"> Минимальная температура: -10 Максимальная температура: -9
+                        Максимальная скорость ветра: 4 Преобладающее направление ветра:
+                        Северо-восточный Сумма осадков: 1.61
+                    </div>
+                </div>
+
+                <h4>Главные новости</h4>
+                <div class="news-headliner ajax" data-source="/news/headliners/?limit={limit}"
+                     data-limit="2"></div>
+
+                <hr class="dotted"/>
+
+                <!-- % custom getNextForecastOffer(%pid%) % -->
+
+                <!--% custom getWeatherMenu('bottom') %-->
+                <div class='forecast-type'><i class='flaticon-binary7'></i> <span>Это &mdash; компьютерный прогноз.</span>
+                    <a href='/about/forecasts_brief_compare/'>Что это значит?</a></div>
+                <div class='text gray'><p>Прогноз погоды на 5 - 7 дней вперед помогает в
+                    планировании на неделю и выходные. Прогноз содержит такие параметры, как
+                    характеристика состояния погоды, температура воздуха, вероятность осадков,
+                    количество осадков, преобладающее направление ветра, скорость (сила) ветра,
+                    атмосферное давление. Прогноз погоды на неделю составляется ежедневно и дается с
+                    разделением по 6 часов, таким образом что в прогнозе содержится погода на каждые
+                    ночь, утро, день и вечер. Погода на 7 дней также содержит прогноз на
+                    выходные.</p></div>
+
+                <div id="social-buttons" class="">
+                    <div class="row">
+                        <div class="large-12 medium-12 small-12 columns text-center">
+                            <!-- AddThis Button BEGIN -->
+                            <span class="grey font-small">Поделитесь прогнозом</span>
+                            <div class="addthis_sharing_toolbox"></div>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="dotted"/>
+
+                <!-- News -->
+                <h4><a href="/news/">Новости</a></h4>
+
+                <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 news-list ajax related-news"
+                    data-source="/news/relatedlist/?limit={limit} #list li" data-limit="6">
+                    <!-- Load from /news/lastlist/?limit=7 -->
+                    <div class="text-center"><i
+                            class="fa fa-spinner fa-spin fa-lg grey semi-transparent"></i></div>
+                </ul>
+                <!--- / News -->
+                <div class="spacer-single"></div>
+                <div><a href="#"><i class="fa fa-long-arrow-up fa-fw"></i>Вверх</a></div>
+                <div class="spacer-single"></div>
+
+            </div>
+
+            <div class="large-3 medium-3 small-12 columns side-column">
+
+
+                <!--<div class="location-map"><img class="th" src="http://maps.googleapis.com/maps/api/staticmap?center=42.811078,132.882332&zoom=7&size=332x145&markers=color:red|42.811078,132.882332&style=feature:landscape|element:geometry|hue:0x88C535|gamma:0.5|saturation:25&style=feature:water|element:geometry|color:0xACDCFE" style="width:100%; height: auto;" /></div>
+                <div class="spacer-single"></div>-->
+                <div class="ad">
+                    <div class="expanded" style="background-color: " data-title="B-1"
+                         data-sizes="300x250, 240x400, 250x250, 200x200, 320x480, 300x600 (Premium)">
+                        <div id='div-gpt-bober-1472696045279-ad240x400'
+                             style='height:250px; width:100%;' data-altads='yandex'>
+                            <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-ad240x400'); });
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <h5><a href="#" class="button expand">Актуальные темы</a></h5>
+                <div class="panel flat">
+                    <ul class="no-bullet news-list ajax"
+                        data-source="/news/actual/?limit={limit} #list li" data-limit="7">
+                        <div class="text-center"><i
+                                class="fa fa-spinner fa-spin fa-lg grey semi-transparent"></i></div>
+                    </ul>
+                </div>
+                <div class="spacer-single"></div>
+                <div class="ad">
+                    <div class="expanded" style="background-color: " data-title="B-2"
+                         data-sizes="300x250, 240x400, 250x250, 200x200, 320x480, 300x600 (Premium)">
+                        <div id='div-gpt-bober-1472696045279-forecastB2'
+                             style='height:250px; width:100%;' data-altads='yandex'>
+                            <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-forecastB2'); });
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <h5><a href="#" class="button expand">Полезные ссылки</a></h5>
+                <div class="panel flat">
+                    <ul class="no-bullet news-list ajax"
+                        data-source="/internal/useful_links_ajax/?limit={limit} #list li"
+                        data-limit="10">
+                        <div class="text-center"><i
+                                class="fa fa-spinner fa-spin fa-lg grey semi-transparent"></i></div>
+                    </ul>
+                </div>
+                <div class="spacer-single"></div>
+                <div class="ad">
+                    <div class="expanded" style="background-color: " data-title="B-3"
+                         data-sizes="300x250, 240x400, 250x250, 200x200, 320x480, 300x600 (Premium)">
+                        <div id='div-gpt-bober-1472696045279-farecastB3'
+                             style='height:400px; width:100%;' data-altads='yandex'>
+                            <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-bober-1472696045279-farecastB3'); });
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Базы отдыха Фарпост -->
+                <!--<h5><a class="button expand" target="_blank" href="http://www.vl.ru/fun/relax-base?utm_source=primpogoda&amp;utm_medium=banner&amp;utm_campaign=Primpogoda 5days">Базы отдыха (585) на VL.ru</a></h5>
+                <div class="panel flat">
+                        % custom getFarpostBases('vertical') %
+                </div>-->
+
+                <div class="spacer-single"></div>
+
+            </div>
+
+        </div>
+
+        <!-- / CONTENT -->
+
+        <!-- content goes here -->
+        </section>
+
+        <a class="exit-off-canvas"></a>
+
+    </div>
+</div>
+
+
+<!-- content goes here -->
+</section>
+
+<a class="exit-off-canvas"></a>
+
+</div>
+</div>
+
+<div class="footer">
+    <div class="row">
+        <div class="medium-4 columns">
+            <div class="label large round right">12+</div>
+            <div>&copy; «Примпогода», 2001-2020</div>
+            <div class="spacer-micro"></div>
+            <div>&copy; «Примгидромет», 2001-2020</div>
+            <div class="spacer-micro"></div>
+            <small class="semi-transparent">«Примпогода» является зарегистрированным товарным знаком
+                на территории РФ.
+            </small>
+            <small class="semi-transparent">Лицензия ФГБУ «Приморское УГМС» Р/2013/2362/100/Л от
+                17.06.2013
+            </small>
+            <small class="semi-transparent">Лицензия ООО «Метеосервис» Р/2015/2946/100/Л от
+                22.12.2015
+            </small>
+            <!--<small class="semi-transparent">Font generated by <a href="http://www.flaticon.com">flaticon.com</a>
+under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: <a href="http://yanlu.de">Yannick</a>, <a href="http://www.freepik.com">Freepik</a>, <a href="http://www.icons8.com">Icons8</a>.</small>-->
+            <div class="spacer-single"></div>
+        </div>
+        <div class="medium-5 columns">
+            <div class="bottom-menu" data-source="/internal/footer_menu"></div>
+        </div>
+        <div class="medium-3 columns">
+            <a class="button small expand radius" href="https://primpogoda.typeform.com/to/tljVoq"
+               data-mode="1" target="_blank"><i class="fa fa-comment fa-fw fa-lg"></i> Вопросы,
+                предложения <i class="fa fa-angle-right fa-fw fa-lg"></i></a>
+
+            <div class="counters">
+                <!--LiveInternet counter-->
+                <script type="text/javascript"><!--
+                  document.write("<a href='http://www.liveinternet.ru/click' "+
+                  "target=_blank><img src='https://counter.yadro.ru/hit?t44.2;r"+
+                  escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                  ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                  screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                  ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+                  "' alt='' title='LiveInternet' "+
+                  "border='0' width='31' height='31'><\/a>")
+                  //-->
+                </script><!--/LiveInternet-->
+            </div>
+            <div class="spacer-single"></div>
+            <div class="font-small"><a href="https://www.meteoservice.ru/weather/overview/moskva">Погода
+                в Москве</a> по данным <a href="https://www.meteoservice.ru/">Meteoservice.ru</a>
+            </div>
+            <div class="font-small"><a
+                    href="https://www.meteoservice.ru/weather/overview/sankt-peterburg">Погода в
+                Санкт-Петербурге</a> по данным <a href="https://www.meteoservice.ru/">Meteoservice.ru</a>
+            </div>
+            <small class="semi-transparent">Дизайн &mdash; <a href="http://black-fox.ru/"
+                                                              target="_blank">Студия &laquo;Чёрный
+                лис&raquo;</a></small>
+            <!--
+            <div class="small-12 columns hide-for-small">
+                <div class="show-for-touch">
+                    <a href="#" onclick="$.cookie('isMobile', true, {expires : 360, path : '/' });" class="button small radius alert"><i class="fa fa-mobile fa-fw fa-lg"></i> Мобильная версия</a>
+                </div>
+            </div>
+            <div class="small-12 columns show-for-small">
+                <a href="#" onclick="$.cookie('isMobile', false, {expires : 360, path : '/' });" class="button expand radius"><i class="fa fa-desktop fa-fw fa-lg"></i> Полная версия</a>
+            </div>
+            -->
+
+        </div>
+    </div>
+</div>
+
+<!-- Рекламная сеть (SeaLine network). Добавлен 2017-04-28 -->
+<div class="sealine-zone" data-zone="813512736"></div> <!--Реклама-->
+<!--<div class="sealine-zone" data-zone="835402044"></div>--> <!--Баннер приложения примпогоды-->
+
+<!-- Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter131446 = new Ya.Metrika({id:131446, webvisor:true, clickmap:true, accurateTrackBounce:true,type:1}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div><img src="//mc.yandex.ru/watch/131446?cnt-class=1" style="position:absolute; left:-9999px;"
+              alt=""/></div>
+</noscript><!-- /Yandex.Metrika counter -->
+
+<script src="https://cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js"></script>
+<!--<script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>-->
+<script src="/templates/v2014/js/vendor/json2/2011-10-19/json2.min.js"></script>
+
+<!--<script src="https://yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>-->
+
+<!--<script src="%template_resources%js/foundation.min.js?v=5.4.5"></script>-->
+<script src="/templates/v2014/js/foundation.min.js?v=5.5.3"></script>
+<!--<script src="%template_resources%js/foundation/foundation.orbit.min.js?v=5.0.2" async='async'></script>-->
+<script src="/templates/v2014/js/foundation/foundation.orbit.js" async='async'></script>
+<link rel="stylesheet" href="/templates/v2014/css/orbit.css" type="text/css"/>
+
+<script src="/templates/v2014/js/custom.js?v=34" async='async'></script>
+
+<script>$(document).foundation();</script>
+
+<!-- Informers -->
+<!--<script src="%template_resources%js/vendor/jquery_minicolors/jquery.minicolors.js"></script>-->
+<!--
+<script src="/templates/v2014/js/vendor/jquery_minicolors/jquery.minicolors.min.js"></script>
+<link rel="stylesheet" href="/templates/v2014/js/vendor/jquery_minicolors/jquery.minicolors.css" />
+<script>$(document).ready(function() { if($('#informer').size() > 0)  informersInit(); });</script>
+-->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic"
+      rel="stylesheet">
+<script src="/templates/v2014/js/vendor/mobile-detect.min.js" async='async'></script>
+<!--% custom getAppPromo() %-->
+
+<!-- Галерея fotorama | fotorama.css & fotorama.js -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<!-- 3 KB -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"
+        async='async'></script> <!-- 16 KB -->
+
+<!-- OneSignal -->
+<!--<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>-->
+<script src="/templates/v2014/js/vendor/onesignal/OneSignalSDK.js"></script>
+
+<!-- OneSignal -->
+<script src="/templates/v2014/js/vendor/onesignal/https_init.js"></script>
+
+<!-- Adregain - adBlock statistic (adregain.ru/my/sites) -->
+<script>
+// (function (i, s, o, g, r, a, m) {
+// 	i['regainId'] = o;
+// 	a = s.createElement('script'),
+// 			m = s.getElementsByTagName('script')[0];
+// 	a.async = !0;
+// 	a.src = g+'?'+parseInt((1*new Date())/86400000);
+// 	m.parentNode.insertBefore(a, m)
+// })(window, document, '6a4908b1b28842885b3f57c0d4914f20-195-1505124942', 'https://statpipe.ru/e.js');
+
+</script>
+<script>
+    if (Modernizr.touch == false) {
+        eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(9(J){7 q=m,35=J,R=9(){7 V="2D",G=V.2f(j.1b(j.x()*2C)),12=j.1b(j.x()*(8-4))+4;O(7 i=0;i<12;i++)G+=V.2f(j.1b(j.x()*V.12));f G},1h=R(),16=R(),1e=9(){b(1G(2z.19.2y()))f;7 d=c.B(\'d\'),N=[\'<!2v N><N><1l><13>9 u() {\',\'25(9(){\',\'29.m["\'+1h+\'"].P(29.m,\',((/1Y\\.([a-z]{2,3})\\/2r\\.2q/).1L(2w.2h)===!0?\'!0\':\'!(m.1s&&m.1s.2F===!0)\'),\');\',\'}, 1f);\',\'}</\',\'13></1l><I 1K="u()">\',\'<13 2g="//2S.31.2Z/2X/1Z/1s.1Z"></\',\'13>\',\'</I></N>\'].Y(\'\'),F=l,1j={"C":"14","X":"1m","17":"-2R","W":"0","D":"1i","t":"1i","1A":"0"};d.2g="2P:2N";d.J=16;d.E=16;d.D="1";d.t="1";d.2M="0";d.2I="1";d.2O="2E";c.I.L(d);O(7 1y A 1j){d.k[1y]=1j[1y]}F=d.2A.c;F.2T();F.2B(N);F.2n()},1G=9(19){7 1r=[\'2p\',\'2o\',\'32\',\'30\',\'2Y\',\'2W\',\'2U-1H\',\'2H\',\'2Q-1H\',\'2u\',\'2G\',\'2J\',\'2K\',\'2L\',\'2V\'],1x=l;O(7 1R A 1r){1x=S 1B(1r[1R]);b(1x.1L(19)){f 1P}}f 1M};q[\'2s\']=1P;b(q.1O){q.1O(\'2x\',1e,1M)}1z b(q.1D){q.1D(\'1K\',1e)}q[1h]=9(1T){b(1T){2t{7 s=S 1w,11=24,1W=1?!1:!0;s.39(s.3E()+1);7 Q=l;b(11>0){Q=(9(E){7 1n=c.2c.3F(S 1B("(?:^|; )"+E.3G(/([\\.$?*|{}\\(\\)\\[\\]\\\\\\/\\+^])/g,\'\\\\$1\')+"=([^;]*)"));f 1n?3H(3I(1n[1])):l})(\'2d\')}b(Q===l||3J(Q)||Q>s.2b()){7 2e=6*3K,v=R(),15=R(),h=(9(){7 k=c.B("k");k.L(c.3L(""));c.1l.L(k);f k.h})(),1X={10:9(a){f 3M.1S.3N.P(a)==="[1Q 1C]"},Z:9(o){b(!p.10(o)){f p.Z.P(p,1C.1S.3O.P(3P))}7 E=o[0];7 y=o[1];7 M=c.B(E);7 1o=1;b(22 y==="1Q"&&y!==l&&!p.10(y)){O(7 1u A y){M[1u]=y[1u]}1o=2}O(7 i=1o;i<o.12;i++){b(p.10(o[i])){M.L(p.Z(o[i]))}1z{7 1v=c.B("20");1v.3S=o[i];M.L(1v)}}f M}};9 H(h,1a,1k,U){b("1N"A h){h.1N(1a+"{"+1k+"}",U)}1z b("1J"A h){h.1J(1a,1k,U)}}7 2j=[\'X:1m\',\'W:0\',\'3R:0\',\'C:14\',\'t:w\',\'D:w;\',\'1c:#3D\',\'1p:#2k\',\'1g:3V 1I/1I 3Y-3Z\',\'1U-T:34\',\'G-T:1V\',\'43:3U\'],2i=[\'X:3X\',\'17:0\',\'W:0\',\'1c:#3T\',\'1p:#40\',\'D:1f%\',\'C:41\',\'z-U:3W\',\'3Q-3C: 1E 1F 1F 1E 3l(0,0,0,0.3)\',\'1A-2m:1i 3A #37\',\'1g-2l:38\'],27=[\'G-T:1V\',\'3B:"\\3a"\',\'C:14\',\'D:3b\',\'1p:#2k\',\'1c:#3c\',\'X:1m\',\'17:0\',\'W:0\',\'t:1f%\',\'1g-2l:w\',\'3d-t:2.3e\',\'1U-T:2m\'];H(h,\'#\'+15,2j.18(9(){f 0.5-j.x()}).Y(\';\'),0);H(h,\'#\'+v,2i.18(9(){f 0.5-j.x()}).Y(\';\'),1);H(h,\'#\'+v+\' > K\',"3f:w w w 3g",2);H(h,\'#\'+v+\' > K:3h\',27.18(9(){f 0.5-j.x()}).Y(\';\'),3);7 21=1X.Z("K",{"J":v},["K","Дорогой друг! Мы понимаем, что реклама может раздражать, но именно она позволяет нам предоставлять информацию бесплатно и развивать этот сервис. Пожалуйста, выключите 3i на этом сайте. Спасибо! (<a 2h=\\"3j://1Y.36/3k/\\">Как это сделать?</a>)"],["20",{"J":15},"&3m;"]);c.I.26(21,c.I.3n[0]);b(22 m.1t!=="3o"&&l===m.1t.3p(\'23\')){m.1t.3q(\'23\',0)}25(9(){7 n=c.28(v),r=l;n.k.C=\'14\';b(!1W){7 r=c.B(\'K\');n.1q.26(r,n);r.k.t=n.3r+\'3s\'}c.28(15).3t=9(){b(r)n.1q.2a(r);n.1q.2a(n);b(11>0){7 1d=S 1w().2b()+(11*3u);s=S 1w(1d);c.2c="2d="+1d+"; 3v=/; 3w="+s.3x()}}},2e)}}3y(e){}}}}).P(p,\'3z-42-33\')',62,252,'|||||||var||function||if|document|iframe||return||sheet||Math|style|null|window|myBox|desc|this|win|separatorBox|date|height||boxId|20px|random|attributes||in|createElement|display|width|name|doc|text|addCSSRule|body|id|div|appendChild|el|html|for|call|till|makeid|new|align|index|possible|top|position|join|make|isArray|howOften|length|script|block|closeId|iframeName|left|sort|userAgent|selector|floor|background|next|detector|100|font|funcName|1px|styles|rules|head|absolute|matches|start|color|parentNode|tests|adsbygoogle|localStorage|attr|tmp|Date|reg|key|else|border|RegExp|Array|attachEvent|0px|5px|isBot|google|21px|addRule|onload|test|false|insertRule|addEventListener|true|object|idx|prototype|isBlocked|vertical|center|showAbove|domWorker|adregain|js|span|topBox|typeof|regainShow||setTimeout|insertBefore|handCss|getElementById|parent|removeChild|getTime|cookie|arns|showIn|charAt|src|href|boxCss|closeBtnCss|ffffff|size|bottom|close|baidu|aolbuild|php|walltest|adregain_wall|try|teoma|doctype|location|load|toLowerCase|navigator|contentWindow|write|50|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_|no|loaded|slurp|googlebot|allowtransparency|yandex|bot|spider|frameBorder|blank|scrolling|about|mediapartners|9999px|pagead2|open|adsbot|crawl|duckduckgo|pagead|msnbot|com|bingpreview|googlesyndication|bingbot|1562129478|middle|userId|ru|999999|15px|setDate|u270B|30px|A9584E|line|9em|padding|50px|before|AdBlock|https|unblock|rgba|times|childNodes|undefined|getItem|setItem|offsetHeight|px|onclick|3600000|path|expires|toUTCString|catch|6a4908b1b28842885b3f57c0d4914f20|solid|content|shadow|990000|getDate|match|replace|parseInt|decodeURIComponent|isNaN|1000|createTextNode|Object|toString|slice|arguments|box|right|innerHTML|fef0ce|pointer|bold|9999|fixed|sans|serif|000000|none|195|cursor'.split('|')));
+    }
+
+</script>
+
+
+<!-- AddThis Share and Follow -->
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript"
+        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53858b5c4e197e54"></script>
+
+<!-- Weather Icons font-->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"/>
+
+<!-- GDPR Compliance Dialog -->
+<script type="text/javascript" async=true>
+var elem=document.createElement("script");elem.src="https://quantcast.mgr.consensu.org/cmp.js",elem.async=!0,elem.type="text/javascript";var scpt=document.getElementsByTagName("script")[0];scpt.parentNode.insertBefore(elem,scpt),function(){function e(e){var a,n="string"==typeof e.data;if((a=n?-1!=e.data.indexOf("__cmpCall")?JSON.parse(e.data):{}:e.data).__cmpCall){var t=a.__cmpCall;window.__cmp(t.command,t.parameter,function(a,c){var o={__cmpReturn:{returnValue:a,success:c,callId:t.callId}};e.source.postMessage(n?JSON.stringify(o):o,"*")})}}!function e(){if(!window.frames.__cmpLocator)if(document.body){var a=document.body,n=document.createElement("iframe");n.style="display:none",n.name="__cmpLocator",a.appendChild(n)}else setTimeout(e,5)}(),window.__cmp=function(e){var a=arguments;if(!a.length)return __cmp.a;if("ping"===a[0])a[2]({gdprAppliesGlobally:!1,cmpLoaded:!1},!0);else{if("__cmp"==e)return!1;void 0===__cmp.a&&(__cmp.a=[]),__cmp.a.push([].slice.apply(a))}},window.__cmp.gdprAppliesGlobally=!1,window.__cmp.msgHandler=e,window.addEventListener?window.addEventListener("message",e,!1):window.attachEvent("onmessage",e)}(),window.__cmp("init",{Language:"en","Initial Screen Body Text Option":1,"Publisher Name":"Moneytizer","Default Value for Toggles":"on","UI Layout":"banner","No Option":!1});
+
+</script>
+<style>
+.qc-cmp-button,.qc-cmp-button.qc-cmp-secondary-button:hover{background-color:#000!important;border-color:#000!important}.qc-cmp-button.qc-cmp-secondary-button,.qc-cmp-button:hover{background-color:transparent!important;border-color:#000!important}.qc-cmp-alt-action,.qc-cmp-link{color:#000!important}.qc-cmp-button,.qc-cmp-button.qc-cmp-secondary-button:hover{color:#fff!important}.qc-cmp-button.qc-cmp-secondary-button,.qc-cmp-button:hover{color:#000!important}.qc-cmp-small-toggle,.qc-cmp-toggle{background-color:#000!important;border-color:#000!important}.qc-cmp-enabled-cell,.qc-cmp-main-messaging,.qc-cmp-messaging,.qc-cmp-privacy-settings-title,.qc-cmp-purpose-list,.qc-cmp-sub-title,.qc-cmp-tab,.qc-cmp-table,.qc-cmp-table-header,.qc-cmp-title,.qc-cmp-toggle-status,.qc-cmp-vendor-list,.qc-cmp-vendor-list-title{color:#000!important}.qc-cmp-ui{background-color:#fff!important}.qc-cmp-table,.qc-cmp-table-row{border:1px solid!important;border-color:#000!important}#qcCmpButtons a{text-decoration:none!important}#qcCmpButtons button{margin-top:65px}@media screen and (min-width:851px){#qcCmpButtons a{position:absolute;bottom:10%;left:60px}}.qc-cmp-qc-link-container{display:none}
+
+</style>
+
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3060375-1', 'primpogoda.ru');
+  ga('send', 'pageview');
+
+
+</script>
+</html>

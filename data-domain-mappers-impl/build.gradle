@@ -1,0 +1,7 @@
+apply from:"../common_java_module.gradle"
+
+dependencies {
+    implementation project(':data-domain-mappers-model')
+    implementation project(":domain-model")
+    implementation project(':parsers-model')
+}

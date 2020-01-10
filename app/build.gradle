@@ -1,0 +1,12 @@
+apply plugin: 'com.android.application'
+apply from: "../common_android_module.gradle"
+
+android {
+    defaultConfig {
+        applicationId "com.yurivlad.multiweather"
+    }
+}
+
+dependencies {
+    implementation project(':bridge')
+}

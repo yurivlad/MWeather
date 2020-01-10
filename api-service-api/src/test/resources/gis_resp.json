@@ -1,0 +1,157 @@
+{
+  "temperature": {
+    "air": {
+      "C": -8.3,
+      "F": 17.1
+    },
+    "comfort": {
+      "C": -14.5,
+      "F": 5.9
+    },
+    "water": {
+      "C": 3,
+      "F": 37.4
+    }
+  },
+  "icon": {
+    "flatui_FI": "d",
+    "bg": "d_c0",
+    "3": "d0",
+    "standart": "d.sun",
+    "0": "d",
+    "flatui": "d",
+    "emoji": "☀️"
+  },
+  "city": 11825,
+  "astro": {
+    "sunrise": {
+      "previous": "2020-01-08 08:45",
+      "current": "2020-01-09 08:45",
+      "next": "2020-01-10 08:45"
+    },
+    "sunset": {
+      "previous": "2020-01-08 17:51",
+      "current": "2020-01-09 17:52",
+      "next": "2020-01-10 17:53"
+    },
+    "length": {
+      "previous": 545,
+      "current": 546,
+      "next": 548,
+      "current_hours": "09:06"
+    },
+    "moonrise": {
+      "current": "2020-01-09 16:19",
+      "next": "2020-01-10 17:14"
+    },
+    "moonset": {
+      "current": "2020-01-10 08:05",
+      "next": "2020-01-11 09:03"
+    },
+    "moonphase": {
+      "isMoon": false,
+      "fullmoon": false,
+      "label": "Луна растущая"
+    },
+    "newmoon": {
+      "current": {
+        "datetime": {
+          "unix": 1579910400,
+          "date": "2020-01-25 00:00:00"
+        }
+      },
+      "next": {
+        "datetime": {
+          "unix": 1579910400,
+          "date": "2020-01-25 00:00:00"
+        }
+      }
+    },
+    "fullmoon": {
+      "current": {
+        "datetime": {
+          "unix": 1579910400,
+          "date": "2020-01-10 00:00:00"
+        }
+      },
+      "next": {
+        "datetime": {
+          "unix": 1578614400,
+          "date": "2020-01-10 00:00:00"
+        }
+      }
+    },
+    "dit": 1,
+    "icon": 7,
+    "phases": {
+      "median": 97.9,
+      "current": 97.9
+    },
+    "date": {
+      "local": "2020-01-09",
+      "unix": 1578528000
+    },
+    "polar": false
+  },
+  "description": {
+    "full": "#nebulosity.type.0#",
+    "skip_precipitation_data": null
+  },
+  "cloudiness": {
+    "percent": 0,
+    "scale_3": 0
+  },
+  "wind": {
+    "direction": {
+      "degree": 70,
+      "scale_8": 3
+    },
+    "speed": {
+      "m_s": 4,
+      "km_h": 14,
+      "mi_h": 9
+    },
+    "gust_speed": {
+      "m_s": null,
+      "km_h": null,
+      "mi_h": null
+    },
+    "gust_direction": {
+      "degree": null,
+      "scale_8": null
+    },
+    "alternate_direction": false
+  },
+  "pressure": {
+    "mm_hg_atm": 764,
+    "h_pa": 1018,
+    "in_hg": 40.1
+  },
+  "humidity": {
+    "percent": 56,
+    "dew_point": {
+      "C": -14.4
+    }
+  },
+  "gm": 2,
+  "date": {
+    "UTC": "2020-01-09 06:00:00",
+    "local": "2020-01-09 16:00:00",
+    "unix": 1578549600,
+    "timeZoneOffset": 600,
+    "hr_to_forecast": null
+  },
+  "precipitation": {
+    "type": 0,
+    "type_ext": null,
+    "amount": 0,
+    "intensity": 0,
+    "area": [],
+    "duration": 0,
+    "correction": null
+  },
+  "radiation": {
+    "UVB": null,
+    "uvb_index": null
+  }
+}

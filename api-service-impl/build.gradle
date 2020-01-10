@@ -1,0 +1,10 @@
+apply from:"../common_java_module.gradle"
+
+
+dependencies {
+    implementation retrofit
+    implementation okhttpLogginInterceptor
+    testImplementation okhttpLogginInterceptor
+    implementation project(":api-service-model")
+    implementation project(':parsers-model')
+}

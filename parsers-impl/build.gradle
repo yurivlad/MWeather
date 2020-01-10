@@ -1,0 +1,8 @@
+apply from:"../common_java_module.gradle"
+
+
+dependencies {
+    implementation jsoup
+    testImplementation jsoup
+    implementation project(':parsers-model')
+}

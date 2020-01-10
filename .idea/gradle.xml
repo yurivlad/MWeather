@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api-service-api" />
+            <option value="$PROJECT_DIR$/api-service-impl" />
+            <option value="$PROJECT_DIR$/api-service-model" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bridge" />
+            <option value="$PROJECT_DIR$/constants" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/data-domain-mappers-impl" />
+            <option value="$PROJECT_DIR$/data-domain-mappers-model" />
+            <option value="$PROJECT_DIR$/domain-impl" />
+            <option value="$PROJECT_DIR$/domain-model" />
+            <option value="$PROJECT_DIR$/parsers-impl" />
+            <option value="$PROJECT_DIR$/parsers-model" />
+            <option value="$PROJECT_DIR$/presentation-api" />
+            <option value="$PROJECT_DIR$/presentation-impl" />
+            <option value="$PROJECT_DIR$/presentation-model" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

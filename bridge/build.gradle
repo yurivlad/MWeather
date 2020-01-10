@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: "../common_android_module.gradle"
+
+dependencies {
+    implementation project(':parsers-model')
+    implementation project(':parsers-impl')
+    implementation project(":api-service-model")
+    implementation project(":domain-impl")
+    implementation project(":data-domain-mappers-model")
+    implementation project(":data-domain-mappers-impl")
+    implementation project(":api-service-api")
+    implementation project(":presentation-impl")
+    implementation project(":data")
+    api project(":presentation-api")
+    api project(":domain-model")
+}
