@@ -46,7 +46,7 @@ class ThreeWeatherSourcesForecastUseCaseTest {
 
         useCase.action(NoParamsRequest)
 
-        val forecasts = useCase.resultChannel.valueOrNull!!.list.map { it.valueOrNull!! }
+        val forecasts = useCase.resultChannel.valueOrNull.orEmpty()
 
         Assert.assertTrue(
             forecasts.contains(gisForecast)
@@ -77,7 +77,7 @@ class ThreeWeatherSourcesForecastUseCaseTest {
         useCase.action(NoParamsRequest)
 
         val channel = useCase.resultChannel
-        val forecasts = channel.valueOrNull!!.list.mapNotNull { it.valueOrNull }
+        val forecasts = channel.valueOrNull.orEmpty()
 
         Assert.assertTrue(
             forecasts.contains(gisForecast)

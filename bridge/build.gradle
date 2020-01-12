@@ -9,8 +9,11 @@ dependencies {
     implementation project(":data-domain-mappers-model")
     implementation project(":data-domain-mappers-impl")
     implementation project(":api-service-api")
-    implementation project(":presentation-impl")
+    implementation project(':weekly-forecast-impl')
     implementation project(":data")
-    api project(":presentation-api")
+    implementation project(":domain-presenter-mappers-model")
+    implementation project(":domain-presenter-mappers-impl")
+    implementation project(":presenter-model")
+    api project(':weekly-forecast-api')
     api project(":domain-model")
 }

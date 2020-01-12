@@ -16,42 +16,18 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
-import java.util.concurrent.*
+import java.util.concurrent.TimeUnit
 
 /**
  *
  */
-internal val okHttpClient =
+fun createOkHttpClient(dispatcher: Dispatcher) =
     OkHttpClient
         .Builder()
         .addNetworkInterceptor(HttpLoggingInterceptor().apply {
             setLevel(HttpLoggingInterceptor.Level.BODY)
         })
-        .dispatcher(Dispatcher(object :AbstractExecutorService() {
-            override fun isTerminated(): Boolean {
-                return false
-            }
-
-            override fun execute(command: Runnable) {
-               command.run()
-            }
-
-            override fun shutdown() {
-
-            }
-
-            override fun shutdownNow(): MutableList<Runnable> {
-               return arrayListOf()
-            }
-
-            override fun isShutdown(): Boolean {
-                return false
-            }
-
-            override fun awaitTermination(timeout: Long, unit: TimeUnit): Boolean {
-               return true
-            }
-        }))
+        .dispatcher(dispatcher)
         .followRedirects(false)
         .callTimeout(30_000, TimeUnit.SECONDS)
         .addInterceptor(object : Interceptor {
@@ -60,7 +36,7 @@ internal val okHttpClient =
                     chain
                         .request()
                         .newBuilder()
-                        .addHeader("user-agent", getRandomUserAgent())
+                        //.addHeader("user-agent", getRandomUserAgent())
                         .build()
                 )
             }
@@ -68,11 +44,20 @@ internal val okHttpClient =
         .build()
 
 
-fun createGisApiService(gis10DayForecastParser: Parser<Gis10DayForecast>): GisApiService =
+fun createGisApiService(
+    gis10DayForecastParser: Parser<Gis10DayForecast>,
+    okHttpClient: OkHttpClient
+): GisApiService =
     GisApiServiceImpl(gis10DayForecastParser, okHttpClient)
 
-fun createPrimApiService(prim7DayForecastParser: Parser<Prim7DayForecast>): PrimApiService =
+fun createPrimApiService(
+    prim7DayForecastParser: Parser<Prim7DayForecast>,
+    okHttpClient: OkHttpClient
+): PrimApiService =
     PrimApiServiceImpl(prim7DayForecastParser, okHttpClient)
 
-fun createYaApiService(ya10DayForecastParser: Parser<Ya10DayForecast>): YaApiService =
+fun createYaApiService(
+    ya10DayForecastParser: Parser<Ya10DayForecast>,
+    okHttpClient: OkHttpClient
+): YaApiService =
     YaApiServiceImpl(ya10DayForecastParser, okHttpClient)

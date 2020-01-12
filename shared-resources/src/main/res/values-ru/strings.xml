@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">shared-resources</string>
+    <string name="gis_name">Гисметео</string>
+    <string name="prim_name">Примпогода</string>
+    <string name="ya_name">Яндекс</string>
+    <string name="morning">Утро</string>
+    <string name="day">День</string>
+    <string name="evening">Вечер</string>
+    <string name="night">Ночь</string>
+    <string name="range_temp">%s..%s °C</string>
+    <string name="range_wind">%s..%s м/c</string>
+</resources>

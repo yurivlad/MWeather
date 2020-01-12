@@ -1,7 +1,0 @@
-apply plugin: 'com.android.library'
-apply from: "../common_android_module.gradle"
-
-dependencies {
-    api project(":presentation-model")
-    implementation project(":presentation-impl")
-}

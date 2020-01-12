@@ -5,6 +5,6 @@ import com.yurivlad.multiweather.domainModel.DomainModel
 /**
  *
  */
-interface ToDomainMapper<F, D : ToDomainMapperAdditionalParams, T : DomainModel> {
+interface ToDomainMapper<F, D : ToDomainMapperParams, T : DomainModel> {
     fun convert(from: F, additionalData: D): T
 }

@@ -2,7 +2,7 @@ package com.yurivlad.multiweather
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.yurivlad.multiweather.presentationModel.Presentation
+import com.yurivlad.multiweather.weeklyForecast.Presentation
 import org.koin.android.ext.android.inject
 
 const val ROOT_FRAGMENT_TAG = "root_fragment_tag"

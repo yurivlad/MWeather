@@ -7,7 +7,6 @@ import com.yurivlad.multiweather.domainModel.model.ForecastSources
 import com.yurivlad.multiweather.domainModel.model.NoParamsRequest
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import org.junit.Assert
@@ -35,7 +34,7 @@ class ThreeForecastUseCastIntegrationTest : KoinTest {
 
         useCase.action(NoParamsRequest)
 
-        val forecasts = useCase.resultChannel.valueOrNull!!.list.mapNotNull { it.valueOrNull }
+        val forecasts = useCase.resultChannel.valueOrNull.orEmpty()
 
         Assert.assertEquals(
             "$useCase channel progress lost",
@@ -47,12 +46,23 @@ class ThreeForecastUseCastIntegrationTest : KoinTest {
             3,
             forecasts.size
         )
+        Assert.assertTrue(
+            forecasts[0].isNotEmpty()
+        )
+        Assert.assertTrue(
+            forecasts[1].isNotEmpty()
+        )
+        Assert.assertTrue(
+            forecasts[2].isNotEmpty()
+        )
     }
 }
 
+@ExperimentalCoroutinesApi
 val testModule = module {
     single<DispatchersProvider> { AssignableDispatcher(TestCoroutineDispatcher()) }
     single<CoroutineDispatcher> { TestCoroutineDispatcher() }
+    single { createTestDispatcher() }
 }
 
 

@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from: "../common_android_module.gradle"
+apply from: "../presenter_dependencies.gradle"
+
+dependencies {
+    implementation project(':weekly-forecast-model')
+    implementation project(':domain-model')
+
+}

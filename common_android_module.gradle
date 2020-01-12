@@ -46,7 +46,9 @@ dependencies {
     implementation "org.koin:koin-android:$koinVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation okhttpLogginInterceptor
-
+    implementation project(":shared-resources")
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    implementation "com.squareup.moshi:moshi-adapters:$moshiVersion"
 
     testImplementation 'org.robolectric:robolectric:4.3'
     testImplementation coroutines
@@ -57,5 +59,7 @@ dependencies {
     testImplementation "org.koin:koin-core:$koinVersion"
     testImplementation "org.koin:koin-core-ext:$koinVersion"
     testImplementation okhttpLogginInterceptor
+    testImplementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    testImplementation "com.squareup.moshi:moshi-adapters:$moshiVersion"
 
 }

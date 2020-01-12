@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">shared-resources</string>
+    <string name="gis_name">Gismeteo</string>
+    <string name="prim_name">Primpogoda</string>
+    <string name="ya_name">Yandex</string>
+    <string name="morning">Morning</string>
+    <string name="day">Day</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="range_temp">%s..%s °C</string>
+    <string name="range_wind">%s..%s m/s</string>
+</resources>

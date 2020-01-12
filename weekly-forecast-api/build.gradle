@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+apply from: "../common_android_module.gradle"
+
+dependencies {
+    api project(':weekly-forecast-model')
+    implementation project(':weekly-forecast-impl')
+}

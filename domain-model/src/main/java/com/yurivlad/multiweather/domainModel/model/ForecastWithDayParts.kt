@@ -11,7 +11,7 @@ data class ForecastWithDayParts(
     val from: Date,
     val to: Date,
     val forecasts: List<ForecastForDayWithDayParts>
-) : DomainModel
+) : DomainModel, List<ForecastForDayWithDayParts> by forecasts
 
 data class ForecastForDayWithDayParts(
     val date: Date,

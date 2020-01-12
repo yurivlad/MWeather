@@ -33,11 +33,6 @@ class WeatherSourcesForecastUseCase(
             primRepo.getModel(primRequest)
         )
 
-        channel
-            .valueSendChannel
-            .offer(
-                ForecastSources(channels)
-            )
 
         workerScope.launch {
             val receiveChannel = createCombinedProgressChannel(channels)
@@ -66,6 +61,20 @@ class WeatherSourcesForecastUseCase(
                 if (lastValue == null || lastValue != newValue) {
                     channel.errorSendChannel.send(newValue)
                 }
+            }
+        }
+        workerScope.launch {
+            val receiveChannel = createCombinedErrorChannel(channels)
+
+            while (!receiveChannel.isClosedForReceive) {
+                receiveChannel.receive()
+                channel.valueSendChannel.send(
+                    ForecastSources(
+                        channels.mapNotNull {
+                            it.valueOrNull
+                        }
+                    )
+                )
             }
         }
     }

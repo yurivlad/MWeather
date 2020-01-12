@@ -11,5 +11,6 @@ ext {
     koinVersion = '2.0.1'
     appCompatVersion = "1.1.0"
     navVersion = "2.1.0"
-
+    lifeCycleVersion = "2.2.0-rc03"
+    moshiVersion = "1.9.2"
 }
