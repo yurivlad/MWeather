@@ -1,8 +1,8 @@
-package com.yurivlad.multiweather.weeklyForecastModel
+package com.yurivlad.multiweather.weeklyForecastImpl
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastFragment
+import com.yurivlad.multiweather.weeklyForecastModel.Presentation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 /**

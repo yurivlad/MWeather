@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">shared-resources</string>
+    <string name="app_name">MultiWeather</string>
     <string name="gis_name">Gismeteo</string>
     <string name="prim_name">Primpogoda</string>
     <string name="ya_name">Yandex</string>
