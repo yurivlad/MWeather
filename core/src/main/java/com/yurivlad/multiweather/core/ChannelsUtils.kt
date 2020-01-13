@@ -9,7 +9,8 @@ import kotlinx.coroutines.selects.select
 /**
  *
  */
-@UseExperimental(ExperimentalCoroutinesApi::class)
+
+@ExperimentalCoroutinesApi
 fun <T> CoroutineScope.combine(vararg channels: ReceiveChannel<T>): ReceiveChannel<T> = produce {
     while (!channels.any { it.isClosedForReceive }) {
         val value = select<T> {

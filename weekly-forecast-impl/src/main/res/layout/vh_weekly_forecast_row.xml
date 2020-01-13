@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="forecast"
+            type="com.yurivlad.multiweather.presenterModel.DayPartRow" />
+
+        <variable
+            name="stringsProvider"
+            type="com.yurivlad.multiweather.core.StringsProvider" />
+
+        <import type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastBindingUtils" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:background="@drawable/rect_gray"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dayPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:rotation="-90"
+            android:textSize="12sp"
+            android:text="@{forecast.dayPart}"
+            tools:text="Вечер" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/first_forecast"
+            style="@style/WeekForecastItem"
+            android:paddingStart="8dp"
+            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.firstColumn, stringsProvider)}"
+            tools:text="Погода солнечная\n5-10 градусов\nветер: 3-4 м/c" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/second_forecast"
+            style="@style/WeekForecastItem"
+            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.secondColumn, stringsProvider)}"
+            tools:text="" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/third_forecast"
+            style="@style/WeekForecastItem"
+            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.thirdColumn, stringsProvider)}"
+            tools:text="Погода солнечная\n5-10 градусов\nветер: 3-4 м/c" />
+    </LinearLayout>
+</layout>

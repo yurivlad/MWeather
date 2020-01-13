@@ -3,6 +3,7 @@ apply from: "../ext.gradle"
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
 
     compileSdkVersion targetSdk
@@ -13,9 +14,12 @@ android {
         targetSdkVersion targetSdk
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+    }
+    dataBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -34,7 +38,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    kapt 'androidx.databinding:databinding-compiler:3.5.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.core:core-ktx:$appCompatVersion"
     implementation project(":constants")

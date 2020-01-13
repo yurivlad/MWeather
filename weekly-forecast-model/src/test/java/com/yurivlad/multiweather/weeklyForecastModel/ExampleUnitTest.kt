@@ -1,4 +1,4 @@
-package com.yurivlad.multiweather.weeklyForecast
+package com.yurivlad.multiweather.weeklyForecastModel
 
 import org.junit.Test
 

@@ -7,21 +7,21 @@ import java.util.*
  */
 data class ForecastWithThreeSourcesPresenterModel(
     val sources: ForecastSourceNames,
-    val forecastRows: List<ForecastRow>
-) : PresenterModel, List<ForecastRow> by forecastRows
+    val forecastRows: List<WeeklyForecastRow>
+) : PresenterModel, List<WeeklyForecastRow> by forecastRows
 
 data class ForecastSourceNames(val first: String?, val second: String?, val third: String?)
 
-sealed class ForecastRow
+sealed class WeeklyForecastRow
 
-data class DateRow(val date: Date) : ForecastRow()
+data class DateRow(val date: Date) : WeeklyForecastRow()
 
 data class DayPartRow(
     val dayPart: String,
     val firstColumn: ForecastForDayPart?,
     val secondColumn: ForecastForDayPart?,
     val thirdColumn: ForecastForDayPart?
-) : ForecastRow()
+) : WeeklyForecastRow()
 
 data class ForecastForDayPart(
     val summary: String,

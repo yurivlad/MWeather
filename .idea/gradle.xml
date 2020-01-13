@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/parsers-impl" />
             <option value="$PROJECT_DIR$/parsers-model" />
             <option value="$PROJECT_DIR$/presenter-model" />
+            <option value="$PROJECT_DIR$/presenter-utils" />
             <option value="$PROJECT_DIR$/shared-resources" />
             <option value="$PROJECT_DIR$/weekly-forecast-api" />
             <option value="$PROJECT_DIR$/weekly-forecast-impl" />

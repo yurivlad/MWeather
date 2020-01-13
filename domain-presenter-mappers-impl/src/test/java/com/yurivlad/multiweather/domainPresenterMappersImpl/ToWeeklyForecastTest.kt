@@ -104,7 +104,7 @@ class ToWeeklyForecastTest {
         Assert.assertEquals("gis temperature lost", "-9", first.firstColumn?.temperature)
         Assert.assertEquals(
             "prim temperature lost",
-            sp.getString(R.string.range_temp, -8, -9),
+            "-8",
             first.secondColumn?.temperature
         )
         Assert.assertEquals("gis wind lost", "4", first.firstColumn?.windMetersPerSecond)

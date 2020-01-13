@@ -22,7 +22,7 @@ open class CompositeReceiveChannel<T> {
 
     fun openValueSubscription(): ReceiveChannel<T> = valueChannel.openSubscription()
     fun openProgressSubscription(): ReceiveChannel<Boolean> = progressChannel.openSubscription()
-    fun openErrorSubscription(): ReceiveChannel<java.lang.Exception?> = errorChannel.openSubscription()
+    fun openErrorSubscription(): ReceiveChannel<Exception?> = errorChannel.openSubscription()
 }
 
 
@@ -33,15 +33,12 @@ class CompositeBroadcastChannel<T> : CompositeReceiveChannel<T>() {
     val errorSendChannel: ConflatedBroadcastChannel<Exception?> = errorChannel
 }
 
-/**
- * Merges multiple [channels] into one channel.
- * All elements of all channels are sent to the combined channel in the order they arrive on the input channels.
- */
-fun <T> CoroutineScope.mergeChannels(vararg channels: ReceiveChannel<T>) : ReceiveChannel<T> {
+@ExperimentalCoroutinesApi
+fun <T> CoroutineScope.mergeChannels(vararg channels: ReceiveChannel<T>): ReceiveChannel<T> {
     return produce {
-        while (true){
+        while (true) {
             channels.forEach { channel ->
-                while (!channel.isClosedForReceive){
+                while (!channel.isClosedForReceive) {
                     send(channel.receive())
                 }
             }

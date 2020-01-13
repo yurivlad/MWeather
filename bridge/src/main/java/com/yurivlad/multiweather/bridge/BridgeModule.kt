@@ -39,6 +39,7 @@ import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresente
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.Dispatcher
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -99,16 +100,17 @@ internal val appCoreModules = module {
 val realAppDependencies = module {
     single<DispatchersProvider> { DispatchersProviderImpl }
     single<CoroutineDispatcher> { get<DispatchersProvider>().workerDispatcher }
-    single {
+    single<StringsProvider> {
         object : StringsProvider {
             override fun getString(resId: Int): String {
-                return get<Context>().getString(resId)
+                return androidContext().getString(resId)
             }
 
             override fun getString(resId: Int, vararg formatArgs: Any): String {
-                return get<Context>().getString(resId, *formatArgs)
+                return androidContext().getString(resId, *formatArgs)
             }
         }
     }
     single { Dispatcher() }
+
 }

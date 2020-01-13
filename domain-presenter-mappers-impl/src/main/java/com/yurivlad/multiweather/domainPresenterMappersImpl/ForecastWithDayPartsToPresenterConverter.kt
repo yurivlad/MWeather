@@ -10,6 +10,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.LinkedHashMap
+import kotlin.math.ceil
 
 /**
  *
@@ -43,7 +44,7 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
                 }
             ),
             dayNumToForecasts.run {
-                val out = ArrayList<ForecastRow>(size * 4)
+                val out = ArrayList<WeeklyForecastRow>(size * 4)
                 forEach { mapEntry ->
                     val cal = Calendar.getInstance(TimeZone.getDefault())
                     cal.set(Calendar.DAY_OF_MONTH, mapEntry.key)
@@ -121,18 +122,11 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
         return forecastForDay?.let { forecast ->
             ForecastForDayPart(
                 forecast.summary,
-                if (forecast.temperature.from != forecast.temperature.to)
-                    stringsProvider.getString(
-                        R.string.range_temp,
-                        forecast.temperature.from,
-                        forecast.temperature.to
-                    ) else forecast.temperature.from.toString(),
+                if (forecast.temperature.from != forecast.temperature.to) ceil((forecast.temperature.from + forecast.temperature.to) / 2.0).formatDouble()
+                else forecast.temperature.from.toString(),
                 if (forecast.windMetersPerSecond.from != forecast.windMetersPerSecond.to)
-                    stringsProvider.getString(
-                        R.string.range_wind,
-                        forecast.windMetersPerSecond.from.formatDouble(),
-                        forecast.windMetersPerSecond.to.formatDouble()
-                    ) else forecast.windMetersPerSecond.from.formatDouble()
+                    ceil((forecast.windMetersPerSecond.from + forecast.windMetersPerSecond.to) / 2.0).formatDouble()
+                else forecast.windMetersPerSecond.from.formatDouble()
             )
 
         }

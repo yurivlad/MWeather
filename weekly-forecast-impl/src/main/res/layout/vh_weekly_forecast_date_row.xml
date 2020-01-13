@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools">
+    
+    <data>
+        <import type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastBindingUtils"/>
+        <variable
+            name="dateRow"
+            type="com.yurivlad.multiweather.presenterModel.DateRow" />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:minHeight="32dp"
+        android:text = "@{WeeklyForecastBindingUtils.createDateLabelText(dateRow.date)}"
+        android:textSize="14sp"
+        tool:text="12  декабря" />
+</layout>

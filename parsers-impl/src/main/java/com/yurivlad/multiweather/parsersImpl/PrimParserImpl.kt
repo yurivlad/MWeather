@@ -67,13 +67,17 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
                         it
                             .text()
                             .split("-")
-                            .map { it.replace(nonNumbersRegexp, "").toInt() }
+                            .map {
+                                it
+                                    .filter { Character.isDigit(it) }
+                                    .toInt()
+                            }
 
                     }
 
-                val dayParts = (0..3).map { index ->
+                val dayParts = (0..3).map { dayPartIndex ->
                     createDayPartItem(
-                        index,
+                        dayPartIndex,
                         temperatures,
                         summaries,
                         winds

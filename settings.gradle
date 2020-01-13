@@ -1,4 +1,4 @@
-include ':app', ':weekly-forecast-impl',
+include ':app', ':weekly-forecast-impl', ':presenter-utils',
         ':weekly-forecast-model',
         ':api-service-api',
         ':weekly-forecast-api',

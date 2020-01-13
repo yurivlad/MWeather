@@ -7,6 +7,9 @@
     <string name="day">Day</string>
     <string name="evening">Evening</string>
     <string name="night">Night</string>
-    <string name="range_temp">%s..%s °C</string>
-    <string name="range_wind">%s..%s m/s</string>
+    <string name="range_temp">%s..%s</string>
+    <string name="range_wind">%s..%s</string>
+    <string name="day_part_forecast">overall: %s\ntemp: %s\nwind: %s</string>
+    <string name="unknown_weekly_forecast_row">Unknown</string>
+    <string name="update_error_check_network_connection">Update error, check network connection</string>
 </resources>

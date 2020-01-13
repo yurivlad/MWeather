@@ -8,6 +8,9 @@
     <string name="day">День</string>
     <string name="evening">Вечер</string>
     <string name="night">Ночь</string>
-    <string name="range_temp">%s..%s °C</string>
-    <string name="range_wind">%s..%s м/c</string>
+    <string name="range_temp">%s..%s</string>
+    <string name="range_wind">%s..%s</string>
+    <string name="unknown_weekly_forecast_row">Неизвестно</string>
+    <string name="day_part_forecast">%s\nТемпература: %s °C\nВетер: %s м/c</string>
+    <string name="update_error_check_network_connection">Проверьте интернет-соединение</string>
 </resources>

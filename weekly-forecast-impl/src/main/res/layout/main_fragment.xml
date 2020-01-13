@@ -1,56 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <data>
+
+        <import type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastBindingUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/weekly_forecast_root"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?actionBarSize" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/error_view"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:lines="1"
-                android:padding="8dp"
-                android:text="Update error, check network connection"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="16sp"
-                android:visibility="visible" />
+                app:layout_scrollFlags="scroll|enterAlways|snap">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler"
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/first_forecast_source_name"
+                        style="@style/ForecastSourceNameStyle"
+                        firstSource="@{viewModel.forecastsLiveData.onValue}"
+                        tools:text="Гисметео" />
+
+                    <TextView
+                        android:id="@+id/second_forecast_source_name"
+                        style="@style/ForecastSourceNameStyle"
+                        secondSource="@{viewModel.forecastsLiveData.onValue}"
+                        tools:text="Примпогода" />
+
+                    <TextView
+                        android:id="@+id/third_forecast_source_name"
+                        style="@style/ForecastSourceNameStyle"
+                        thirdSource="@{viewModel.forecastsLiveData.onValue}"
+                        tools:text="Яндекс" />
+                </LinearLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_to_refresh"
+            isRefreshing="@{viewModel.forecastsLiveData.onProgress}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:onRefreshListener="@{() -> viewModel.requestUpdate()}">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/v_holder_week_forecast" />
-        </LinearLayout>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/error_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="8dp"
+                    android:text="@string/update_error_check_network_connection"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    android:visibility="@{viewModel.forecastsLiveData.onError != null? View.VISIBLE : View.GONE}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    items="@{viewModel.forecastsLiveData.onValue}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                    tools:listitem="@layout/vh_weekly_forecast_row" />
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

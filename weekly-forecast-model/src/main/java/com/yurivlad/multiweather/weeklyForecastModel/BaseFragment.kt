@@ -1,4 +1,4 @@
-package com.yurivlad.multiweather.weeklyForecast
+package com.yurivlad.multiweather.weeklyForecastModel
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
