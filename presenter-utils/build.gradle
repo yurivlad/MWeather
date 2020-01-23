@@ -3,9 +3,3 @@ apply from: "../ext.gradle"
 apply plugin: 'com.android.library'
 
 apply from:"../common_android_module.gradle"
-
-android {
-    dataBinding {
-        enabled = true
-    }
-}

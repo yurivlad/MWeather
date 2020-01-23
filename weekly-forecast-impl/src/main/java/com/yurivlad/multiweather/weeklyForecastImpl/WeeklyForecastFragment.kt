@@ -27,7 +27,6 @@ class WeeklyForecastFragment : BaseFragment<WeeklyForecastViewModel>() {
         val db = MainFragmentBinding.inflate(inflater, container, false)
         db.lifecycleOwner = this
         db.viewModel = viewModel
-        (db.recycler.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
         return db.root
     }
 

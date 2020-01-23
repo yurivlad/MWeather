@@ -2,7 +2,6 @@
 
 package com.yurivlad.multiweather.bridge
 
-import android.content.Context
 import com.yurivlad.multiweather.apiServiceApi.createGisApiService
 import com.yurivlad.multiweather.apiServiceApi.createOkHttpClient
 import com.yurivlad.multiweather.apiServiceApi.createPrimApiService
@@ -12,15 +11,16 @@ import com.yurivlad.multiweather.apiServiceModel.PrimApiService
 import com.yurivlad.multiweather.apiServiceModel.YaApiService
 import com.yurivlad.multiweather.core.DispatchersProvider
 import com.yurivlad.multiweather.core.DispatchersProviderImpl
-import com.yurivlad.multiweather.core.StringsProvider
 import com.yurivlad.multiweather.data.Gis10DayForecastRepositoryImpl
 import com.yurivlad.multiweather.data.Prim7DayForecastRepositoryImpl
 import com.yurivlad.multiweather.data.Ya10DayForecastRepositoryImpl
 import com.yurivlad.multiweather.dataDomainConvertersImpl.GisToDomainMapper
 import com.yurivlad.multiweather.dataDomainConvertersImpl.PrimToDomainMapper
+import com.yurivlad.multiweather.dataDomainConvertersImpl.ToWeatherTypeMapperImpl
 import com.yurivlad.multiweather.dataDomainConvertersImpl.YaToDomainMapper
 import com.yurivlad.multiweather.dataDomainConvertersModel.NoAdditionalParams
 import com.yurivlad.multiweather.dataDomainConvertersModel.ToDomainMapper
+import com.yurivlad.multiweather.dataDomainConvertersModel.ToWeatherTypeMapper
 import com.yurivlad.multiweather.domainImpl.WeatherSourcesForecastUseCase
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.UseCase
@@ -36,6 +36,7 @@ import com.yurivlad.multiweather.parsersModel.Parser
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
 import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
+import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.Dispatcher
@@ -56,9 +57,10 @@ internal val appCoreModules = module {
     single<YaApiService> { createYaApiService(get(named("YaParserImpl")), get()) }
     single<PrimApiService> { createPrimApiService(get(named("PrimParserImpl")), get()) }
 
-    single<ToDomainMapper<Gis10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("GisToDomainMapper")) { GisToDomainMapper }
-    single<ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("YaToDomainMapper")) { YaToDomainMapper }
-    single<ToDomainMapper<Prim7DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("PrimToDomainMapper")) { PrimToDomainMapper }
+    single<ToWeatherTypeMapper> { ToWeatherTypeMapperImpl }
+    single<ToDomainMapper<Gis10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("GisToDomainMapper")) { GisToDomainMapper(get()) }
+    single<ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("YaToDomainMapper")) { YaToDomainMapper(get()) }
+    single<ToDomainMapper<Prim7DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("PrimToDomainMapper")) { PrimToDomainMapper(get()) }
 
     single<RepositoryDomain<ForecastWithDayParts, Gis10DayForecastRequest>>(named("Gis10DayForecastRepositoryImpl")) {
         Gis10DayForecastRepositoryImpl(

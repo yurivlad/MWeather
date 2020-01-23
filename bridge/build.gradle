@@ -14,6 +14,7 @@ dependencies {
     implementation project(":domain-presenter-mappers-model")
     implementation project(":domain-presenter-mappers-impl")
     implementation project(":presenter-model")
+    implementation project(":presenter-utils")
     api project(':weekly-forecast-api')
     api project(":domain-model")
 }

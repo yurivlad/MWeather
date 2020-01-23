@@ -21,24 +21,11 @@ class GisServiceTest {
                 override fun parse(inputHtml: String): Gis10DayForecast {
                     return Gis10DayForecast(Date(), Date(), emptyList())
                 }
-            })
+            }, OkHttpClient())
 
             service.get10DayForecast("weather-nakhodka-4879")
         }
     }
 
-    ////api/v2/search/nearestTownsByCoords/?latitude=" + t.latitude + "&longitude=" + t.longitude + "&limit=1"
-    //https://www.gismeteo.ru/api/v2/weather/current/11825/
-    @Test
-    fun apiTest() {
-        val okHttpClient = OkHttpClient
-            .Builder()
-            .addNetworkInterceptor(HttpLoggingInterceptor().apply {
-                setLevel(HttpLoggingInterceptor.Level.BODY)
-            })
-            .build()
 
-        okHttpClient.newCall(Request.Builder().get().url("https://www.gismeteo.ru/weather-nakhodka-4879/3-days/#7-9-days").build())
-            .execute()
-    }
 }

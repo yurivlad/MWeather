@@ -9,5 +9,5 @@ import retrofit2.http.Path
  */
 interface PrimApiService {
     @GET("{cityName}/.week")
-    suspend fun get7DayForecast(@Path("cityName") primCityName: String): Prim7DayForecast
+    suspend fun get7DayForecast(@Path("cityName", encoded = true) primCityName: String): Prim7DayForecast
 }

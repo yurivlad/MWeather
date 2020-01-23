@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="divider_color">#c3c3c3</color>
+    <color name="textPrimary">#99000000</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorDay">#00C6FF</color>
+    <color name="colorEvening">#0063FF</color>
+    <color name="colorNight">#092DFF</color>
 </resources>

@@ -9,7 +9,10 @@
     <string name="night">Night</string>
     <string name="range_temp">%s..%s</string>
     <string name="range_wind">%s..%s</string>
-    <string name="day_part_forecast">overall: %s\ntemp: %s\nwind: %s</string>
+    <string name="day_part_forecast">%s\nTemperature: %s\nWind: %s</string>
     <string name="unknown_weekly_forecast_row">Unknown</string>
     <string name="update_error_check_network_connection">Update error, check network connection</string>
+    <string name="temperature">%s °C</string>
+    <string name="wind">%s m/s</string>
+    <string name="no_forecast">No forecast</string>
 </resources>

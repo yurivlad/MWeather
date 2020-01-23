@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ContentDescription"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -10,63 +12,278 @@
 
         <variable
             name="stringsProvider"
-            type="com.yurivlad.multiweather.core.StringsProvider" />
+            type="com.yurivlad.multiweather.presenterUtils.StringsProvider" />
 
         <import type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastBindingUtils" />
+
+        <import type="android.view.View" />
     </data>
 
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:gravity="center"
-        android:minHeight="40dp"
         android:background="@drawable/rect_gray"
+        android:gravity="center|top"
+        android:minHeight="40dp"
         android:orientation="horizontal">
 
-        <TextView
+        <com.yurivlad.multiweather.presenterUtils.VerticalText
             android:id="@+id/dayPart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:rotation="-90"
-            android:textSize="12sp"
-            android:text="@{forecast.dayPart}"
-            tools:text="Вечер" />
+            vertText="@{forecast.dayPart}"
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
 
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/first_forecast"
-            style="@style/WeekForecastItem"
-            android:paddingStart="8dp"
-            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.firstColumn, stringsProvider)}"
-            tools:text="Погода солнечная\n5-10 градусов\nветер: 3-4 м/c" />
 
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/second_forecast"
-            style="@style/WeekForecastItem"
-            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.secondColumn, stringsProvider)}"
-            tools:text="" />
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/ForecastColumn">
+
+            <ImageView
+                imageSrc="@{forecast.firstColumn.weatherPicture}"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_clear_linear_40dp"
+                app:layout_constraintStart_toEndOf="@id/barrier_1"
+                 />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="wrap_content"
+                android:id="@+id/barrier_1"
+                app:constraint_referenced_ids="temp_descr_1,wind_descr_1"
+                app:barrierDirection="end"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/therm_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_therm_linear_14dp"
+                android:visibility="@{forecast.firstColumn == null? View.GONE:View.VISIBLE}"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/temp_descr_1"
+                style="@style/WeeklyForecastItemLabel"
+                temperature="@{forecast.firstColumn}"
+                app:layout_constraintBottom_toBottomOf="@id/therm_1"
+                app:layout_constraintStart_toEndOf="@id/therm_1"
+                app:layout_constraintTop_toTopOf="parent"
+
+                tools:text="5 C" />
+
+            <ImageView
+                android:id="@+id/wind_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_wind_14dp"
+                android:visibility="@{forecast.firstColumn == null? View.GONE:View.VISIBLE}"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/therm_1" />
+
+            <TextView
+                android:id="@+id/wind_descr_1"
+                style="@style/WeeklyForecastItemLabel"
+                wind="@{forecast.firstColumn}"
+                app:layout_constraintStart_toEndOf="@id/wind_1"
+                app:layout_constraintTop_toBottomOf="@id/wind_1"
+                app:layout_constraintTop_toTopOf="@id/wind_1"
+                tools:text="3 м/с" />
+
+
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:text="@{forecast.firstColumn.summary}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wind_1"
+                tools:text="Погода солнечная" />
+
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/no_forecast"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="No forecast"
+                android:visibility="@{forecast.firstColumn == null? View.VISIBLE:View.GONE}"
+                tools:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/divider_color" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/ForecastColumn">
+
+            <ImageView
+                imageSrc="@{forecast.secondColumn.weatherPicture}"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toEndOf="@id/barrier_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_clear_linear_40dp" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="wrap_content"
+                android:id="@+id/barrier_2"
+                app:constraint_referenced_ids="temp_descr_2,wind_descr_2"
+                app:barrierDirection="end"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/therm_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_therm_linear_14dp"
+                android:visibility="@{forecast.secondColumn == null? View.GONE:View.VISIBLE}"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/temp_descr_2"
+                style="@style/WeeklyForecastItemLabel"
+                temperature="@{forecast.secondColumn}"
+                app:layout_constraintBottom_toBottomOf="@id/therm_2"
+                app:layout_constraintStart_toEndOf="@id/therm_2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5 C" />
+
+            <ImageView
+                android:id="@+id/wind_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_wind_14dp"
+                android:visibility="@{forecast.secondColumn == null?View.GONE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/therm_2" />
+
+            <TextView
+                android:id="@+id/wind_descr_2"
+                style="@style/WeeklyForecastItemLabel"
+                wind="@{forecast.secondColumn}"
+                app:layout_constraintStart_toEndOf="@id/wind_2"
+                app:layout_constraintTop_toBottomOf="@id/wind_2"
+                app:layout_constraintTop_toTopOf="@id/wind_2"
+                tools:text="3 м/с" />
+
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:text="@{forecast.secondColumn.summary}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wind_2"
+                tools:text="Погода солнечная" />
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/no_forecast"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="No forecast"
+                android:visibility="@{forecast.secondColumn == null? View.VISIBLE:View.GONE}"
+                tools:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/third_forecast"
-            style="@style/WeekForecastItem"
-            android:text="@{WeeklyForecastBindingUtils.createForecast(forecast.thirdColumn, stringsProvider)}"
-            tools:text="Погода солнечная\n5-10 градусов\nветер: 3-4 м/c" />
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/ForecastColumn">
+
+            <ImageView
+                imageSrc="@{forecast.thirdColumn.weatherPicture}"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrier_3"
+                tools:src="@drawable/ic_clear_linear_40dp" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="wrap_content"
+                android:id="@+id/barrier_3"
+                app:constraint_referenced_ids="temp_descr_3,wind_descr_3"
+                app:barrierDirection="end"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/therm_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_therm_linear_14dp"
+                android:visibility="@{forecast.thirdColumn == null?View.GONE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/temp_descr_3"
+                style="@style/WeeklyForecastItemLabel"
+                temperature="@{forecast.thirdColumn}"
+                app:layout_constraintBottom_toBottomOf="@id/therm_3"
+                app:layout_constraintStart_toEndOf="@id/therm_3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5 C" />
+
+            <ImageView
+                android:id="@+id/wind_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_wind_14dp"
+                android:visibility="@{forecast.thirdColumn == null?View.GONE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/therm_3" />
+
+            <TextView
+                android:id="@+id/wind_descr_3"
+                style="@style/WeeklyForecastItemLabel"
+                wind="@{forecast.thirdColumn}"
+                app:layout_constraintStart_toEndOf="@id/wind_3"
+                app:layout_constraintTop_toBottomOf="@id/wind_3"
+                app:layout_constraintTop_toTopOf="@id/wind_3"
+                tools:text="3 м/с" />
+
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:text="@{forecast.thirdColumn.summary}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wind_3"
+                tools:text="Погода солнечная" />
+            <TextView
+                style="@style/WeeklyForecastSummaryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/no_forecast"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="No forecast"
+                android:visibility="@{forecast.thirdColumn == null? View.VISIBLE:View.GONE}"
+                tools:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </layout>

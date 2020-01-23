@@ -63,14 +63,14 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
                     }
                 val winds = forecastContainer
                     .select(".wind td .text-center div:nth-child(1)")
-                    .map {
-                        it
+                    .map { element ->
+                        element
                             .text()
                             .split("-")
                             .map {
                                 it
                                     .filter { Character.isDigit(it) }
-                                    .toInt()
+                                    .toIntOrNull() ?: 0
                             }
 
                     }

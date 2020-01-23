@@ -65,7 +65,8 @@
             android:id="@+id/swipe_to_refresh"
             isRefreshing="@{viewModel.forecastsLiveData.onProgress}"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            colorScheme = "@{null}"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:onRefreshListener="@{() -> viewModel.requestUpdate()}">
 
@@ -84,8 +85,10 @@
                     android:gravity="center"
                     android:lines="1"
                     android:padding="8dp"
+                    android:background="?selectableItemBackground"
+                    android:onClick="@{()-> viewModel.requestUpdate()}"
                     android:text="@string/update_error_check_network_connection"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="#e66f60"
                     android:textSize="16sp"
                     android:visibility="@{viewModel.forecastsLiveData.onError != null? View.VISIBLE : View.GONE}" />
 

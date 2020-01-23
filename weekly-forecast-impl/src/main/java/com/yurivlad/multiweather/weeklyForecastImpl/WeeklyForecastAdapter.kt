@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.yurivlad.multiweather.core.StringsProvider
+import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import com.yurivlad.multiweather.presenterModel.DateRow
 import com.yurivlad.multiweather.presenterModel.DayPartRow
 import com.yurivlad.multiweather.presenterModel.WeeklyForecastRow
@@ -86,6 +86,7 @@ class ForecastRowHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
     )
 ) {
     val binding: VhWeeklyForecastRowBinding = VhWeeklyForecastRowBinding.bind(itemView)
+
 }
 
 class DateRowHolder(parent: ViewGroup) : RecyclerView.ViewHolder(

@@ -26,7 +26,8 @@ data class ForecastForDay(
     val dayPart: DayPart,
     val summary: String,
     val temperature: ForecastTemperature,
-    val windMetersPerSecond: ForecastWind
+    val windMetersPerSecond: ForecastWind,
+    val weatherList: WeatherList
 ) : DomainModel
 
 data class ForecastTemperature(val from: Int, val to: Int)

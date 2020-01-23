@@ -3,7 +3,7 @@ package com.yurivlad.multiweather.domainPresenterMappersImpl
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import com.yurivlad.multiweather.core.StringsProvider
+import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import com.yurivlad.multiweather.domainModel.model.ForecastSources
 import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
 import com.yurivlad.multiweather.presenterModel.DateRow
@@ -21,7 +21,8 @@ class ToWeeklyForecastTest {
 
     @Test
     fun testConvert() {
-        val sp = object : StringsProvider {
+        val sp = object :
+            com.yurivlad.multiweather.presenterUtils.StringsProvider {
             override fun getString(resId: Int): String {
                 return when (resId) {
                     R.string.morning -> "morning"

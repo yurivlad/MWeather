@@ -1,5 +1,6 @@
 package com.yurivlad.multiweather.presenterModel
 
+import androidx.annotation.DrawableRes
 import java.util.*
 
 /**
@@ -26,5 +27,6 @@ data class DayPartRow(
 data class ForecastForDayPart(
     val summary: String,
     val temperature: String,
-    val windMetersPerSecond: String
+    val windMetersPerSecond: String,
+    @DrawableRes val weatherPicture: Int
 )

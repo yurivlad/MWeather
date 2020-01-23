@@ -5,4 +5,5 @@ dependencies {
     implementation project(":domain-model")
     implementation project(":presenter-model")
     implementation project(":domain-presenter-mappers-model")
+    implementation project(":presenter-utils")
 }

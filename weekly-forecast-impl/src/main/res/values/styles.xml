@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="WeekForecastItem">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">0.33</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:padding">4dp</item>
-    </style>
-
     <style name="ForecastSourceNameStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:gravity">center</item>
@@ -17,5 +8,32 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">0.33</item>
+    </style>
+
+    <style name="ForecastColumn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.3</item>
+        <item name="android:padding">6dp</item>
+
+    </style>
+
+    <style name="WeeklyForecastItemLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WeeklyForecastSummaryLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">2dp</item>
     </style>
 </resources>

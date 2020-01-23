@@ -12,4 +12,8 @@
     <string name="unknown_weekly_forecast_row">Неизвестно</string>
     <string name="day_part_forecast">%s\nТемпература: %s °C\nВетер: %s м/c</string>
     <string name="update_error_check_network_connection">Проверьте интернет-соединение</string>
+    <string name="temperature">%s °C</string>
+    <string name="wind">%s м/c</string>
+    <string name="no_forecast">Нет прогноза</string>
+
 </resources>

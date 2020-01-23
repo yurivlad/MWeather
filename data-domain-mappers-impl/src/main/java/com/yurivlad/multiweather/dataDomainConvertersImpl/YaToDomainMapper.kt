@@ -2,16 +2,14 @@ package com.yurivlad.multiweather.dataDomainConvertersImpl
 
 import com.yurivlad.multiweather.dataDomainConvertersModel.NoAdditionalParams
 import com.yurivlad.multiweather.dataDomainConvertersModel.ToDomainMapper
+import com.yurivlad.multiweather.dataDomainConvertersModel.ToWeatherTypeMapper
 import com.yurivlad.multiweather.domainModel.model.*
-import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
-import com.yurivlad.multiweather.parsersModel.Ya10DayForecastDay
-import com.yurivlad.multiweather.parsersModel.Ya10DayForecastDayPart
-import com.yurivlad.multiweather.parsersModel.Ya10DayForecastPartOfDayItem
+import com.yurivlad.multiweather.parsersModel.*
 
 /**
  *
  */
-object YaToDomainMapper : ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts> {
+class YaToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) : ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts> {
 
     override fun convert(
         from: Ya10DayForecast,
@@ -39,7 +37,8 @@ object YaToDomainMapper : ToDomainMapper<Ya10DayForecast, NoAdditionalParams, Fo
             convertDayPart(from.dayPart),
             from.summary,
             ForecastTemperature(from.temperature.from, from.temperature.to),
-            ForecastWind(from.windMetersPerSecond, from.windMetersPerSecond)
+            ForecastWind(from.windMetersPerSecond, from.windMetersPerSecond),
+            weatherTypeParser.convert(from.summary, NoAdditionalParams)
         )
     }
 

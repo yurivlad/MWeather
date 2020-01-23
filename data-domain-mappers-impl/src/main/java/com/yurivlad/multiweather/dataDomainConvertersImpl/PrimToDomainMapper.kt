@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.dataDomainConvertersImpl
 
 import com.yurivlad.multiweather.dataDomainConvertersModel.NoAdditionalParams
 import com.yurivlad.multiweather.dataDomainConvertersModel.ToDomainMapper
+import com.yurivlad.multiweather.dataDomainConvertersModel.ToWeatherTypeMapper
 import com.yurivlad.multiweather.domainModel.model.*
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecastDay
@@ -11,7 +12,7 @@ import com.yurivlad.multiweather.parsersModel.Prim7DayForecastPartOfDayItem
 /**
  *
  */
-object PrimToDomainMapper :
+class PrimToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
     ToDomainMapper<Prim7DayForecast, NoAdditionalParams, ForecastWithDayParts> {
 
     override fun convert(
@@ -43,7 +44,8 @@ object PrimToDomainMapper :
             ForecastWind(
                 from.windMetersPerSecond.from.toDouble(),
                 from.windMetersPerSecond.to.toDouble()
-            )
+            ),
+            weatherTypeParser.convert(from.summary, NoAdditionalParams)
         )
     }
 
