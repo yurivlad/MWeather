@@ -13,6 +13,11 @@ fun <T> CoroutineScope.createCombinedValueChannel(vararg channel: CompositeRecei
     combine(*channel
         .map { it.openValueSubscription() }
         .toTypedArray())
+@ExperimentalCoroutinesApi
+fun <T> CoroutineScope.createCombinedValueChannel(channels: List<CompositeReceiveChannel<T>>): ReceiveChannel<T> =
+    combine(*channels.toTypedArray()
+        .map { it.openValueSubscription() }
+        .toTypedArray())
 
 @ExperimentalCoroutinesApi
 fun CoroutineScope.createCombinedErrorChannel(vararg channel: CompositeReceiveChannel<*>): ReceiveChannel<Exception?> =

@@ -4,12 +4,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
+import com.yurivlad.multiweather.core.DispatchersProvider
 import com.yurivlad.multiweather.presenterModel.DateRow
 import com.yurivlad.multiweather.presenterModel.DayPartRow
 import com.yurivlad.multiweather.presenterModel.WeeklyForecastRow
+import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.VhWeeklyForecastDateRowBinding
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.VhWeeklyForecastRowBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -17,32 +22,48 @@ import org.koin.core.inject
 /**
  *
  */
-class WeeklyForecastAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(), KoinComponent {
+class WeeklyForecastAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>(), KoinComponent {
     private val stringsProvider: StringsProvider by inject()
+    private val dispatchersProvider: DispatchersProvider by inject()
+    private val workerScope = CoroutineScope(dispatchersProvider.workerDispatcher)
+    private val mainScope = CoroutineScope(dispatchersProvider.mainDispatcher)
+    private var lastListUpdateJob: Job? = null
 
     var items: List<WeeklyForecastRow> = emptyList()
         set(value) {
-            DiffUtil.calculateDiff(object : DiffUtil.Callback() {
-                override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                    return field[oldItemPosition]::class.java == value[newItemPosition]::class.java
-                }
+            lastListUpdateJob?.cancel()
+            lastListUpdateJob = mainScope.launch {
+                val result = workerScope.async {
+                    DiffUtil.calculateDiff(object : DiffUtil.Callback() {
+                        override fun areItemsTheSame(
+                            oldItemPosition: Int,
+                            newItemPosition: Int
+                        ): Boolean {
+                            val old = field[oldItemPosition]
+                            val new = value[newItemPosition]
 
-                override fun getOldListSize(): Int {
-                    return field.size
-                }
+                            return old.id == new.id
+                        }
 
-                override fun getNewListSize(): Int {
-                    return value.size
-                }
+                        override fun getOldListSize(): Int {
+                            return field.size
+                        }
 
-                override fun areContentsTheSame(
-                    oldItemPosition: Int,
-                    newItemPosition: Int
-                ): Boolean {
-                    return field[oldItemPosition] == value[newItemPosition]
-                }
-            }).dispatchUpdatesTo(this)
-            field = value
+                        override fun getNewListSize(): Int {
+                            return value.size
+                        }
+
+                        override fun areContentsTheSame(
+                            oldItemPosition: Int,
+                            newItemPosition: Int
+                        ): Boolean {
+                            return field[oldItemPosition] == value[newItemPosition]
+                        }
+                    })
+                }.await()
+                result.dispatchUpdatesTo(this@WeeklyForecastAdapter)
+                field = value
+            }
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

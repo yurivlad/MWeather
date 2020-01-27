@@ -9,9 +9,8 @@ import androidx.annotation.DrawableRes
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.yurivlad.multiweather.presenterModel.ForecastForDayPart
+import com.yurivlad.multiweather.presenterModel.ForecastForDayPartColumn
 import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import com.yurivlad.multiweather.presenterUtils.VerticalText
 import java.text.SimpleDateFormat
 import java.util.*
@@ -21,18 +20,8 @@ import java.util.*
  *
  */
 
-
-fun createForecast(dayPart: ForecastForDayPart?, stringProvider: StringsProvider): String {
-    return if (dayPart != null) stringProvider.getString(
-        R.string.day_part_forecast,
-        dayPart.summary,
-        dayPart.temperature,
-        dayPart.windMetersPerSecond
-    ) else stringProvider.getString(R.string.unknown_weekly_forecast_row)
-}
-
 @BindingAdapter("temperature")
-fun TextView.createTempLabel(dayPart: ForecastForDayPart?) {
+fun TextView.createTempLabel(dayPart: ForecastForDayPartColumn?) {
     text = dayPart?.let {
         resources.getString(R.string.temperature, it.temperature)
     } ?: ""
@@ -40,7 +29,7 @@ fun TextView.createTempLabel(dayPart: ForecastForDayPart?) {
 }
 
 @BindingAdapter("wind")
-fun TextView.createWindLabel(dayPart: ForecastForDayPart?) {
+fun TextView.createWindLabel(dayPart: ForecastForDayPartColumn?) {
     text = dayPart?.let {
         resources.getString(R.string.wind, it.windMetersPerSecond)
     } ?: ""
@@ -90,10 +79,6 @@ fun TextView.thirdForecastSource(model: ForecastWithThreeSourcesPresenterModel?)
     text = model?.sources?.third
 }
 
-@BindingAdapter("drawableResId")
-fun View.setBackgroundImage(@DrawableRes id: Int) {
-    setBackgroundResource(id)
-}
 
 @BindingAdapter("imageSrc")
 fun ImageView.setImageSrc(@DrawableRes id: Int) {

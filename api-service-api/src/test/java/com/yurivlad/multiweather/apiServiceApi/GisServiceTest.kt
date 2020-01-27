@@ -4,8 +4,6 @@ import com.yurivlad.multiweather.parsersModel.Gis10DayForecast
 import com.yurivlad.multiweather.parsersModel.Parser
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.logging.HttpLoggingInterceptor
 import org.junit.Test
 import java.util.*
 

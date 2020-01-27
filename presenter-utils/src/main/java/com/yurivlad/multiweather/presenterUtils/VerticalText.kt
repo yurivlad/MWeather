@@ -18,7 +18,8 @@ class VerticalText @JvmOverloads constructor(
     defaultResId: Int = 0
 ) : View(context, attributeSet, defaultResId) {
 
-    private val textSizeDip = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 12f, resources.displayMetrics)
+    private val textSizeDip =
+        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 12f, resources.displayMetrics)
 
     private val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
         color = ContextCompat.getColor(this@VerticalText.context, R.color.textPrimary)
@@ -26,7 +27,11 @@ class VerticalText @JvmOverloads constructor(
         textSize = textSizeDip
     }
 
-    var text: String = "Evening"
+    var text: String = "Stub"
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)

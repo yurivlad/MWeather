@@ -8,7 +8,7 @@ import java.util.*
 data class Gis10DayForecast(
     val from: Date,
     val to: Date,
-     val foreCasts: List<Gis10DayForecastDay>)
+     val foreCasts: List<Gis10DayForecastDay>): List<Gis10DayForecastDay> by foreCasts
 
 data class Gis10DayForecastPartOfDayItem(
     val dayPart: Gis10DayForecastDayPart,

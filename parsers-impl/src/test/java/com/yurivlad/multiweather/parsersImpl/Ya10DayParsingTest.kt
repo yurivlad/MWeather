@@ -27,6 +27,7 @@ class Ya10DayParsingTest {
         Assert.assertEquals(1.7, nightTemp.windMetersPerSecond, 0.0)
         Assert.assertEquals("Ясно", nightTemp.summary)
         Assert.assertEquals(nightTemp.dayPart, Ya10DayForecastDayPart.NIGHT)
+        println(result)
     }
 
 

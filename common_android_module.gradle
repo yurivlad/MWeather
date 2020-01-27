@@ -53,8 +53,10 @@ dependencies {
     implementation project(":shared-resources")
     implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
     implementation "com.squareup.moshi:moshi-adapters:$moshiVersion"
+    implementation "androidx.preference:preference-ktx:$appCompatVersion"
 
     testImplementation 'org.robolectric:robolectric:4.3'
+    testImplementation 'androidx.test:core:1.2.0'
     testImplementation coroutines
     testImplementation log
     testImplementation 'junit:junit:4.12'
@@ -65,5 +67,4 @@ dependencies {
     testImplementation okhttpLogginInterceptor
     testImplementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
     testImplementation "com.squareup.moshi:moshi-adapters:$moshiVersion"
-
 }

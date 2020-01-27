@@ -8,6 +8,7 @@ import com.yurivlad.multiweather.parsersModel.Gis10DayForecast
 import com.yurivlad.multiweather.parsersModel.Gis10DayForecastDay
 import com.yurivlad.multiweather.parsersModel.Gis10DayForecastDayPart
 import com.yurivlad.multiweather.parsersModel.Gis10DayForecastPartOfDayItem
+import java.util.*
 
 /**
  *
@@ -27,7 +28,10 @@ class GisToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
     }
 
     private fun convertDayForecast(from: Gis10DayForecastDay): ForecastForDayWithDayParts {
+        val cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+0:00"))
+        cal.time = from.date
         return ForecastForDayWithDayParts(
+            "${ForecastSource.GISMETEO.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH)}}",
             from.date,
             convertDayPartForecast(from.nightForecast),
             convertDayPartForecast(from.morningForecast),
@@ -36,8 +40,8 @@ class GisToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
         )
     }
 
-    private fun convertDayPartForecast(from: Gis10DayForecastPartOfDayItem): ForecastForDay {
-        return ForecastForDay(
+    private fun convertDayPartForecast(from: Gis10DayForecastPartOfDayItem): ForecastForDayPart {
+        return ForecastForDayPart(
             convertDayPart(from.dayPart),
             from.summary,
             ForecastTemperature(from.temperature, from.temperature),

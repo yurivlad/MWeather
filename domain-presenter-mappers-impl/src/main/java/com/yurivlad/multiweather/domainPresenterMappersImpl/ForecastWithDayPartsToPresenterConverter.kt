@@ -50,14 +50,14 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
                     val cal = Calendar.getInstance(TimeZone.getDefault())
                     cal.set(Calendar.DAY_OF_MONTH, mapEntry.key)
 
-                    out.add(DateRow(cal.time))
+                    out.add(DateRow("dr:${mapEntry.key}", cal.time))
 
                     out.addAll(
                         createDayPartRowsForDay(
                             mapEntry.value.firstOrNull { it.first == ForecastSource.GISMETEO }?.second,
                             mapEntry.value.firstOrNull { it.first == ForecastSource.PRIMPOGODA }?.second,
                             mapEntry.value.firstOrNull { it.first == ForecastSource.YANDEX }?.second
-                        )
+                        ) { dayPart -> "dpr:${mapEntry.key}:${dayPart.ordinal}" }
                     )
                     Unit
                 }
@@ -70,43 +70,50 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
     private fun createDayPartRowsForDay(
         first: ForecastForDayWithDayParts?,
         second: ForecastForDayWithDayParts?,
-        third: ForecastForDayWithDayParts?
+        third: ForecastForDayWithDayParts?,
+        idCreator: (DayPart) -> String
     ): List<DayPartRow> {
         return listOf(
+            createDayPartRow(
+                DayPart.NIGHT,
+                first?.nightForecast,
+                second?.nightForecast,
+                third?.nightForecast,
+                idCreator
+            ),
             createDayPartRow(
                 DayPart.MORNING,
                 first?.morningForecast,
                 second?.morningForecast,
-                third?.morningForecast
+                third?.morningForecast,
+                idCreator
             ),
             createDayPartRow(
                 DayPart.DAY,
                 first?.dayForecast,
                 second?.dayForecast,
-                third?.dayForecast
+                third?.dayForecast,
+                idCreator
             ),
             createDayPartRow(
                 DayPart.EVENING,
                 first?.eveningForecast,
                 second?.eveningForecast,
-                third?.eveningForecast
-            ),
-            createDayPartRow(
-                DayPart.NIGHT,
-                first?.nightForecast,
-                second?.nightForecast,
-                third?.nightForecast
+                third?.eveningForecast,
+                idCreator
             )
         )
     }
 
     private fun createDayPartRow(
         dayPart: DayPart,
-        first: ForecastForDay?,
-        second: ForecastForDay?,
-        third: ForecastForDay?
+        first: ForecastForDayPart?,
+        second: ForecastForDayPart?,
+        third: ForecastForDayPart?,
+        idCreator: (DayPart) -> String
     ): DayPartRow {
         return DayPartRow(
+            idCreator(dayPart),
             when (dayPart) {
                 DayPart.MORNING -> stringsProvider.getString(R.string.morning)
                 DayPart.DAY -> stringsProvider.getString(R.string.day)
@@ -119,15 +126,13 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
         )
     }
 
-    private fun createForecastForDayPart(forecastForDay: ForecastForDay?): ForecastForDayPart? {
+    private fun createForecastForDayPart(forecastForDay: ForecastForDayPart?): ForecastForDayPartColumn? {
         return forecastForDay?.let { forecast ->
-            ForecastForDayPart(
+            ForecastForDayPartColumn(
                 forecast.summary,
                 if (forecast.temperature.from != forecast.temperature.to) ceil((forecast.temperature.from + forecast.temperature.to) / 2.0).formatDouble()
                 else forecast.temperature.from.toString(),
-                if (forecast.windMetersPerSecond.from != forecast.windMetersPerSecond.to)
-                    ceil((forecast.windMetersPerSecond.from + forecast.windMetersPerSecond.to) / 2.0).formatDouble()
-                else forecast.windMetersPerSecond.from.formatDouble(),
+                forecast.windMetersPerSecond.to.formatDouble(),
                 forecast.weatherList.convertToDrawableRes(forecastForDay.dayPart)
             )
         }
@@ -150,8 +155,15 @@ class ForecastWithDayPartsToPresenterConverter(private val stringsProvider: Stri
                     contains(WeatherType.STORM) && (contains(WeatherType.SNOW) || contains(
                         WeatherType.HEAVY_SNOW
                     ) || contains(WeatherType.SMALL_SNOW)) -> R.drawable.ic_storm_with_snow_linear_40dp
-                    contains(WeatherType.CLEAR) && (contains(WeatherType.RAIN)|| contains(WeatherType.SMALL_RAIN)) -> R.drawable.ic_rain_clear_linear_40dp
-                    contains(WeatherType.SMALL_SNOW) &&  (contains(WeatherType.CLOUDY) || contains(WeatherType.MAINLY_CLOUDY))-> R.drawable.ic_light_snow_linear_40dp
+                    contains(WeatherType.CLEAR) && (contains(WeatherType.RAIN) || contains(
+                        WeatherType.SMALL_RAIN
+                    )) && dayPart != DayPart.NIGHT -> R.drawable.ic_rain_clear_linear_40dp
+                    contains(WeatherType.CLEAR) && (contains(WeatherType.CLOUDY) || contains(
+                        WeatherType.MAINLY_CLOUDY
+                    )) && dayPart != DayPart.NIGHT -> R.drawable.ic_main_cloudy_clear_day_linear_40dp
+                    contains(WeatherType.SMALL_SNOW) && (contains(WeatherType.CLOUDY) || contains(
+                        WeatherType.MAINLY_CLOUDY
+                    )) -> R.drawable.ic_light_snow_linear_40dp
                     else -> first().toDrawableRes(dayPart)
                 }
             }

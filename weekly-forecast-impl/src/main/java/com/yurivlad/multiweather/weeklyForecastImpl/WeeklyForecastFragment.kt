@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.SimpleItemAnimator
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.MainFragmentBinding
 import com.yurivlad.multiweather.weeklyForecastModel.BaseFragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -36,7 +35,7 @@ class WeeklyForecastFragment : BaseFragment<WeeklyForecastViewModel>() {
             object : ViewModelProvider.Factory {
                 override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                     @Suppress("UNCHECKED_CAST")
-                    return WeeklyForecastViewModel(get(), get()) as T
+                    return WeeklyForecastViewModel(get(), get(), get()) as T
                 }
             }).get(WeeklyForecastViewModel::class.java)
     }

@@ -19,6 +19,7 @@ object YaParserImpl : Parser<Ya10DayForecast> {
         }
 
         val sdf = SimpleDateFormat("dd MMMM", Locale("ru"))
+        val year = Calendar.getInstance(TimeZone.getTimeZone("GMT+0:00")).get(Calendar.YEAR)
 
         fun createDayPart(
             index: Int,
@@ -59,7 +60,12 @@ object YaParserImpl : Parser<Ya10DayForecast> {
 
 
             Ya10DayForecastDay(
-                sdf.parse(date),
+                Calendar.getInstance()
+                    .apply {
+                        time = sdf.parse(date)
+                        set(Calendar.YEAR, year)
+                    }
+                    .time,
                 createDayPart(3, summaries, temps, winds),
                 createDayPart(0, summaries, temps, winds),
                 createDayPart(1, summaries, temps, winds),

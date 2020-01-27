@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.domainImpl
 
 import com.yurivlad.multiweather.core.createCombinedErrorChannel
 import com.yurivlad.multiweather.core.createCombinedProgressChannel
+import com.yurivlad.multiweather.core.createCombinedValueChannel
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.UseCaseBaseImpl
 import com.yurivlad.multiweather.domainModel.model.*
@@ -28,9 +29,9 @@ class WeatherSourcesForecastUseCase(
 
     init {
         val channels = listOf(
-            gisRepo.getModel(gisRequest),
-            yaRepo.getModel(yaRequest),
-            primRepo.getModel(primRequest)
+            gisRepo.getReceiveChannel(gisRequest),
+            yaRepo.getReceiveChannel(yaRequest),
+            primRepo.getReceiveChannel(primRequest)
         )
 
 
@@ -64,7 +65,7 @@ class WeatherSourcesForecastUseCase(
             }
         }
         workerScope.launch {
-            val receiveChannel = createCombinedErrorChannel(channels)
+            val receiveChannel = createCombinedValueChannel(channels)
 
             while (!receiveChannel.isClosedForReceive) {
                 receiveChannel.receive()

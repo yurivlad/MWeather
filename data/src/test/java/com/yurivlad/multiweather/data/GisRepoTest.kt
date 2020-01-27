@@ -1,13 +1,13 @@
 package com.yurivlad.multiweather.data
 
 import com.yurivlad.multiweather.apiServiceModel.GisApiService
-import com.yurivlad.multiweather.core.AssignableDispatcher
 import com.yurivlad.multiweather.dataDomainConvertersModel.NoAdditionalParams
 import com.yurivlad.multiweather.dataDomainConvertersModel.ToDomainMapper
 import com.yurivlad.multiweather.domainModel.model.ForecastSource
 import com.yurivlad.multiweather.domainModel.model.ForecastWithDayParts
 import com.yurivlad.multiweather.domainModel.model.Gis10DayForecastRequest
 import com.yurivlad.multiweather.parsersModel.Gis10DayForecast
+import com.yurivlad.multiweather.persistence_model.DatabaseDomain
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
@@ -20,6 +20,20 @@ import java.util.*
  */
 @ExperimentalCoroutinesApi
 class GisRepoTest {
+
+    val alwaysEmptyDatabase = object: DatabaseDomain<ForecastWithDayParts, ForecastSource> {
+        override suspend fun put(item: ForecastWithDayParts) {
+
+        }
+
+        override suspend fun get(id: ForecastSource): ForecastWithDayParts? {
+            return null
+        }
+
+        override suspend fun remove(id: ForecastSource) {
+        }
+    }
+
     @Test
     fun testEmptyState() = runBlocking {
         val repo = Gis10DayForecastRepositoryImpl(object : GisApiService {
@@ -35,10 +49,10 @@ class GisRepoTest {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         },
-            TestCoroutineDispatcher()
+            TestCoroutineDispatcher(),alwaysEmptyDatabase
         )
         val testRequest = Gis10DayForecastRequest("")
-        val channel = repo.getModel(testRequest)
+        val channel = repo.getReceiveChannel(testRequest)
 
         Assert.assertNull("empty repository must return null", channel.progressOrNull)
         Assert.assertNull("empty repository must return null", channel.errorOrNull)
@@ -75,10 +89,10 @@ class GisRepoTest {
                 return emptyForecastModel
             }
         },
-            TestCoroutineDispatcher()
+            TestCoroutineDispatcher(),alwaysEmptyDatabase
         )
         val testRequest = Gis10DayForecastRequest("")
-        val channel = repo.getModel(testRequest)
+        val channel = repo.getReceiveChannel(testRequest)
         repo.requestUpdate(testRequest)
 
         Assert.assertEquals("progress state lost", false, channel.progressOrNull)
@@ -115,10 +129,10 @@ class GisRepoTest {
                 return emptyForecastModel
             }
         },
-            TestCoroutineDispatcher()
+            TestCoroutineDispatcher(),alwaysEmptyDatabase
         )
         val testRequest = Gis10DayForecastRequest("")
-        val channel = repo.getModel(testRequest)
+        val channel = repo.getReceiveChannel(testRequest)
         repo.requestUpdate(testRequest)
 
         Assert.assertEquals("progress state lost", false, channel.progressOrNull)

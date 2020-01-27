@@ -22,7 +22,7 @@ class ToWeeklyForecastTest {
     @Test
     fun testConvert() {
         val sp = object :
-            com.yurivlad.multiweather.presenterUtils.StringsProvider {
+            StringsProvider {
             override fun getString(resId: Int): String {
                 return when (resId) {
                     R.string.morning -> "morning"
@@ -58,6 +58,7 @@ class ToWeeklyForecastTest {
         )
 
         val result = converter.convert(forecastSources, NoAdditionalData)
+
 
         Assert.assertEquals(
             "size must be 50, 4 per day, 10 days + 10 date rows",

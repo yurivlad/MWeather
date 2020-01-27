@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.parsersImpl
 
 import com.yurivlad.multiweather.parsersModel.*
 import org.jsoup.Jsoup
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -22,7 +23,16 @@ object GisParserImpl : Parser<Gis10DayForecast> {
         val forecastWindLine = forecastScroller.select(".windline .w_wind .unit_wind_m_s")
         val forecastIconLine = forecastScroller.select(".iconline .weather_item .img .tooltip")
 
-        val calendar = Calendar.getInstance(TimeZone.getDefault())
+        val sdf = SimpleDateFormat("dd MMM", Locale("ru"))
+        val year = Calendar.getInstance(TimeZone.getTimeZone("GMT+0:00")).get(Calendar.YEAR)
+        val dates = forecastScroller.select(".clearfix .header_item").map { it.text().substring(4) }
+            .map { timeString ->
+                (Calendar.getInstance(TimeZone.getDefault())
+                    .also {
+                        it.time =  sdf.parse(timeString.replace("фев", "февр"))
+                        it.set(Calendar.YEAR, year)
+                    }).time
+            }
 
         val daysCount = forecastTempLine.size / 4
 
@@ -38,41 +48,31 @@ object GisParserImpl : Parser<Gis10DayForecast> {
             )
 
 
-        val result =
-            Gis10DayForecast(
-                calendar.time,
-                Calendar.getInstance(TimeZone.getDefault()).apply {
-                    set(Calendar.DAY_OF_YEAR, calendar.get(Calendar.DAY_OF_YEAR) + daysCount - 1)
-                }.time,
-                (0 until daysCount)
-                    .map { dayIndex ->
-                        Gis10DayForecastDay(
-                            Calendar.getInstance(TimeZone.getDefault()).apply {
-                                set(
-                                    Calendar.DAY_OF_YEAR,
-                                    calendar.get(Calendar.DAY_OF_YEAR) + dayIndex
-                                )
-                            }.time,
-                            nightForecast = createForeCastForIndex(
-                                dayIndex * 4,
-                                Gis10DayForecastDayPart.NIGHT
-                            ),
-                            morningForecast = createForeCastForIndex(
-                                1 + dayIndex * 4,
-                                Gis10DayForecastDayPart.MORNING
-                            ),
-                            dayForecast = createForeCastForIndex(
-                                2 + dayIndex * 4,
-                                Gis10DayForecastDayPart.DAY
-                            ),
-                            eveningForecast = createForeCastForIndex(
-                                3 + dayIndex * 4,
-                                Gis10DayForecastDayPart.EVENING
-                            )
+        return Gis10DayForecast(
+            dates.first(),
+            dates.last(),
+            (0 until daysCount)
+                .map { dayIndex ->
+                    Gis10DayForecastDay(
+                        dates[dayIndex],
+                        nightForecast = createForeCastForIndex(
+                            dayIndex * 4,
+                            Gis10DayForecastDayPart.NIGHT
+                        ),
+                        morningForecast = createForeCastForIndex(
+                            1 + dayIndex * 4,
+                            Gis10DayForecastDayPart.MORNING
+                        ),
+                        dayForecast = createForeCastForIndex(
+                            2 + dayIndex * 4,
+                            Gis10DayForecastDayPart.DAY
+                        ),
+                        eveningForecast = createForeCastForIndex(
+                            3 + dayIndex * 4,
+                            Gis10DayForecastDayPart.EVENING
                         )
-                    }
-            )
-
-        return result
+                    )
+                }
+        )
     }
 }

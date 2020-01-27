@@ -13,4 +13,5 @@ ext {
     navVersion = "2.1.0"
     lifeCycleVersion = "2.2.0-rc03"
     moshiVersion = "1.9.2"
+    roomVersion = "2.2.3"
 }

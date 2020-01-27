@@ -1,3 +1,5 @@
+@file:Suppress("BlockingMethodInNonBlockingContext")
+
 package com.yurivlad.multiweather.bridge
 
 import com.squareup.moshi.Moshi
@@ -22,7 +24,10 @@ import java.util.regex.Pattern
 /**
  *
  */
+@ExperimentalCoroutinesApi
+@Suppress("UNUSED_VARIABLE")
 class WeatherTypesParsingExperiments : KoinTest {
+    @ExperimentalCoroutinesApi
     @Test
     fun gisExperiments() {
         runBlocking {
@@ -63,9 +68,6 @@ class WeatherTypesParsingExperiments : KoinTest {
             println(result)
         }
     }
-
-
-    data class City(val url: String)
 
     @Test
     fun primExperiments() = runBlocking {

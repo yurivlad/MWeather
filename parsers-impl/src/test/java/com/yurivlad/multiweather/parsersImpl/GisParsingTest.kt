@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.parsersImpl
 
 import org.junit.Assert
 import org.junit.Test
+import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -27,6 +28,13 @@ class GisParsingTest {
             Assert.assertTrue(it.morningForecast.summary.isNotEmpty())
             Assert.assertTrue(it.nightForecast.summary.isNotEmpty())
         }
+        Assert.assertEquals("forecast first day is 9 of January",9, Calendar.getInstance().apply {
+            time = result.foreCasts.first().date
+        }.get(Calendar.DAY_OF_MONTH))
+        Assert.assertEquals("forecast last day is 18 of January",18, Calendar.getInstance().apply {
+            time = result.foreCasts.last().date
+        }.get(Calendar.DAY_OF_MONTH))
+
         println(result)
     }
 

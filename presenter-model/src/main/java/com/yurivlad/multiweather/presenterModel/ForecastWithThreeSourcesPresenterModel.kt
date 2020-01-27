@@ -13,18 +13,21 @@ data class ForecastWithThreeSourcesPresenterModel(
 
 data class ForecastSourceNames(val first: String?, val second: String?, val third: String?)
 
-sealed class WeeklyForecastRow
+sealed class WeeklyForecastRow {
+    abstract val id: String
+}
 
-data class DateRow(val date: Date) : WeeklyForecastRow()
+data class DateRow(override val id: String, val date: Date) : WeeklyForecastRow()
 
 data class DayPartRow(
+    override val id: String,
     val dayPart: String,
-    val firstColumn: ForecastForDayPart?,
-    val secondColumn: ForecastForDayPart?,
-    val thirdColumn: ForecastForDayPart?
+    val firstColumn: ForecastForDayPartColumn?,
+    val secondColumn: ForecastForDayPartColumn?,
+    val thirdColumn: ForecastForDayPartColumn?
 ) : WeeklyForecastRow()
 
-data class ForecastForDayPart(
+data class ForecastForDayPartColumn(
     val summary: String,
     val temperature: String,
     val windMetersPerSecond: String,

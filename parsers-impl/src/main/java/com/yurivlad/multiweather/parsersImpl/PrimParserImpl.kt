@@ -10,7 +10,6 @@ import java.util.*
  */
 
 object PrimParserImpl : Parser<Prim7DayForecast> {
-    private val nonNumbersRegexp = Regex("\\W")
     private val tempRegex = Regex("[\\n°]")
 
     override fun parse(inputHtml: String): Prim7DayForecast {
@@ -18,7 +17,16 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
         val sdf = SimpleDateFormat("dd MMMM", Locale("ru"))
         val forecastsPanel = Jsoup.parse(inputHtml).select(".forecast")
 
-        val titlesWithDates = forecastsPanel.select("h3").map { it.text() }
+        val year = Calendar.getInstance(TimeZone.getTimeZone("GTM+0:00")).get(Calendar.YEAR)
+
+        val forecastDates = forecastsPanel.select("h3").map { it.text() }.map { dateString ->
+            Calendar.getInstance()
+                .apply {
+                    time = sdf.parse(dateString)
+                    set(Calendar.YEAR, year)
+                }
+                .time
+        }
 
         val forecastsContainer = forecastsPanel.select(".table-container")
 
@@ -42,9 +50,10 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
         )
 
 
+
         return Prim7DayForecast(
-            sdf.parse(titlesWithDates.first()),
-            sdf.parse(titlesWithDates.last()),//body > div.off-canvas-wrap > div > div.row > div.large-9.medium-9.small-12.columns > div.forecast > div:nth-child(5) > table > tbody > tr.wind.divider.tip-right > td:nth-child(2) > div > div:nth-child(1) > br
+            forecastDates.first(),
+            forecastDates.last(),
             forecastsContainer.mapIndexed { index, forecastContainer ->
                 val temperatures =
                     forecastContainer
@@ -54,7 +63,7 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
                                 .text()
                                 .replace(tempRegex, "")
                                 .split("...")
-                                .map { it.toInt() }
+                                .map { temp -> temp.toInt() }
                         }
 
                 val summaries = forecastContainer.select(".divider.weather td .tip-right")
@@ -69,7 +78,7 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
                             .split("-")
                             .map {
                                 it
-                                    .filter { Character.isDigit(it) }
+                                    .filter { windSpeed-> Character.isDigit(windSpeed) }
                                     .toIntOrNull() ?: 0
                             }
 
@@ -84,7 +93,7 @@ object PrimParserImpl : Parser<Prim7DayForecast> {
                     )
                 }
                 Prim7DayForecastDay(
-                    sdf.parse(titlesWithDates[index]),
+                    forecastDates[index],
                     dayParts[0], dayParts[1], dayParts[2], dayParts[3]
                 )
             }

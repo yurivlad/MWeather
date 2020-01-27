@@ -9,7 +9,7 @@ data class Prim7DayForecast(
     val from: Date,
     val to: Date,
     val foreCasts: List<Prim7DayForecastDay>
-)
+): List<Prim7DayForecastDay> by foreCasts
 
 data class Prim7DayForecastPartOfDayItem(
     val dayPart: Prim7DayForecastDayPart,

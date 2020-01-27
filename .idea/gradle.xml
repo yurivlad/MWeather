@@ -24,6 +24,9 @@
             <option value="$PROJECT_DIR$/domain-presenter-mappers-model" />
             <option value="$PROJECT_DIR$/parsers-impl" />
             <option value="$PROJECT_DIR$/parsers-model" />
+            <option value="$PROJECT_DIR$/persistence-api" />
+            <option value="$PROJECT_DIR$/persistence-impl" />
+            <option value="$PROJECT_DIR$/persistence-model" />
             <option value="$PROJECT_DIR$/presenter-model" />
             <option value="$PROJECT_DIR$/presenter-utils" />
             <option value="$PROJECT_DIR$/shared-resources" />

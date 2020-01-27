@@ -2,7 +2,6 @@ package com.yurivlad.multiweather.domainModel
 
 import com.yurivlad.multiweather.core.CompositeBroadcastChannel
 import com.yurivlad.multiweather.core.CompositeReceiveChannel
-import com.yurivlad.multiweather.core.DispatchersProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi

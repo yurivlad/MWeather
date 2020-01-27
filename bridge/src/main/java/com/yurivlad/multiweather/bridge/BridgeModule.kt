@@ -2,6 +2,8 @@
 
 package com.yurivlad.multiweather.bridge
 
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.yurivlad.multiweather.apiServiceApi.createGisApiService
 import com.yurivlad.multiweather.apiServiceApi.createOkHttpClient
 import com.yurivlad.multiweather.apiServiceApi.createPrimApiService
@@ -35,6 +37,8 @@ import com.yurivlad.multiweather.parsersModel.Gis10DayForecast
 import com.yurivlad.multiweather.parsersModel.Parser
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
+import com.yurivlad.multiweather.persistence_api.createForecastWithDayPartsDatabase
+import com.yurivlad.multiweather.persistence_model.DatabaseDomain
 import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
 import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import kotlinx.coroutines.CoroutineDispatcher
@@ -58,14 +62,27 @@ internal val appCoreModules = module {
     single<PrimApiService> { createPrimApiService(get(named("PrimParserImpl")), get()) }
 
     single<ToWeatherTypeMapper> { ToWeatherTypeMapperImpl }
-    single<ToDomainMapper<Gis10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("GisToDomainMapper")) { GisToDomainMapper(get()) }
-    single<ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("YaToDomainMapper")) { YaToDomainMapper(get()) }
-    single<ToDomainMapper<Prim7DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("PrimToDomainMapper")) { PrimToDomainMapper(get()) }
+    single<ToDomainMapper<Gis10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("GisToDomainMapper")) {
+        GisToDomainMapper(
+            get()
+        )
+    }
+    single<ToDomainMapper<Ya10DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("YaToDomainMapper")) {
+        YaToDomainMapper(
+            get()
+        )
+    }
+    single<ToDomainMapper<Prim7DayForecast, NoAdditionalParams, ForecastWithDayParts>>(named("PrimToDomainMapper")) {
+        PrimToDomainMapper(
+            get()
+        )
+    }
 
     single<RepositoryDomain<ForecastWithDayParts, Gis10DayForecastRequest>>(named("Gis10DayForecastRepositoryImpl")) {
         Gis10DayForecastRepositoryImpl(
             get(),
             get(named("GisToDomainMapper")),
+            get(),
             get()
         )
     }
@@ -74,6 +91,7 @@ internal val appCoreModules = module {
         Ya10DayForecastRepositoryImpl(
             get(),
             get(named("YaToDomainMapper")),
+            get(),
             get()
         )
     }
@@ -82,6 +100,7 @@ internal val appCoreModules = module {
         Prim7DayForecastRepositoryImpl(
             get(),
             get(named("PrimToDomainMapper")),
+            get(),
             get()
         )
     }
@@ -97,6 +116,12 @@ internal val appCoreModules = module {
     single<ToPresenterMapper<ForecastSources, NoAdditionalData, ForecastWithThreeSourcesPresenterModel>>
     { ForecastWithDayPartsToPresenterConverter(get()) }
     single { createOkHttpClient(get()) }
+    single {
+        Moshi
+            .Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+    }
 }
 
 val realAppDependencies = module {
@@ -114,5 +139,9 @@ val realAppDependencies = module {
         }
     }
     single { Dispatcher() }
-
+    single<DatabaseDomain<ForecastWithDayParts, ForecastSource>> {
+        createForecastWithDayPartsDatabase(
+            get()
+        )
+    }
 }

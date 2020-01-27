@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from:"../common_android_module.gradle"
+
+dependencies {
+    api project(":persistence-model")
+    implementation project(":persistence-impl")
+    implementation project(":domain-model")
+    implementation "androidx.room:room-ktx:$roomVersion"
+}

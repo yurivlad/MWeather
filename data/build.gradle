@@ -5,4 +5,5 @@ dependencies {
     implementation project(":api-service-model")
     implementation project(':data-domain-mappers-model')
     implementation project(':parsers-model')
+    implementation project(':persistence-model')
 }

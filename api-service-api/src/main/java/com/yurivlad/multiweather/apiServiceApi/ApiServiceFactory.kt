@@ -6,7 +6,6 @@ import com.yurivlad.multiweather.apiServiceImpl.YaApiServiceImpl
 import com.yurivlad.multiweather.apiServiceModel.GisApiService
 import com.yurivlad.multiweather.apiServiceModel.PrimApiService
 import com.yurivlad.multiweather.apiServiceModel.YaApiService
-import com.yurivlad.multiweather.constants.getRandomUserAgent
 import com.yurivlad.multiweather.parsersModel.Gis10DayForecast
 import com.yurivlad.multiweather.parsersModel.Parser
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
@@ -30,17 +29,6 @@ fun createOkHttpClient(dispatcher: Dispatcher) =
         .dispatcher(dispatcher)
         .followRedirects(false)
         .callTimeout(30_000, TimeUnit.SECONDS)
-        .addInterceptor(object : Interceptor {
-            override fun intercept(chain: Interceptor.Chain): Response {
-                return chain.proceed(
-                    chain
-                        .request()
-                        .newBuilder()
-                        //.addHeader("user-agent", getRandomUserAgent())
-                        .build()
-                )
-            }
-        })
         .build()
 
 

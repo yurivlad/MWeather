@@ -13,7 +13,7 @@ import okhttp3.OkHttpClient
 class GisApiServiceImpl(
     gis10DayForecastParser: Parser<Gis10DayForecast>,
     okHttpClient: OkHttpClient
-) : GisApiService by createService<GisApiService>(
+) : GisApiService by createService(
     okHttpClient,
     GIS_BASE_URL,
     listOf(

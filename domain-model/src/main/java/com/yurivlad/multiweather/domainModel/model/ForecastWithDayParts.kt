@@ -14,15 +14,16 @@ data class ForecastWithDayParts(
 ) : DomainModel, List<ForecastForDayWithDayParts> by forecasts
 
 data class ForecastForDayWithDayParts(
+    val id: String,
     val date: Date,
-    val nightForecast: ForecastForDay,
-    val morningForecast: ForecastForDay,
-    val dayForecast: ForecastForDay,
-    val eveningForecast: ForecastForDay
+    val nightForecast: ForecastForDayPart?,
+    val morningForecast: ForecastForDayPart?,
+    val dayForecast: ForecastForDayPart?,
+    val eveningForecast: ForecastForDayPart?
 ) : DomainModel
 
 
-data class ForecastForDay(
+data class ForecastForDayPart(
     val dayPart: DayPart,
     val summary: String,
     val temperature: ForecastTemperature,
