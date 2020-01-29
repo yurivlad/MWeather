@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.MainFragmentBinding
 import com.yurivlad.multiweather.weeklyForecastModel.BaseFragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -26,9 +28,15 @@ class WeeklyForecastFragment : BaseFragment<WeeklyForecastViewModel>() {
         val db = MainFragmentBinding.inflate(inflater, container, false)
         db.lifecycleOwner = this
         db.viewModel = viewModel
+        db.recycler.addItemDecoration(
+            DividerItemDecoration(
+                activity!!,
+                LinearLayoutManager.VERTICAL
+            ).apply {
+                setDrawable(resources.getDrawable(R.drawable.decorator_divider_gray_2px, activity!!.theme))
+            })
         return db.root
     }
-
 
     override fun createViewModel(): WeeklyForecastViewModel {
         return ViewModelProviders.of(this,

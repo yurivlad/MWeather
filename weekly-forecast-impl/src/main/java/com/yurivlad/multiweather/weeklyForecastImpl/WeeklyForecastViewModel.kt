@@ -59,8 +59,7 @@ class WeeklyForecastViewModel constructor(
 
 
     override fun onComponentStart(bundle: Bundle?) {
-        val sources = useCase.resultChannel.valueOrNull
-        if (sources.isNullOrEmpty()) useCase.action(NoParamsRequest)
+        useCase.action(NoParamsRequest)
     }
 
     fun requestUpdate() {

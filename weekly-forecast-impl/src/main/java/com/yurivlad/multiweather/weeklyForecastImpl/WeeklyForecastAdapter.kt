@@ -17,12 +17,13 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 import org.koin.core.inject
+import trikita.log.Log
 
 
 /**
  *
  */
-class WeeklyForecastAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>(), KoinComponent {
+class WeeklyForecastAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(), KoinComponent {
     private val stringsProvider: StringsProvider by inject()
     private val dispatchersProvider: DispatchersProvider by inject()
     private val workerScope = CoroutineScope(dispatchersProvider.workerDispatcher)
@@ -69,8 +70,13 @@ class WeeklyForecastAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>(),
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             R.layout.vh_weekly_forecast_date_row -> DateRowHolder(parent)
-            R.layout.vh_weekly_forecast_row -> ForecastRowHolder(parent).apply {
-                binding.stringsProvider = stringsProvider
+            R.layout.vh_weekly_forecast_row -> {
+                val start = System.currentTimeMillis()
+                val rh = ForecastRowHolder(parent).apply {
+                    binding.stringsProvider = stringsProvider
+                }
+                Log.d("row inflating took ${System.currentTimeMillis() - start}")
+                rh
             }
             else -> throw java.lang.IllegalArgumentException("unknown viewType $viewType")
         }

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -82,7 +83,8 @@ fun TextView.thirdForecastSource(model: ForecastWithThreeSourcesPresenterModel?)
 
 @BindingAdapter("imageSrc")
 fun ImageView.setImageSrc(@DrawableRes id: Int) {
-    this.setImageResource(id)
+    if (id == 0) setImageDrawable(null)
+    else setImageDrawable(ContextCompat.getDrawable(context, id))
 }
 
 @BindingAdapter("vertText")
