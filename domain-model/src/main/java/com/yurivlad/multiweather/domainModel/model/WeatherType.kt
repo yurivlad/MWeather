@@ -6,17 +6,18 @@ import com.yurivlad.multiweather.domainModel.DomainModel
  *
  */
 enum class WeatherType : DomainModel {
-    CLOUDY,
     CLEAR,
-    SNOW_WITH_RAIN,
+    CLOUDY,
     MAINLY_CLOUDY,
     SMALL_RAIN,
-    RAIN, SNOW,
+    RAIN,
+    SNOW_WITH_RAIN,
+    HEAVY_RAIN,
+    SNOW,
     SMALL_SNOW,
+    HEAVY_SNOW,
     STORM,
     WINDY,
-    HEAVY_SNOW,
-    HEAVY_RAIN,
     FOG,
     UNKNOWN
 }

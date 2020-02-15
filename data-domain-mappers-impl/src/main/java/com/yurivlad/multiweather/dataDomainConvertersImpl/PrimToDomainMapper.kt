@@ -32,8 +32,8 @@ class PrimToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
         cal.time = from.date
 
         return ForecastForDayWithDayParts(
-            "${ForecastSource.PRIMPOGODA.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH)}}",
-            from.date,
+            "${ForecastSource.PRIMPOGODA.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH) + 1}",
+            cal.time,
             convertDayPartForecast(from.nightForecast),
             convertDayPartForecast(from.morningForecast),
             convertDayPartForecast(from.dayForecast),

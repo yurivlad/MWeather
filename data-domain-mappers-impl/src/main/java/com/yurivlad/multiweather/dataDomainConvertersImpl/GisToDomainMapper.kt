@@ -31,8 +31,8 @@ class GisToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
         val cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+0:00"))
         cal.time = from.date
         return ForecastForDayWithDayParts(
-            "${ForecastSource.GISMETEO.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH)}}",
-            from.date,
+            "${ForecastSource.GISMETEO.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH) + 1}",
+            cal.time,
             convertDayPartForecast(from.nightForecast),
             convertDayPartForecast(from.morningForecast),
             convertDayPartForecast(from.dayForecast),

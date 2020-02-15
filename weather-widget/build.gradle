@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from: "../common_android_module.gradle"
+
+dependencies {
+    implementation project(":domain-model")
+    implementation project(":domain-presenter-mappers-model")
+    implementation project(":presenter-model")
+    implementation project(":navigation")
+}

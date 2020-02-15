@@ -2,6 +2,7 @@
 
 package com.yurivlad.multiweather.weeklyForecastImpl
 
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -46,10 +47,9 @@ fun createDateLabelText(forDate: Date): String {
 
 @BindingAdapter("isRefreshing")
 fun SwipeRefreshLayout.refreshing(isRefreshing: Boolean?) {
-    if (this.isRefreshing != isRefreshing)
-        post {
+        postDelayed( {
             this.isRefreshing = isRefreshing == true
-        }
+        }, 30)
 }
 
 @BindingAdapter("items")

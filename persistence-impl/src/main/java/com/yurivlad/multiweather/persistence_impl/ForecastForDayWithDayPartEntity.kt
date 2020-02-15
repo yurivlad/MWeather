@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.persistence_impl
 
 import androidx.room.*
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 import com.yurivlad.multiweather.domainModel.model.*
 import org.koin.core.KoinComponent
 import org.koin.core.get
@@ -97,15 +98,17 @@ class ForecastForDayWithDayPartEntityConverters : KoinComponent {
 
     @TypeConverter
     fun fromStringWeatherList(string: String): WeatherList {
-        return get<Moshi>().adapter<WeatherList>(WeatherList::class.java).fromJson(string)
-            ?: WeatherList(
-                emptySet()
-            )
+        val type = Types.newParameterizedType(Set::class.java, WeatherType::class.java)
+        val weatherSet = get<Moshi>().adapter<Set<WeatherType>>(type).fromJson(string)!!
+
+        return WeatherList(weatherSet)
     }
 
     @TypeConverter
     fun toStringWeatherList(source: WeatherList): String {
-        return get<Moshi>().adapter<WeatherList>(WeatherList::class.java).toJson(source)
+        val type = Types.newParameterizedType(Set::class.java, WeatherType::class.java)
+
+        return get<Moshi>().adapter<Set<WeatherType>>(type).toJson(source.list)
     }
 
 

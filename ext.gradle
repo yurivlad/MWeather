@@ -1,8 +1,9 @@
 ext {
-    retrofit = "com.squareup.retrofit2:retrofit:2.7.0"
-    okhttpLogginInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.0"
     minSdk = 21
     targetSdk = 29
+    appVersionCode = 2
+    retrofit = "com.squareup.retrofit2:retrofit:2.7.0"
+    okhttpLogginInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.0"
     coreKtx = 'androidx.core:core-ktx:1.1.0'
     buildToolsVersion = "29.02"
     jsoup = 'org.jsoup:jsoup:1.12.1'
@@ -15,5 +16,4 @@ ext {
     moshiVersion = "1.9.2"
     roomVersion = "2.2.3"
     glide = "com.github.bumptech.glide:glide:4.11.0"
-    kotlinReflect =  "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }

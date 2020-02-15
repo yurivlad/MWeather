@@ -52,7 +52,8 @@ object YaParserImpl : Parser<Ya10DayForecast> {
             val summaries =
                 card.select("td.weather-table__body-cell.weather-table__body-cell_type_condition")
                     .map { it.text() }
-            val winds = card.select(".wind-speed").map { it.text().replace(",", ".").toDouble() }
+            val winds = card.select(".wind-speed").map { it.text().replace(",", ".").toDouble() }.plus(
+                listOf(0.0, 0.0, 0.0, 0.0))
             val dateTitle = card.select("dt[data-anchor]")
             val dayNum = dateTitle.select("strong").text().toInt()
             val month = dateTitle.select("small, span").first().child(0).text()

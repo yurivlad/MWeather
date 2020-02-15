@@ -116,7 +116,7 @@
 
         <TextView
             android:id="@+id/temp_descr_1"
-            style="@style/WeeklyForecastItemLabel"
+            style="@style/TempLabel"
             temperature="@{forecast.firstColumn}"
             android:lines="1"
             app:layout_constraintBottom_toBottomOf="@id/therm_1"
@@ -199,7 +199,7 @@
 
         <TextView
             android:id="@+id/temp_descr_2"
-            style="@style/WeeklyForecastItemLabel"
+            style="@style/TempLabel"
             temperature="@{forecast.secondColumn}"
             app:layout_constraintBottom_toBottomOf="@id/therm_2"
             app:layout_constraintStart_toEndOf="@id/therm_2"
@@ -275,7 +275,7 @@
 
         <TextView
             android:id="@+id/temp_descr_3"
-            style="@style/WeeklyForecastItemLabel"
+            style="@style/TempLabel"
             temperature="@{forecast.thirdColumn}"
             app:layout_constraintBottom_toBottomOf="@id/therm_3"
             app:layout_constraintStart_toEndOf="@id/therm_3"

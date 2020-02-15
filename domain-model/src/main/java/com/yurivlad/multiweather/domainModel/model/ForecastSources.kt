@@ -7,6 +7,5 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
  *
  */
 @ExperimentalCoroutinesApi
-data class ForecastSources(val list: List<ForecastWithDayParts>) : DomainModel,
-    List<ForecastWithDayParts> by list
+data class ForecastSources(val list: List<ForecastWithDayParts>) : DomainModel, List<ForecastWithDayParts> by list
 

@@ -2,371 +2,66 @@
   "list": [
     {
       "source": "GISMETEO",
-      "from": "2020-01-12T11:41:25.027Z",
-      "to": "2020-01-21T11:41:25.028Z",
+      "from": "2020-01-31T14:00:00.000Z",
+      "to": "2020-02-09T14:00:00.000Z",
       "forecasts": [
         {
-          "date": "2020-01-12T11:41:25.029Z",
+          "id": "GISMETEO:31:0}",
+          "date": "2020-01-31T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
             "summary": "Ясно",
             "temperature": {
-              "from": -8,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 10.0,
-              "to": 10.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
+              "from": -7,
+              "to": -7
             },
             "windMetersPerSecond": {
               "from": 4.0,
               "to": 4.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -4,
-              "to": -4
             },
-            "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 3.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -8,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-13T11:41:25.042Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Малооблачно",
-            "temperature": {
-              "from": -6,
-              "to": -6
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
             "summary": "Малооблачно",
             "temperature": {
               "from": -9,
               "to": -9
             },
             "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-14T11:41:25.042Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -11
+              "from": 1.0,
+              "to": 1.0
             },
-            "windMetersPerSecond": {
-              "from": 7.0,
-              "to": 7.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
             "summary": "Ясно",
             "temperature": {
-              "from": -6,
-              "to": -6
+              "from": -2,
+              "to": -2
             },
             "windMetersPerSecond": {
               "from": 8.0,
               "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
             "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-15T11:41:25.043Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -13,
-              "to": -13
-            },
-            "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -5,
-              "to": -5
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-16T11:41:25.043Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -4,
-              "to": -4
-            },
-            "windMetersPerSecond": {
-              "from": 9.0,
-              "to": 9.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -8,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-17T11:41:25.043Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -10,
-              "to": -10
-            },
-            "windMetersPerSecond": {
-              "from": 10.0,
-              "to": 10.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -4,
-              "to": -4
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -8,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-18T11:41:25.044Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -10,
-              "to": -10
-            },
-            "windMetersPerSecond": {
-              "from": 7.0,
-              "to": 7.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 7.0,
-              "to": 7.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -3,
-              "to": -3
-            },
-            "windMetersPerSecond": {
-              "from": 6.0,
-              "to": 6.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Облачно, небольшой снег",
-            "temperature": {
-              "from": -4,
-              "to": -4
-            },
-            "windMetersPerSecond": {
-              "from": 6.0,
-              "to": 6.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-19T11:41:25.044Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Пасмурно, снег",
             "temperature": {
               "from": -4,
               "to": -4
@@ -374,319 +69,322 @@
             "windMetersPerSecond": {
               "from": 10.0,
               "to": 10.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:1:1}",
+          "date": "2020-02-01T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -7,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 14.0,
+              "to": 14.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 9.0,
+              "to": 9.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -4,
+              "to": -4
+            },
+            "windMetersPerSecond": {
+              "from": 10.0,
+              "to": 10.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -6,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:2:1}",
+          "date": "2020-02-02T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
             "summary": "Пасмурно",
             "temperature": {
+              "from": -9,
+              "to": -9
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно",
+            "temperature": {
               "from": -4,
               "to": -4
             },
             "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Облачно",
-            "temperature": {
-              "from": -1,
-              "to": -1
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -6,
-              "to": -6
-            },
-            "windMetersPerSecond": {
               "from": 10.0,
               "to": 10.0
-            }
-          }
-        },
-        {
-          "date": "2020-01-20T11:41:25.045Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -8,
-              "to": -8
             },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
+          "eveningForecast": {
+            "dayPart": "EVENING",
             "summary": "Малооблачно",
             "temperature": {
-              "from": -3,
-              "to": -3
+              "from": -7,
+              "to": -7
             },
             "windMetersPerSecond": {
               "from": 8.0,
               "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -5,
-              "to": -5
             },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           }
         },
         {
-          "date": "2020-01-21T11:41:25.045Z",
+          "id": "GISMETEO:3:1}",
+          "date": "2020-02-03T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -7,
-              "to": -7
-            },
-            "windMetersPerSecond": {
-              "from": 11.0,
-              "to": 11.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 11.0,
-              "to": 11.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -3,
-              "to": -3
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -7,
-              "to": -7
-            },
-            "windMetersPerSecond": {
-              "from": 8.0,
-              "to": 8.0
-            }
-          }
-        }
-      ]
-    },
-    {
-      "source": "YANDEX",
-      "from": "1970-01-11T14:00:00.000Z",
-      "to": "1970-01-20T14:00:00.000Z",
-      "forecasts": [
-        {
-          "date": "1970-01-11T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -13,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 3.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
             "summary": "Ясно",
             "temperature": {
               "from": -10,
-              "to": -9
+              "to": -10
             },
             "windMetersPerSecond": {
-              "from": 4.0,
-              "to": 4.0
+              "from": 12.0,
+              "to": 12.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -12,
+              "to": -12
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
-            "summary": "Ясно",
+            "summary": "Пасмурно, небольшой снег",
             "temperature": {
-              "from": -8,
-              "to": -4
+              "from": -7,
+              "to": -7
             },
             "windMetersPerSecond": {
-              "from": 4.0,
-              "to": 4.0
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "SMALL_SNOW"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
-            "summary": "Ясно",
+            "summary": "Пасмурно, небольшой снег",
             "temperature": {
-              "from": -11,
-              "to": -6
+              "from": -8,
+              "to": -8
             },
             "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 3.0
+              "from": 12.0,
+              "to": 12.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "SMALL_SNOW"
+              ]
             }
           }
         },
         {
-          "date": "1970-01-12T14:00:00.000Z",
+          "id": "GISMETEO:4:1}",
+          "date": "2020-02-04T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
             "summary": "Ясно",
             "temperature": {
-              "from": -13,
+              "from": -11,
               "to": -11
             },
             "windMetersPerSecond": {
-              "from": 3.4,
-              "to": 3.4
+              "from": 15.0,
+              "to": 15.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
             "summary": "Ясно",
             "temperature": {
-              "from": -13,
-              "to": -10
+              "from": -15,
+              "to": -15
             },
             "windMetersPerSecond": {
-              "from": 3.1,
-              "to": 3.1
+              "from": 14.0,
+              "to": 14.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
-            "summary": "Облачно с прояснениями",
+            "summary": "Ясно",
             "temperature": {
-              "from": -8,
-              "to": -6
+              "from": -12,
+              "to": -12
             },
             "windMetersPerSecond": {
-              "from": 3.1,
-              "to": 3.1
+              "from": 15.0,
+              "to": 15.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
             "summary": "Малооблачно",
             "temperature": {
-              "from": -11,
-              "to": -8
+              "from": -13,
+              "to": -13
             },
             "windMetersPerSecond": {
-              "from": 3.5,
-              "to": 3.5
+              "from": 14.0,
+              "to": 14.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           }
         },
         {
-          "date": "1970-01-13T14:00:00.000Z",
+          "id": "GISMETEO:5:1}",
+          "date": "2020-02-05T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
             "summary": "Ясно",
             "temperature": {
-              "from": -13,
-              "to": -12
+              "from": -14,
+              "to": -14
             },
             "windMetersPerSecond": {
-              "from": 4.3,
-              "to": 4.3
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -13,
-              "to": -10
+              "from": 15.0,
+              "to": 15.0
             },
-            "windMetersPerSecond": {
-              "from": 3.7,
-              "to": 3.7
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -6
-            },
-            "windMetersPerSecond": {
-              "from": 3.7,
-              "to": 3.7
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 4.3,
-              "to": 4.3
-            }
-          }
-        },
-        {
-          "date": "1970-01-14T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 2.5,
-              "to": 2.5
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "morningForecast": {
@@ -694,125 +392,531 @@
             "summary": "Ясно",
             "temperature": {
               "from": -14,
-              "to": -11
+              "to": -14
             },
             "windMetersPerSecond": {
-              "from": 3.9,
-              "to": 3.9
+              "from": 15.0,
+              "to": 15.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -7,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 11.0,
+              "to": 11.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -10,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 9.0,
+              "to": 9.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:6:1}",
+          "date": "2020-02-06T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно, небольшой снег",
+            "temperature": {
+              "from": -9,
+              "to": -9
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "SMALL_SNOW"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно, снег",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY",
+                "SNOW"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -4,
+              "to": -4
+            },
+            "windMetersPerSecond": {
+              "from": 13.0,
+              "to": 13.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 12.0,
+              "to": 12.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:7:1}",
+          "date": "2020-02-07T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -10,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -10,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -4,
+              "to": -4
+            },
+            "windMetersPerSecond": {
+              "from": 10.0,
+              "to": 10.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 10.0,
+              "to": 10.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:8:1}",
+          "date": "2020-02-08T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -10,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Облачно",
+            "temperature": {
+              "from": -9,
+              "to": -9
+            },
+            "windMetersPerSecond": {
+              "from": 9.0,
+              "to": 9.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Облачно",
+            "temperature": {
+              "from": -4,
+              "to": -4
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -6,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 9.0,
+              "to": 9.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "GISMETEO:9:1}",
+          "date": "2020-02-09T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно, небольшой снег",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "SMALL_SNOW"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -7,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -3,
+              "to": -3
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -6,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 8.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source": "YANDEX",
+      "from": "2020-01-31T14:00:00.000Z",
+      "to": "2020-02-09T14:00:00.000Z",
+      "forecasts": [
+        {
+          "id": "YANDEX:31:0}",
+          "date": "2020-01-31T14:00:00.000Z",
+          "morningForecast": {
+            "dayPart": "MORNING",
             "summary": "Ясно",
             "temperature": {
               "from": -9,
               "to": -5
             },
             "windMetersPerSecond": {
-              "from": 3.9,
-              "to": 3.9
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -7
+              "from": 3.2,
+              "to": 3.2
             },
-            "windMetersPerSecond": {
-              "from": 2.8,
-              "to": 2.8
-            }
-          }
-        },
-        {
-          "date": "1970-01-15T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -12,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.7,
-              "to": 2.7
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -13,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.2,
-              "to": 2.2
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
             "summary": "Ясно",
             "temperature": {
-              "from": -6,
-              "to": -4
+              "from": -3,
+              "to": -1
             },
             "windMetersPerSecond": {
-              "from": 3.8,
-              "to": 3.8
+              "from": 3.9,
+              "to": 3.9
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -6,
+              "to": -3
+            },
+            "windMetersPerSecond": {
+              "from": 4.9,
+              "to": 4.9
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:1:1}",
+          "date": "2020-02-01T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -8,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 4.1,
+              "to": 4.1
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
             "summary": "Ясно",
             "temperature": {
               "from": -9,
               "to": -6
             },
             "windMetersPerSecond": {
-              "from": 3.2,
-              "to": 3.2
-            }
-          }
-        },
-        {
-          "date": "1970-01-16T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -11,
-              "to": -11
+              "from": 4.1,
+              "to": 4.1
             },
-            "windMetersPerSecond": {
-              "from": 2.9,
-              "to": 2.9
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -13,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.4,
-              "to": 2.4
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
-            "summary": "Ясно",
+            "summary": "Малооблачно",
             "temperature": {
-              "from": -6,
-              "to": -4
+              "from": -5,
+              "to": -3
             },
             "windMetersPerSecond": {
-              "from": 2.7,
-              "to": 2.7
+              "from": 4.9,
+              "to": 4.9
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -8,
+              "to": -5
+            },
+            "windMetersPerSecond": {
+              "from": 4.1,
+              "to": 4.1
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:2:1}",
+          "date": "2020-02-02T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -8,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 2.9,
+              "to": 2.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -10,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 4.3,
+              "to": 4.3
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -8,
+              "to": -5
+            },
+            "windMetersPerSecond": {
+              "from": 4.7,
+              "to": 4.7
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           },
           "eveningForecast": {
@@ -823,212 +927,523 @@
               "to": -7
             },
             "windMetersPerSecond": {
-              "from": 2.9,
-              "to": 2.9
+              "from": 4.4,
+              "to": 4.4
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           }
         },
         {
-          "date": "1970-01-17T14:00:00.000Z",
+          "id": "YANDEX:3:1}",
+          "date": "2020-02-03T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
-            "summary": "Пасмурно",
-            "temperature": {
-              "from": -10,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 1.8,
-              "to": 1.8
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
             "summary": "Ясно",
             "temperature": {
               "from": -12,
               "to": -10
             },
             "windMetersPerSecond": {
-              "from": 2.7,
-              "to": 2.7
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Облачно с прояснениями",
-            "temperature": {
-              "from": -5,
-              "to": -4
+              "from": 4.5,
+              "to": 4.5
             },
-            "windMetersPerSecond": {
-              "from": 2.2,
-              "to": 2.2
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Облачно с прояснениями",
-            "temperature": {
-              "from": -9,
-              "to": -6
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-18T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 2.5,
-              "to": 2.5
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -13,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 3.2,
+              "to": 3.2
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
             "summary": "Небольшой снег",
             "temperature": {
               "from": -9,
               "to": -7
             },
             "windMetersPerSecond": {
+              "from": 3.2,
+              "to": 3.2
+            },
+            "weatherList": {
+              "list": [
+                "SMALL_SNOW"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Небольшой снег",
+            "temperature": {
+              "from": -12,
+              "to": -9
+            },
+            "windMetersPerSecond": {
+              "from": 4.4,
+              "to": 4.4
+            },
+            "weatherList": {
+              "list": [
+                "SMALL_SNOW"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:4:1}",
+          "date": "2020-02-04T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -16,
+              "to": -14
+            },
+            "windMetersPerSecond": {
+              "from": 5.2,
+              "to": 5.2
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -17,
+              "to": -16
+            },
+            "windMetersPerSecond": {
+              "from": 5.4,
+              "to": 5.4
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно",
+            "temperature": {
+              "from": -13,
+              "to": -13
+            },
+            "windMetersPerSecond": {
+              "from": 5.9,
+              "to": 5.9
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -15,
+              "to": -15
+            },
+            "windMetersPerSecond": {
+              "from": 5.3,
+              "to": 5.3
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:5:1}",
+          "date": "2020-02-05T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -16,
+              "to": -15
+            },
+            "windMetersPerSecond": {
+              "from": 4.8,
+              "to": 4.8
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -16,
+              "to": -13
+            },
+            "windMetersPerSecond": {
+              "from": 4.1,
+              "to": 4.1
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -8,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 4.0,
+              "to": 4.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -11,
+              "to": -9
+            },
+            "windMetersPerSecond": {
+              "from": 3.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:6:1}",
+          "date": "2020-02-06T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -12,
+              "to": -12
+            },
+            "windMetersPerSecond": {
+              "from": 0.9,
+              "to": 0.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -12,
+              "to": -9
+            },
+            "windMetersPerSecond": {
               "from": 1.9,
               "to": 1.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -4,
+              "to": -4
+            },
+            "windMetersPerSecond": {
+              "from": 3.9,
+              "to": 3.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -9,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 3.8,
+              "to": 3.8
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:7:1}",
+          "date": "2020-02-07T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -12,
+              "to": -11
+            },
+            "windMetersPerSecond": {
+              "from": 1.8,
+              "to": 1.8
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -12,
+              "to": -11
+            },
+            "windMetersPerSecond": {
+              "from": 1.7,
+              "to": 1.7
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -6,
+              "to": -5
+            },
+            "windMetersPerSecond": {
+              "from": 2.4,
+              "to": 2.4
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -10,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 2.5,
+              "to": 2.5
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:8:1}",
+          "date": "2020-02-08T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясно",
+            "temperature": {
+              "from": -11,
+              "to": -11
+            },
+            "windMetersPerSecond": {
+              "from": 1.3,
+              "to": 1.3
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -12,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 1.3,
+              "to": 1.3
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
             "summary": "Пасмурно",
             "temperature": {
-              "from": -4,
+              "from": -5,
               "to": -3
+            },
+            "windMetersPerSecond": {
+              "from": 0.9,
+              "to": 0.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -6,
+              "to": -5
+            },
+            "windMetersPerSecond": {
+              "from": 0.6,
+              "to": 0.6
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "YANDEX:9:1}",
+          "date": "2020-02-09T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Облачно с прояснениями",
+            "temperature": {
+              "from": -9,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 0.8,
+              "to": 0.8
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -9,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 1.1,
+              "to": 1.1
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -5,
+              "to": -4
             },
             "windMetersPerSecond": {
               "from": 2.9,
               "to": 2.9
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
             "summary": "Облачно с прояснениями",
             "temperature": {
-              "from": -6,
-              "to": -5
-            },
-            "windMetersPerSecond": {
-              "from": 2.6,
-              "to": 2.6
-            }
-          }
-        },
-        {
-          "date": "1970-01-19T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Снег",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 1.2,
-              "to": 1.2
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -9,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 2.4,
-              "to": 2.4
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -4,
-              "to": -3
-            },
-            "windMetersPerSecond": {
-              "from": 2.6,
-              "to": 2.6
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
               "from": -7,
-              "to": -5
+              "to": -6
             },
             "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-20T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -10,
-              "to": -9
+              "from": 1.8,
+              "to": 1.8
             },
-            "windMetersPerSecond": {
-              "from": 2.2,
-              "to": 2.2
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Снег",
-            "temperature": {
-              "from": -9,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 1.2,
-              "to": 1.2
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -4,
-              "to": -2
-            },
-            "windMetersPerSecond": {
-              "from": 3.1,
-              "to": 3.1
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясно",
-            "temperature": {
-              "from": -7,
-              "to": -5
-            },
-            "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 3.0
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "CLOUDY"
+              ]
             }
           }
         }
@@ -1036,33 +1451,44 @@
     },
     {
       "source": "PRIMPOGODA",
-      "from": "1970-01-11T14:00:00.000Z",
-      "to": "1970-01-17T14:00:00.000Z",
+      "from": "2020-01-31T14:00:00.000Z",
+      "to": "2020-02-06T14:00:00.000Z",
       "forecasts": [
         {
-          "date": "1970-01-11T14:00:00.000Z",
+          "id": "PRIMPOGODA:31:0}",
+          "date": "2020-01-31T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
-            "summary": "Облачно",
+            "summary": "Ясная погода",
             "temperature": {
-              "from": -7,
-              "to": -8
+              "from": -6,
+              "to": -7
             },
             "windMetersPerSecond": {
               "from": 2.0,
-              "to": 4.0
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
-            "summary": "Облачно",
+            "summary": "Ясная погода",
             "temperature": {
-              "from": -8,
-              "to": -9
+              "from": -5,
+              "to": -8
             },
             "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 4.0
+              "from": 1.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "dayForecast": {
@@ -1070,329 +1496,466 @@
             "summary": "Ясная погода",
             "temperature": {
               "from": -4,
-              "to": -7
-            },
-            "windMetersPerSecond": {
-              "from": 3.0,
-              "to": 3.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -5,
-              "to": -10
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 3.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-12T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -10,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Малооблачно, кучевые облака",
-            "temperature": {
-              "from": -9,
-              "to": -12
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 2.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Малооблачно, кучевые облака",
-            "temperature": {
-              "from": -5,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 2.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Облачно",
-            "temperature": {
-              "from": -6,
-              "to": -10
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-13T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Малооблачно, кучевые облака",
-            "temperature": {
-              "from": -10,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -9,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -5,
-              "to": -8
+              "to": 0
             },
             "windMetersPerSecond": {
               "from": 1.0,
               "to": 1.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
-            "summary": "Ясная погода",
+            "summary": "Малооблачно, кучевые облака",
             "temperature": {
-              "from": -7,
-              "to": -11
+              "from": -1,
+              "to": -5
             },
             "windMetersPerSecond": {
               "from": 1.0,
-              "to": 3.0
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           }
         },
         {
-          "date": "1970-01-14T14:00:00.000Z",
+          "id": "PRIMPOGODA:1:1}",
+          "date": "2020-02-01T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
             "summary": "Ясная погода",
+            "temperature": {
+              "from": -5,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 2.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Ясная погода",
+            "temperature": {
+              "from": -7,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно, кучевые облака",
+            "temperature": {
+              "from": -3,
+              "to": -5
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -4,
+              "to": -7
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 1.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "PRIMPOGODA:2:1}",
+          "date": "2020-02-02T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -7,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -7,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 2.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Облачно",
+            "temperature": {
+              "from": -4,
+              "to": -6
+            },
+            "windMetersPerSecond": {
+              "from": 2.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Малооблачно, кучевые облака",
+            "temperature": {
+              "from": -5,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "PRIMPOGODA:3:1}",
+          "date": "2020-02-03T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясная погода",
+            "temperature": {
+              "from": -8,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -9,
+              "to": -11
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 1.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -5,
+              "to": -8
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -6,
+              "to": -11
+            },
+            "windMetersPerSecond": {
+              "from": 3.0,
+              "to": 7.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "PRIMPOGODA:4:1}",
+          "date": "2020-02-04T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Ясная погода",
+            "temperature": {
+              "from": -11,
+              "to": -14
+            },
+            "windMetersPerSecond": {
+              "from": 4.0,
+              "to": 6.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно, кучевые облака",
+            "temperature": {
+              "from": -13,
+              "to": -14
+            },
+            "windMetersPerSecond": {
+              "from": 4.0,
+              "to": 6.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Облачно",
+            "temperature": {
+              "from": -10,
+              "to": -12
+            },
+            "windMetersPerSecond": {
+              "from": 7.0,
+              "to": 8.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Малооблачно, кучевые облака",
             "temperature": {
               "from": -11,
               "to": -12
             },
             "windMetersPerSecond": {
               "from": 3.0,
-              "to": 3.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -10,
-              "to": -12
+              "to": 6.0
             },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 3.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -4,
-              "to": -8
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 1.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -5,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 2.0
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           }
         },
         {
-          "date": "1970-01-15T14:00:00.000Z",
+          "id": "PRIMPOGODA:5:1}",
+          "date": "2020-02-05T14:00:00.000Z",
           "nightForecast": {
             "dayPart": "NIGHT",
             "summary": "Ясная погода",
             "temperature": {
-              "from": -9,
+              "from": -12,
+              "to": -14
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "CLEAR"
+              ]
+            }
+          },
+          "morningForecast": {
+            "dayPart": "MORNING",
+            "summary": "Малооблачно, кучевые облака",
+            "temperature": {
+              "from": -12,
+              "to": -14
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "dayForecast": {
+            "dayPart": "DAY",
+            "summary": "Малооблачно, кучевые облака",
+            "temperature": {
+              "from": -7,
               "to": -10
             },
             "windMetersPerSecond": {
               "from": 1.0,
               "to": 1.0
+            },
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
+            }
+          },
+          "eveningForecast": {
+            "dayPart": "EVENING",
+            "summary": "Пасмурно",
+            "temperature": {
+              "from": -7,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 1.0,
+              "to": 1.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
+            }
+          }
+        },
+        {
+          "id": "PRIMPOGODA:6:1}",
+          "date": "2020-02-06T14:00:00.000Z",
+          "nightForecast": {
+            "dayPart": "NIGHT",
+            "summary": "Пасмурно, небольшой снег",
+            "temperature": {
+              "from": -10,
+              "to": -10
+            },
+            "windMetersPerSecond": {
+              "from": 2.0,
+              "to": 2.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY",
+                "SMALL_SNOW"
+              ]
             }
           },
           "morningForecast": {
             "dayPart": "MORNING",
-            "summary": "Ясная погода",
+            "summary": "Пасмурно",
             "temperature": {
               "from": -7,
-              "to": -9
+              "to": -10
             },
             "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 2.0
+              "from": 2.0,
+              "to": 3.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
             }
           },
           "dayForecast": {
             "dayPart": "DAY",
-            "summary": "Ясная погода",
+            "summary": "Облачно",
             "temperature": {
               "from": -3,
               "to": -6
             },
             "windMetersPerSecond": {
               "from": 1.0,
-              "to": 3.0
+              "to": 6.0
+            },
+            "weatherList": {
+              "list": [
+                "MAINLY_CLOUDY"
+              ]
             }
           },
           "eveningForecast": {
             "dayPart": "EVENING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -4,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 3.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-16T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -9,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 1.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -9,
-              "to": -11
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 2.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -4,
-              "to": -7
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 3.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Ясная погода",
-            "temperature": {
-              "from": -5,
-              "to": -9
-            },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 3.0
-            }
-          }
-        },
-        {
-          "date": "1970-01-17T14:00:00.000Z",
-          "nightForecast": {
-            "dayPart": "NIGHT",
             "summary": "Малооблачно, кучевые облака",
             "temperature": {
-              "from": -9,
-              "to": -9
+              "from": -5,
+              "to": -11
             },
             "windMetersPerSecond": {
               "from": 2.0,
-              "to": 3.0
-            }
-          },
-          "morningForecast": {
-            "dayPart": "MORNING",
-            "summary": "Пасмурно",
-            "temperature": {
-              "from": -7,
-              "to": -10
+              "to": 5.0
             },
-            "windMetersPerSecond": {
-              "from": 2.0,
-              "to": 3.0
-            }
-          },
-          "dayForecast": {
-            "dayPart": "DAY",
-            "summary": "Пасмурно",
-            "temperature": {
-              "from": -2,
-              "to": -5
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 1.0
-            }
-          },
-          "eveningForecast": {
-            "dayPart": "EVENING",
-            "summary": "Облачно",
-            "temperature": {
-              "from": -3,
-              "to": -7
-            },
-            "windMetersPerSecond": {
-              "from": 1.0,
-              "to": 2.0
+            "weatherList": {
+              "list": [
+                "CLOUDY"
+              ]
             }
           }
         }

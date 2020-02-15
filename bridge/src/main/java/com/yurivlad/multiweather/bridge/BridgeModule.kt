@@ -3,6 +3,7 @@
 package com.yurivlad.multiweather.bridge
 
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.yurivlad.multiweather.apiServiceApi.createGisApiService
 import com.yurivlad.multiweather.apiServiceApi.createOkHttpClient
@@ -27,9 +28,10 @@ import com.yurivlad.multiweather.domainImpl.WeatherSourcesForecastUseCase
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.UseCase
 import com.yurivlad.multiweather.domainModel.model.*
-import com.yurivlad.multiweather.domainPresenterMappersImpl.ForecastWithDayPartsToPresenterConverter
-import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
-import com.yurivlad.multiweather.domainPresenterMappersModel.ToPresenterMapper
+import com.yurivlad.multiweather.domainPresenterMappersImpl.ForecastWithDayPartsToWeeklyForecastModelMapper
+import com.yurivlad.multiweather.domainPresenterMappersImpl.ForecastWithDayPartsToWeatherWidgetModelMapper
+import com.yurivlad.multiweather.domainPresenterMappersModel.WeatherWidgetMapper
+import com.yurivlad.multiweather.domainPresenterMappersModel.WeeklyForecastMapper
 import com.yurivlad.multiweather.parsersImpl.GisParserImpl
 import com.yurivlad.multiweather.parsersImpl.PrimParserImpl
 import com.yurivlad.multiweather.parsersImpl.YaParserImpl
@@ -39,7 +41,6 @@ import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
 import com.yurivlad.multiweather.persistence_api.createForecastWithDayPartsDatabase
 import com.yurivlad.multiweather.persistence_model.DatabaseDomain
-import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
 import com.yurivlad.multiweather.presenterUtils.StringsProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -47,6 +48,7 @@ import okhttp3.Dispatcher
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
+import java.util.*
 
 /**
  *
@@ -113,12 +115,13 @@ internal val appCoreModules = module {
             get(named("Prim7DayForecastRepositoryImpl"))
         )
     }
-    single<ToPresenterMapper<ForecastSources, NoAdditionalData, ForecastWithThreeSourcesPresenterModel>>
-    { ForecastWithDayPartsToPresenterConverter(get()) }
+    single<WeeklyForecastMapper> { ForecastWithDayPartsToWeeklyForecastModelMapper(get()) }
+    single<WeatherWidgetMapper> { ForecastWithDayPartsToWeatherWidgetModelMapper() }
     single { createOkHttpClient(get()) }
     single {
         Moshi
             .Builder()
+            .add(Date::class.java, Rfc3339DateJsonAdapter())
             .add(KotlinJsonAdapterFactory())
             .build()
     }

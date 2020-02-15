@@ -42,7 +42,7 @@ class ToWeeklyForecastTest {
 
             }
         }
-        val converter = ForecastWithDayPartsToPresenterConverter(sp)
+        val converter = ForecastWithDayPartsToWeeklyForecastModelMapper(sp)
         val moshi = Moshi.Builder()
             .add(Date::class.java, Rfc3339DateJsonAdapter())
             .add(KotlinJsonAdapterFactory())

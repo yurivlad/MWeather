@@ -28,6 +28,9 @@
         <item name="android:maxLines">1</item>
         <item name="android:textSize">12sp</item>
     </style>
+    <style name="TempLabel" parent="WeeklyForecastItemLabel">
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="WeeklyForecastSummaryLabel">
         <item name="android:layout_width">0dp</item>

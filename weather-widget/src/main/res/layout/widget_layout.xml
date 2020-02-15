@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/widget_width"
+    android:focusable="true"
+    android:baselineAligned="false"
+    android:descendantFocusability="beforeDescendants"
+    android:id="@+id/widget_lo_root"
+    android:background="@drawable/weather_widget_background"
+    android:paddingEnd="4dp"
+    android:layout_height="@dimen/widget_height">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:id="@+id/weather_night"
+            style="@style/WeatherIcon"
+            tools:src="@drawable/ic_snow_linear_40dp" />
+
+        <TextView
+            android:id="@+id/temp_night"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="top|start"
+            android:drawableStart="@drawable/ic_therm_linear_14dp"
+            tools:text="25 C" />
+
+        <TextView
+            android:id="@+id/wind_night"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="bottom|start"
+            android:drawableStart="@drawable/ic_wind_14dp"
+            tools:text="12 м/c" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:id="@+id/weather_morning"
+            style="@style/WeatherIcon"
+            tools:src="@drawable/ic_clear_linear_40dp" />
+
+        <TextView
+            android:id="@+id/temp_morning"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="top|start"
+            android:drawableStart="@drawable/ic_therm_linear_14dp"
+            tools:text="25 C" />
+
+        <TextView
+            android:id="@+id/wind_morning"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="bottom|start"
+            android:drawableStart="@drawable/ic_wind_14dp"
+            tools:text="12 м/c" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:id="@+id/weather_day"
+            style="@style/WeatherIcon"
+            tools:src="@drawable/ic_cloudy_clear_day_linear_40dp" />
+
+        <TextView
+            android:id="@+id/temp_day"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="top|start"
+            android:drawableStart="@drawable/ic_therm_linear_14dp"
+            tools:text="25 C" />
+
+        <TextView
+            android:id="@+id/wind_day"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="bottom|start"
+            android:drawableStart="@drawable/ic_wind_14dp"
+            tools:text="12 м/c" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:id="@+id/weather_evening"
+            style="@style/WeatherIcon"
+            tools:src="@drawable/ic_rain_linear_40dp" />
+
+        <TextView
+            android:id="@+id/temp_evening"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="top|start"
+            android:drawableStart="@drawable/ic_therm_linear_14dp"
+            tools:text="25 C" />
+
+        <TextView
+            android:id="@+id/wind_evening"
+            style="@style/WeatherDataLabel"
+            android:layout_gravity="bottom|start"
+            android:drawableStart="@drawable/ic_wind_14dp"
+            tools:text="12 м/c" />
+
+    </FrameLayout>
+
+</LinearLayout>

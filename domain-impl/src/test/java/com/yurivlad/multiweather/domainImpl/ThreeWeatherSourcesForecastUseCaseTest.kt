@@ -1,6 +1,7 @@
 package com.yurivlad.multiweather.domainImpl
 
-import com.yurivlad.multiweather.domainModel.BaseRepositoryImpl
+import com.yurivlad.multiweather.core.CompositeBroadcastChannel
+import com.yurivlad.multiweather.core.CompositeReceiveChannel
 import com.yurivlad.multiweather.domainModel.RepositoryDomain
 import com.yurivlad.multiweather.domainModel.RepositoryRequest
 import com.yurivlad.multiweather.domainModel.model.ForecastSource
@@ -20,12 +21,24 @@ import java.util.*
 class ThreeWeatherSourcesForecastUseCaseTest {
 
     private fun <R : RepositoryRequest> createRepo(thatReturns: () -> ForecastWithDayParts): RepositoryDomain<ForecastWithDayParts, R> {
-        return object :
-            BaseRepositoryImpl<ForecastWithDayParts, R>(TestCoroutineDispatcher()) {
+        return object : RepositoryDomain<ForecastWithDayParts, R> {
+            private val channel = CompositeBroadcastChannel<ForecastWithDayParts>()
+
+
+            override fun getReceiveChannel(request: R): CompositeReceiveChannel<ForecastWithDayParts> {
+                return channel
+            }
 
             override fun requestUpdate(request: R) {
-                val channel = getOrCreateChannel(request)
-                launchHandledCoroutine(channel) { channel.valueSendChannel.offer(thatReturns()) }
+                try {
+                    channel.progressSendChannel.offer(true)
+                    channel.valueSendChannel.offer(thatReturns())
+                    channel.errorSendChannel.offer(null)
+                } catch (e: Exception) {
+                    channel.errorSendChannel.offer(e)
+                } finally {
+                    channel.progressSendChannel.offer(false)
+                }
             }
         }
     }

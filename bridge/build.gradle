@@ -16,6 +16,7 @@ dependencies {
     implementation project(":presenter-model")
     implementation project(":presenter-utils")
     implementation project(":persistence-api")
+    implementation project(":weather-widget")
     api project(':weekly-forecast-api')
     api project(":domain-model")
 }

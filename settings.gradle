@@ -1,4 +1,4 @@
-include ':app', ':weekly-forecast-impl', ':presenter-utils', ':persistence-model', ':persistence-impl', ':persistence-api',
+include ':app', ':weekly-forecast-impl', ':presenter-utils', ':persistence-model', ':persistence-impl', ':persistence-api', ':weather-widget', ':navigation',
         ':weekly-forecast-model',
         ':api-service-api',
         ':weekly-forecast-api',

@@ -1,12 +1,18 @@
 apply plugin: 'com.android.application'
 apply from: "../common_android_module.gradle"
 
+
+
 android {
     defaultConfig {
+        versionCode appVersionCode
+        versionName "mweather v.$appVersionCode"
         applicationId "com.yurivlad.multiweather"
+        setProperty("archivesBaseName", versionName)
     }
 }
 
 dependencies {
     implementation project(':bridge')
+    implementation project(':navigation')
 }

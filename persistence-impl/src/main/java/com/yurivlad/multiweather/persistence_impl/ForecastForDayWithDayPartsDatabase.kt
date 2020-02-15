@@ -15,7 +15,7 @@ import java.util.*
  */
 @Database(
     entities = [ForecastForDayWithDayPartEntity::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(ForecastForDayWithDayPartEntityConverters::class)
 abstract class DataBaseImpl : RoomDatabase(), ForecastForDayWithDayPartsDatabaseDomain {
