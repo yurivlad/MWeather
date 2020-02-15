@@ -3,13 +3,31 @@ apply from: "../common_android_module.gradle"
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+def getPropertyOrNull(String propertyName) {
+    project.hasProperty(propertyName)? project.properties[propertyName] : null
+}
 
 android {
+
+    signingConfigs {
+        config {
+            keyAlias getPropertyOrNull("MWEATHER_KEY")
+            keyPassword getPropertyOrNull("MWEATHER_KEY")
+            storeFile file('../m_weather')
+            storePassword getPropertyOrNull("MWEATHER_STORE_PASSWORD")
+        }
+    }
     defaultConfig {
         versionCode appVersionCode
         versionName "mweather v.$appVersionCode"
         applicationId "com.yurivlad.multiweather"
         setProperty("archivesBaseName", versionName)
+    }
+
+    buildTypes {
+        release {
+           signingConfig signingConfigs.config
+        }
     }
 }
 
