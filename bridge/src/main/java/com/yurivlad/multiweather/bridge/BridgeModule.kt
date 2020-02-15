@@ -41,7 +41,7 @@ import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
 import com.yurivlad.multiweather.persistence_api.createForecastWithDayPartsDatabase
 import com.yurivlad.multiweather.persistence_model.DatabaseDomain
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
+import com.yurivlad.multiweather.presenterCore.StringsProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.Dispatcher

@@ -35,6 +35,8 @@ internal fun WeatherList.convertToDrawableRes(dayPart: DayPart): Int {
                 contains(WeatherType.SMALL_SNOW) && (contains(WeatherType.CLOUDY) || contains(
                     WeatherType.MAINLY_CLOUDY
                 )) -> R.drawable.ic_light_snow_linear_40dp
+                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.SNOW) -> R.drawable.ic_snow_linear_40dp
+                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.HEAVY_SNOW) -> R.drawable.ic_heavy_snow_linear_40dp
                 else -> first().toDrawableRes(dayPart)
             }
         }

@@ -2,7 +2,6 @@
 
 package com.yurivlad.multiweather.weeklyForecastImpl
 
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.yurivlad.multiweather.presenterModel.ForecastForDayPartColumn
 import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
-import com.yurivlad.multiweather.presenterUtils.VerticalText
+import com.yurivlad.multiweather.presenterCore.VerticalText
 import java.text.SimpleDateFormat
 import java.util.*
 

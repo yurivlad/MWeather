@@ -3,7 +3,7 @@ package com.yurivlad.multiweather.domainPresenterMappersImpl
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
+import com.yurivlad.multiweather.presenterCore.StringsProvider
 import com.yurivlad.multiweather.domainModel.model.ForecastSources
 import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
 import com.yurivlad.multiweather.presenterModel.DateRow

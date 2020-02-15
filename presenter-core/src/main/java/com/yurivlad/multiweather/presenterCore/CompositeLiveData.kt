@@ -1,4 +1,4 @@
-package com.yurivlad.multiweather.presenterUtils
+package com.yurivlad.multiweather.presenterCore
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

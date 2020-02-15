@@ -1,4 +1,4 @@
-package com.yurivlad.multiweather.presenterUtils
+package com.yurivlad.multiweather.presenterCore
 
 import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes

@@ -35,7 +35,7 @@ object ToWeatherTypeMapperImpl : ToWeatherTypeMapper {
             "снег с дождём", "дождь со снегом" -> WeatherType.SNOW_WITH_RAIN
             "пасмурно", "облачно", "кучево-дождевых облаков", "кучево-дождевые облака" -> WeatherType.MAINLY_CLOUDY
             "небольшой дождь", "незначительные осадки" -> WeatherType.SMALL_RAIN
-            "дождь", "осадки" -> WeatherType.RAIN
+            "дождь", "осадки", "дождем" -> WeatherType.RAIN
             "снег", "мокрый снег" -> WeatherType.SNOW
             "небольшой снег" -> WeatherType.SMALL_SNOW
             "гроза" -> WeatherType.STORM

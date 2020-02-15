@@ -12,7 +12,7 @@
 
         <variable
             name="stringsProvider"
-            type="com.yurivlad.multiweather.presenterUtils.StringsProvider" />
+            type="com.yurivlad.multiweather.presenterCore.StringsProvider" />
 
         <import type="com.yurivlad.multiweather.weeklyForecastImpl.WeeklyForecastBindingUtils" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:minHeight="60dp">
 
-        <com.yurivlad.multiweather.presenterUtils.VerticalText
+        <com.yurivlad.multiweather.presenterCore.VerticalText
             android:id="@+id/dayPart"
             vertText="@{forecast.dayPart}"
             android:layout_width="24dp"

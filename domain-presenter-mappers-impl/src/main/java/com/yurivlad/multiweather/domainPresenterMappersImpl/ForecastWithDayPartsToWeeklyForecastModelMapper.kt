@@ -5,7 +5,7 @@ import com.yurivlad.multiweather.domainModel.model.*
 import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
 import com.yurivlad.multiweather.domainPresenterMappersModel.WeeklyForecastMapper
 import com.yurivlad.multiweather.presenterModel.*
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
+import com.yurivlad.multiweather.presenterCore.StringsProvider
 import com.yurivlad.multiweather.sharedResources.R
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*

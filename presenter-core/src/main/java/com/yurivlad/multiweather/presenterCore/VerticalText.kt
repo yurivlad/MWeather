@@ -1,4 +1,4 @@
-package com.yurivlad.multiweather.presenterUtils
+package com.yurivlad.multiweather.presenterCore
 
 import android.content.Context
 import android.graphics.Canvas

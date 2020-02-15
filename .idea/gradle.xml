@@ -28,8 +28,8 @@
             <option value="$PROJECT_DIR$/persistence-api" />
             <option value="$PROJECT_DIR$/persistence-impl" />
             <option value="$PROJECT_DIR$/persistence-model" />
+            <option value="$PROJECT_DIR$/presenter-core" />
             <option value="$PROJECT_DIR$/presenter-model" />
-            <option value="$PROJECT_DIR$/presenter-utils" />
             <option value="$PROJECT_DIR$/shared-resources" />
             <option value="$PROJECT_DIR$/weather-widget" />
             <option value="$PROJECT_DIR$/weekly-forecast-api" />

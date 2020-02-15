@@ -11,11 +11,10 @@ import com.yurivlad.multiweather.parsersModel.Parser
 import com.yurivlad.multiweather.parsersModel.Prim7DayForecast
 import com.yurivlad.multiweather.parsersModel.Ya10DayForecast
 import okhttp3.Dispatcher
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
+import javax.net.ssl.HostnameVerifier
 
 /**
  *
@@ -29,6 +28,9 @@ fun createOkHttpClient(dispatcher: Dispatcher) =
         .dispatcher(dispatcher)
         .followRedirects(false)
         .callTimeout(30_000, TimeUnit.SECONDS)
+        .hostnameVerifier(HostnameVerifier { _, _ ->
+            true
+        })
         .build()
 
 

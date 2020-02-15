@@ -11,11 +11,10 @@ import com.yurivlad.multiweather.domainModel.model.NoParamsRequest
 import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
 import com.yurivlad.multiweather.domainPresenterMappersModel.WeeklyForecastMapper
 import com.yurivlad.multiweather.presenterModel.ForecastWithThreeSourcesPresenterModel
-import com.yurivlad.multiweather.presenterUtils.CompositeLiveData
+import com.yurivlad.multiweather.presenterCore.CompositeLiveData
 import com.yurivlad.multiweather.weeklyForecastModel.StatefulViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.withContext
-import trikita.log.Log
 
 /**
  *

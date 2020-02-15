@@ -11,6 +11,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
     implementation project(":presenter-model")
-    implementation project(":presenter-utils")
+    implementation project(":presenter-core")
     implementation project(":domain-presenter-mappers-model")
 }

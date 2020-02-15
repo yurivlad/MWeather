@@ -8,7 +8,7 @@ import com.yurivlad.multiweather.core.DispatchersProvider
 import com.yurivlad.multiweather.presenterModel.DateRow
 import com.yurivlad.multiweather.presenterModel.DayPartRow
 import com.yurivlad.multiweather.presenterModel.WeeklyForecastRow
-import com.yurivlad.multiweather.presenterUtils.StringsProvider
+import com.yurivlad.multiweather.presenterCore.StringsProvider
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.VhWeeklyForecastDateRowBinding
 import com.yurivlad.multiweather.weeklyForecastImpl.databinding.VhWeeklyForecastRowBinding
 import kotlinx.coroutines.CoroutineScope
