@@ -13,7 +13,7 @@ import java.util.regex.Pattern
 object ToWeatherTypeMapperImpl : ToWeatherTypeMapper {
     override fun convert(from: String, additionalData: NoAdditionalParams) =
         from.toLowerCase(Locale.getDefault())
-            .split(Pattern.compile(",|или|\\bс\\b|немного|возможна|возможно"))
+            .split(Pattern.compile(",|или|немного|возможна|возможно"))
             .filter { it.isNotBlank() }
             .map {
                 fromString(
@@ -30,7 +30,7 @@ object ToWeatherTypeMapperImpl : ToWeatherTypeMapper {
 
     private fun fromString(str: String): WeatherType {
         return when (str) {
-            "малооблачно", "переменная облачность", "перистыми облаками", "перистые облака", "кучевые облака", "прояснениями" -> WeatherType.CLOUDY
+            "малооблачно", "переменная облачность", "перистыми облаками", "перистые облака", "кучевые облака", "облачно с прояснениями" -> WeatherType.CLOUDY
             "ясно", "ясная погода" -> WeatherType.CLEAR
             "снег с дождём", "дождь со снегом" -> WeatherType.SNOW_WITH_RAIN
             "пасмурно", "облачно", "кучево-дождевых облаков", "кучево-дождевые облака" -> WeatherType.MAINLY_CLOUDY

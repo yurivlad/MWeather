@@ -4,11 +4,12 @@ import android.annotation.SuppressLint
 import com.yurivlad.multiweather.domainModel.model.*
 import com.yurivlad.multiweather.domainPresenterMappersModel.NoAdditionalData
 import com.yurivlad.multiweather.domainPresenterMappersModel.WeeklyForecastMapper
-import com.yurivlad.multiweather.presenterModel.*
 import com.yurivlad.multiweather.presenterCore.StringsProvider
+import com.yurivlad.multiweather.presenterModel.*
 import com.yurivlad.multiweather.sharedResources.R
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
+import kotlin.Comparator
 import kotlin.collections.ArrayList
 import kotlin.collections.LinkedHashMap
 import kotlin.math.ceil
@@ -16,8 +17,11 @@ import kotlin.math.ceil
 /**
  *
  */
+typealias DayAndMonth = Pair<Int, Int>
+
 @ExperimentalCoroutinesApi
-class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvider: StringsProvider) : WeeklyForecastMapper {
+class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvider: StringsProvider) :
+    WeeklyForecastMapper {
     override fun convert(
         from: ForecastSources,
         additionalData: NoAdditionalData
@@ -47,7 +51,8 @@ class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvide
                 val out = ArrayList<WeeklyForecastRow>(size * 4)
                 forEach { mapEntry ->
                     val cal = Calendar.getInstance(TimeZone.getDefault())
-                    cal.set(Calendar.DAY_OF_MONTH, mapEntry.key)
+                    cal.set(Calendar.DAY_OF_MONTH, mapEntry.key.first)
+                    cal.set(Calendar.MONTH, mapEntry.key.second)
 
                     out.add(DateRow("dr:${mapEntry.key}", cal.time))
 
@@ -146,9 +151,9 @@ class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvide
     }
 
     @SuppressLint("UseSparseArrays")
-    private fun createDayNumToForecastsMap(forecasts: List<ForecastWithDayParts>): MutableMap<Int, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>> {
+    private fun createDayNumToForecastsMap(forecasts: List<ForecastWithDayParts>): MutableMap<DayAndMonth, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>> {
         val forecastDayMap =
-            LinkedHashMap<Int, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>>()
+            LinkedHashMap<DayAndMonth, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>>()
 
         forecasts
             .forEach { forecastWithDayParts ->
@@ -162,12 +167,18 @@ class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvide
                     }
             }
 
-        return forecastDayMap.toSortedMap()
+        return forecastDayMap.toSortedMap(Comparator<DayAndMonth> { o1, o2 ->
+            val first = o1 ?: DayAndMonth(0, 0)
+            val second = o2 ?: DayAndMonth(0, 0)
+            val firstAsInt = first.second * 100 + first.first
+            val secondAsInt = second.second * 100 + second.first
+            firstAsInt.compareTo(secondAsInt)
+        })
 
     }
 
     private fun putForecastToMap(
-        map: MutableMap<Int, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>>,
+        map: MutableMap<DayAndMonth, MutableList<Pair<ForecastSource, ForecastForDayWithDayParts>>>,
         forecastForDayWithDayParts: ForecastForDayWithDayParts,
         source: ForecastSource
     ) {
@@ -176,7 +187,7 @@ class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvide
 
         val forecastWithSource =
             map
-                .getOrPut(calendar.get(Calendar.DAY_OF_MONTH)) { ArrayList(10) }
+                .getOrPut(DayAndMonth(calendar[Calendar.DAY_OF_MONTH], calendar[Calendar.MONTH])) { ArrayList(10) }
 
 
         forecastWithSource

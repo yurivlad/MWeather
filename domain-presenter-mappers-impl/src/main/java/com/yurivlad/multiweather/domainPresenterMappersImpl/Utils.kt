@@ -20,23 +20,35 @@ internal fun WeatherList.convertToDrawableRes(dayPart: DayPart): Int {
             when {
                 contains(WeatherType.WINDY)
                         && (contains(WeatherType.CLOUDY) || contains(WeatherType.MAINLY_CLOUDY)) -> R.drawable.ic_cloudy_wind_linear_40dp
+
                 contains(WeatherType.STORM) && (contains(WeatherType.RAIN) || contains(
                     WeatherType.HEAVY_RAIN
                 ) || contains(WeatherType.SMALL_RAIN)) -> R.drawable.ic_storm_rain_linear_40dp
+
                 contains(WeatherType.STORM) && (contains(WeatherType.SNOW) || contains(
                     WeatherType.HEAVY_SNOW
                 ) || contains(WeatherType.SMALL_SNOW)) -> R.drawable.ic_storm_with_snow_linear_40dp
+
                 contains(WeatherType.CLEAR) && (contains(WeatherType.RAIN) || contains(
                     WeatherType.SMALL_RAIN
                 )) && dayPart != DayPart.NIGHT -> R.drawable.ic_rain_clear_linear_40dp
+
                 contains(WeatherType.CLEAR) && (contains(WeatherType.CLOUDY) || contains(
                     WeatherType.MAINLY_CLOUDY
                 )) && dayPart != DayPart.NIGHT -> R.drawable.ic_main_cloudy_clear_day_linear_40dp
+
                 contains(WeatherType.SMALL_SNOW) && (contains(WeatherType.CLOUDY) || contains(
                     WeatherType.MAINLY_CLOUDY
                 )) -> R.drawable.ic_light_snow_linear_40dp
+
                 contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.SNOW) -> R.drawable.ic_snow_linear_40dp
+
                 contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.HEAVY_SNOW) -> R.drawable.ic_heavy_snow_linear_40dp
+
+                (contains(WeatherType.MAINLY_CLOUDY) || contains(WeatherType.CLOUDY)) && contains(
+                    WeatherType.SNOW_WITH_RAIN
+                ) -> R.drawable.ic_snow_rain_linear_40dp
+
                 else -> first().toDrawableRes(dayPart)
             }
         }

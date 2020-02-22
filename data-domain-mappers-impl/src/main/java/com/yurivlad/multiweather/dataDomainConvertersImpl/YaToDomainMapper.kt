@@ -36,7 +36,7 @@ class YaToDomainMapper(private val weatherTypeParser: ToWeatherTypeMapper) :
 
         return ForecastForDayWithDayParts(
             "${ForecastSource.YANDEX.name}:${cal.get(Calendar.DAY_OF_MONTH)}:${cal.get(Calendar.MONTH) + 1}",
-            cal.time,
+            from.date,
             convertDayPartForecast(previous?.nightForecast),
             convertDayPartForecast(from.morningForecast),
             convertDayPartForecast(from.dayForecast),

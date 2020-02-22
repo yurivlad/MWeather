@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.weeklyForecastImpl
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.yurivlad.multiweather.weeklyForecastModel.Presentation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
