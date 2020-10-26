@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import androidx.databinding.BindingConversion
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.yurivlad.multiweather.presenterModel.ForecastForDayPartColumn
@@ -99,3 +100,5 @@ fun SwipeRefreshLayout.colorScheme(dummy: String?) {
         R.color.colorNight
     )
 }
+@BindingConversion
+fun booleanToVisibility(value: Boolean?) = if (value == true)View.VISIBLE else View.GONE

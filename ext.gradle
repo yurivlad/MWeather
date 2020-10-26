@@ -1,7 +1,7 @@
 ext {
     minSdk = 21
     targetSdk = 29
-    appVersionCode = 7
+    appVersionCode = 11
     retrofit = "com.squareup.retrofit2:retrofit:2.7.0"
     okhttpLogginInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.0"
     coreKtx = 'androidx.core:core-ktx:1.1.0'

@@ -2,6 +2,7 @@ package com.yurivlad.multiweather.parsersImpl
 
 import com.yurivlad.multiweather.parsersModel.*
 import org.jsoup.Jsoup
+import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -29,7 +30,12 @@ object GisParserImpl : Parser<Gis10DayForecast> {
             .map { timeString ->
                 (Calendar.getInstance(TimeZone.getDefault())
                     .also {
-                        it.time =  sdf.parse(timeString.replace("фев", "февр"))
+                        it.time =
+                            sdf.parse(timeString.replace("фев", "февр")
+                                .replace("мар", "марта")
+                                .replace("сен", "сент")
+                                .replace("ноя", "ноября")
+                            )
                         it.set(Calendar.YEAR, year)
                     }).time
             }
@@ -39,10 +45,12 @@ object GisParserImpl : Parser<Gis10DayForecast> {
         fun createForeCastForIndex(index: Int, dayPart: Gis10DayForecastDayPart) =
             Gis10DayForecastPartOfDayItem(
                 dayPart,
-                forecastIconLine[index].attr("data-text").replace(
-                    Regex("(\n)|(</?nobr>)"),
-                    ""
-                ).trim(),
+                forecastIconLine[index].attr("data-text")
+                    .replace(
+                        Regex("(\n)|(</?nobr>)"),
+                        ""
+                    ).replace("&nbsp;", " ")
+                    .trim(),
                 forecastTempLine[index].text().replace("−", "-").toInt(),
                 forecastWindLine[index].text().toInt()
             )

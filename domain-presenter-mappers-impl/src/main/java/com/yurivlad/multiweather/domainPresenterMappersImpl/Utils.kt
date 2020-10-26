@@ -39,15 +39,20 @@ internal fun WeatherList.convertToDrawableRes(dayPart: DayPart): Int {
 
                 contains(WeatherType.SMALL_SNOW) && (contains(WeatherType.CLOUDY) || contains(
                     WeatherType.MAINLY_CLOUDY
-                )) -> R.drawable.ic_light_snow_linear_40dp
+                )) -> WeatherType.SMALL_SNOW.toDrawableRes(dayPart)
 
-                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.SNOW) -> R.drawable.ic_snow_linear_40dp
+                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.SNOW) -> WeatherType.SNOW.toDrawableRes(dayPart)
 
-                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.HEAVY_SNOW) -> R.drawable.ic_heavy_snow_linear_40dp
+                contains(WeatherType.MAINLY_CLOUDY) && contains(WeatherType.HEAVY_SNOW) -> WeatherType.HEAVY_SNOW.toDrawableRes(dayPart)
 
                 (contains(WeatherType.MAINLY_CLOUDY) || contains(WeatherType.CLOUDY)) && contains(
                     WeatherType.SNOW_WITH_RAIN
-                ) -> R.drawable.ic_snow_rain_linear_40dp
+                ) -> WeatherType.SNOW_WITH_RAIN.toDrawableRes(dayPart)
+
+                (any { it == WeatherType.CLOUDY || it == WeatherType.MAINLY_CLOUDY }) && WeatherType.RAIN in this -> WeatherType.RAIN.toDrawableRes(dayPart)
+                (any { it == WeatherType.CLOUDY || it == WeatherType.MAINLY_CLOUDY }) && WeatherType.HEAVY_RAIN in this -> WeatherType.HEAVY_RAIN.toDrawableRes(dayPart)
+                (any { it == WeatherType.CLOUDY || it == WeatherType.MAINLY_CLOUDY }) && WeatherType.SMALL_RAIN in this -> WeatherType.SMALL_RAIN.toDrawableRes(dayPart)
+
 
                 else -> first().toDrawableRes(dayPart)
             }

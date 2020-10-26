@@ -10,7 +10,7 @@
     <string name="range_temp">%s..%s</string>
     <string name="range_wind">%s..%s</string>
     <string name="unknown_weekly_forecast_row">Неизвестно</string>
-    <string name="day_part_forecast">%s\nТемпература: %s °C\nВетер: %s м/c</string>
+    <string name="day_part_forecast">%1$s\nТемпература: %s °C\nВетер: %2$s м/c</string>
     <string name="update_error_check_network_connection">Проверьте интернет-соединение</string>
     <string name="temperature">%s °C</string>
     <string name="wind">%s м/c</string>

@@ -50,7 +50,7 @@ class ForecastWithDayPartsToWeeklyForecastModelMapper(private val stringsProvide
             dayNumToForecasts.run {
                 val out = ArrayList<WeeklyForecastRow>(size * 4)
                 forEach { mapEntry ->
-                    val cal = Calendar.getInstance(TimeZone.getDefault())
+                    val cal = GregorianCalendar.getInstance(Locale.getDefault())
                     cal.set(Calendar.DAY_OF_MONTH, mapEntry.key.first)
                     cal.set(Calendar.MONTH, mapEntry.key.second)
 

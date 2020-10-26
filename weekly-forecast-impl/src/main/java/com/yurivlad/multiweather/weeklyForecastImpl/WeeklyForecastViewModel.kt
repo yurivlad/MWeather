@@ -1,6 +1,7 @@
 package com.yurivlad.multiweather.weeklyForecastImpl
 
 import android.os.Bundle
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
@@ -61,6 +62,7 @@ class WeeklyForecastViewModel constructor(
     override fun onComponentStart(bundle: Bundle?) {
         useCase.action(NoParamsRequest)
     }
+
 
     fun requestUpdate() {
         useCase.action(NoParamsRequest)
